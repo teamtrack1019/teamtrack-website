@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://teamtrack.cloud/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="de" href="https://teamtrack.cloud/?lang=de"/>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://teamtrack.cloud/?lang=tr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://teamtrack.cloud/?lang=en"/>
+  </url>
+</urlset>

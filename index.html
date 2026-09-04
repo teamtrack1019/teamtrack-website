@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeamTrack | Individuelle WebApps & Digitale Firmen-Software</title>
+  <meta name="description" content="Freiberufliche Softwareentwicklung, Web-Entwicklung & IT-Beratung. Maßgeschneiderte Webanwendungen für Handwerk, Logistik, Industrie und Dienstleister – Zeiterfassung, CRM, Fuhrpark & DATEV-Schnittstellen.">
+  <meta name="keywords" content="Softwareentwicklung, WebApp, Zeiterfassung, Fuhrparkverwaltung, Logistik Software, CRM Portal, DATEV Schnittstelle, PWA, Randersacker, Würzburg, Bayern, Deutschland">
+  <meta name="author" content="TeamTrack Softwareentwicklung & IT-Beratung">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://teamtrack.cloud/">
+
+  <!-- OpenGraph / Facebook / LinkedIn / WhatsApp -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://teamtrack.cloud/">
+  <meta property="og:title" content="TeamTrack | Individuelle WebApps & Digitale Firmen-Software">
+  <meta property="og:description" content="Maßgeschneiderte Webanwendungen mit Firmenbranding für Handwerk, Logistik und Mittelstand.">
+  <meta property="og:image" content="https://teamtrack.cloud/assets/teamtrack_logo_v2_1788330726427.jpg">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TeamTrack | Individuelle WebApps">
+  <meta name="twitter:description" content="Maßgeschneiderte Firmen-Software für Handwerk, Logistik & Dienstleister.">
+  <meta name="twitter:image" content="https://teamtrack.cloud/assets/teamtrack_logo_v2_1788330726427.jpg">
+
+  <!-- Schema.org Structured Data (JSON-LD) for Google SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "TeamTrack Softwareentwicklung & IT-Beratung",
+    "image": "https://teamtrack.cloud/assets/teamtrack_logo_v2_1788330726427.jpg",
+    "@id": "https://teamtrack.cloud/#organization",
+    "url": "https://teamtrack.cloud",
+    "telephone": "+491726125371",
+    "email": "teamtrack.software@hotmail.com",
+    "priceRange": "€€",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Balthasar-Neumann-Straße 38",
+      "addressLocality": "Randersacker",
+      "postalCode": "97236",
+      "addressCountry": "DE"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 49.7594,
+      "longitude": 9.9839
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Huriye Ünalsoy"
+    },
+    "sameAs": [
+      "https://teamtrack.cloud"
+    ]
+  }
+  </script>
+  
+  <!-- FAVICON & BRAND ICON -->
+  <link rel="icon" type="image/jpeg" href="assets/teamtrack_logo_v2_1788330726427.jpg">
+  <link rel="apple-touch-icon" href="assets/teamtrack_logo_v2_1788330726427.jpg">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfeff',
+              100: '#cffafe',
+              500: '#06b6d4',
+              600: '#0891b2',
+              700: '#0e7490',
+              800: '#155e75',
+              900: '#164e63',
+              950: '#083344',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-cyan-500 selection:text-white">
+
+  <!-- TOP BANNER -->
+  <div class="bg-gradient-to-r from-brand-900 via-brand-800 to-cyan-900 text-white text-xs md:text-sm py-2 px-4 text-center font-medium flex items-center justify-center gap-2">
+    <span class="bg-emerald-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider notranslate" translate="no">NEU</span>
+    <span data-i18n="topBanner">Maßgeschneiderte WebApps für Handwerk, Logistik, Industrie & Dienstleister – 100% nach Ihren Wünschen!</span>
+    <a href="#kontakt" class="underline font-bold hover:text-cyan-300 ml-2" data-i18n="topBannerLink">Erstgespräch anfragen &rarr;</a>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-4 py-3.5 min-h-[90px]">
+        
+        <!-- Left: Brand Logo & Company Name (Enlarged with Soft Shadow) -->
+        <a href="#" class="flex items-center gap-3.5 sm:gap-4 group flex-shrink-0">
+          <img src="assets/teamtrack_logo_v2_1788330726427.jpg" alt="TeamTrack Logo" class="h-16 w-16 sm:h-20 sm:w-20 object-contain rounded-2xl shadow-[0_4px_14px_rgba(0,0,0,0.08),0_1px_3px_rgba(0,0,0,0.04)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_6px_20px_rgba(0,0,0,0.12)]">
+          <div>
+            <span class="text-2xl sm:text-3xl font-black tracking-tight text-slate-900 flex items-center gap-0.5">
+              <span>Team</span><span class="text-cyan-600">Track</span>
+            </span>
+            <p class="text-[11px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider" data-i18n="logoSub">Softwareentwicklung & IT-Beratung</p>
+          </div>
+        </a>
+
+        <!-- Right Side: Grouped together (1. 3-Lines Menü Button, 2. CTA Button, 3. Language Switcher) -->
+        <div class="flex items-center gap-2.5 sm:gap-4 flex-shrink-0">
+          
+          <!-- 1. 3-Lines Hamburger Menu Button with 100% Solid Dropdown List -->
+          <div class="relative">
+            <button type="button" id="nav-menu-toggle-btn" onclick="toggleNavMenu()" class="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200/80 text-slate-800 font-bold text-xs sm:text-sm border border-slate-300/90 transition-all shadow-sm hover:shadow active:scale-95">
+              <i data-lucide="menu" id="nav-menu-icon" class="w-4 h-4 sm:w-5 sm:h-5 text-cyan-600"></i>
+              <span data-i18n="navMenuBtn">Menü</span>
+              <i data-lucide="chevron-down" id="nav-menu-chevron" class="w-3.5 h-3.5 text-slate-500 transition-transform duration-200"></i>
+            </button>
+
+            <!-- 100% Solid Opaque Dropdown Navigation List (Zero transparency, high contrast) -->
+            <div id="nav-menu-dropdown" class="hidden absolute right-0 mt-3 w-72 sm:w-80 bg-white rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.35)] border-2 border-slate-200 p-3 z-[100] transition-all duration-200">
+              <div class="space-y-1">
+                <a href="#leistungen" onclick="closeNavMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition group">
+                  <span class="p-2 rounded-lg bg-cyan-100 text-cyan-700 group-hover:bg-cyan-600 group-hover:text-white transition">
+                    <i data-lucide="layout" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <p class="font-bold text-slate-900 group-hover:text-cyan-600" data-i18n="navServices">Leistungen</p>
+                    <p class="text-[11px] text-slate-500 font-normal" data-i18n="navServicesSub">WebApps, CRM, Schnittstellen</p>
+                  </div>
+                </a>
+
+                <a href="#showcase" onclick="closeNavMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition group">
+                  <span class="p-2 rounded-lg bg-emerald-100 text-emerald-700 group-hover:bg-emerald-600 group-hover:text-white transition">
+                    <i data-lucide="play-circle" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <p class="font-bold text-slate-900 group-hover:text-cyan-600" data-i18n="navShowcase">Live-Showcase</p>
+                    <p class="text-[11px] text-slate-500 font-normal" data-i18n="navShowcaseSub">Interaktive Demo & Varianten</p>
+                  </div>
+                </a>
+
+                <a href="#ablauf" onclick="closeNavMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition group">
+                  <span class="p-2 rounded-lg bg-blue-100 text-blue-700 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <i data-lucide="git-commit" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <p class="font-bold text-slate-900 group-hover:text-cyan-600" data-i18n="navWorkflow">Prozess & Ablauf</p>
+                    <p class="text-[11px] text-slate-500 font-normal" data-i18n="navWorkflowSub">In 4 Schritten zur Software</p>
+                  </div>
+                </a>
+
+                <a href="#calculator" onclick="closeNavMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition group">
+                  <span class="p-2 rounded-lg bg-amber-100 text-amber-700 group-hover:bg-amber-600 group-hover:text-white transition">
+                    <i data-lucide="calculator" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <p class="font-bold text-slate-900 group-hover:text-cyan-600" data-i18n="navCalculator">Ersparnis-Rechner</p>
+                    <p class="text-[11px] text-slate-500 font-normal" data-i18n="navCalculatorSub">ROI & Kosteneinsparung</p>
+                  </div>
+                </a>
+
+                <a href="#modelle" onclick="closeNavMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition group">
+                  <span class="p-2 rounded-lg bg-purple-100 text-purple-700 group-hover:bg-purple-600 group-hover:text-white transition">
+                    <i data-lucide="handshake" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <p class="font-bold text-slate-900 group-hover:text-cyan-600" data-i18n="navModels">Zusammenarbeit</p>
+                    <p class="text-[11px] text-slate-500 font-normal" data-i18n="navModelsSub">Festpreis & Betreuung</p>
+                  </div>
+                </a>
+
+                <a href="#ueber-mich" onclick="closeNavMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition group">
+                  <span class="p-2 rounded-lg bg-indigo-100 text-indigo-700 group-hover:bg-indigo-600 group-hover:text-white transition">
+                    <i data-lucide="user-check" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <p class="font-bold text-slate-900 group-hover:text-cyan-600" data-i18n="navAbout">Über mich</p>
+                    <p class="text-[11px] text-slate-500 font-normal" data-i18n="navAboutSub">Entwickler & Arbeitsweise</p>
+                  </div>
+                </a>
+
+                <a href="#faq" onclick="closeNavMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition group">
+                  <span class="p-2 rounded-lg bg-rose-100 text-rose-700 group-hover:bg-rose-600 group-hover:text-white transition">
+                    <i data-lucide="help-circle" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <p class="font-bold text-slate-900 group-hover:text-cyan-600" data-i18n="navFaq">Häufige Fragen (FAQ)</p>
+                    <p class="text-[11px] text-slate-500 font-normal" data-i18n="navFaqSub">Antworten auf wichtige Fragen</p>
+                  </div>
+                </a>
+
+                <a href="#kontakt" onclick="closeNavMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition group border-t border-slate-100 pt-2">
+                  <span class="p-2 rounded-lg bg-teal-100 text-teal-700 group-hover:bg-teal-600 group-hover:text-white transition">
+                    <i data-lucide="phone-call" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <p class="font-bold text-slate-900 group-hover:text-cyan-600" data-i18n="footerContact">Kontakt</p>
+                    <p class="text-[11px] text-slate-500 font-normal" data-i18n="navContactSub">Telefon, E-Mail & Formular</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Primary Action CTA Button -->
+          <a href="#kontakt" class="hidden sm:inline-flex items-center justify-center px-4 sm:px-5 py-2.5 rounded-xl font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-500 hover:to-blue-600 shadow-lg shadow-cyan-600/20 hover:shadow-cyan-600/35 transition-all transform hover:-translate-y-0.5 whitespace-nowrap" data-i18n="navCta">
+            Projekt anfragen
+          </a>
+
+          <!-- 3. Language Switcher (At the far right) -->
+          <div class="flex items-center bg-slate-100 p-1 rounded-xl text-xs font-black text-slate-600 border border-slate-200 notranslate" translate="no">
+            <button type="button" onclick="changeLanguage('de')" id="lang-btn-de" class="px-2.5 sm:px-3 py-1.5 rounded-lg bg-white shadow-sm text-cyan-700 font-extrabold transition">
+              DE
+            </button>
+            <button type="button" onclick="changeLanguage('en')" id="lang-btn-en" class="px-2.5 sm:px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition">
+              EN
+            </button>
+            <button type="button" onclick="changeLanguage('tr')" id="lang-btn-tr" class="px-2.5 sm:px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition">
+              TR
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+  <!-- HERO SECTION -->
+  <section class="relative pt-6 pb-16 overflow-hidden bg-gradient-to-b from-white via-cyan-50/30 to-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      
+      <div class="text-center max-w-4xl mx-auto mb-6">
+        
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-slate-900 leading-[1.2] mb-3">
+          <span data-i18n="heroTitle1">Maßgeschneiderte WebApps</span> 
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-600 via-blue-600 to-indigo-700" data-i18n="heroTitle2">& individuelle Software</span><br>
+          <span data-i18n="heroTitle3">exakt nach Ihren Betriebswünschen.</span>
+        </h1>
+
+        <p class="text-sm sm:text-base text-slate-600 mb-5 leading-relaxed max-w-3xl mx-auto" data-i18n="heroSubtitle">
+          Starre Standard-Software passt selten zu 100%. Ich programmiere individuelle Webanwendungen mit Ihrem eigenen Firmenbranding, digitalisiere lästigen Papierkram und automatisiere Ihre Kernprozesse – von Zeiterfassung und Rechnungsstellung über Kundenverwaltung (CRM) bis hin zu Logistik, Auftragsabwicklung und Fuhrparkmanagement.
+        </p>
+
+        <!-- INTERACTIVE HERO MODULE TABS / BUTTONS -->
+        <div class="mb-4">
+          <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2.5 flex items-center justify-center gap-1.5" data-i18n="heroTabsInstruction">
+            <span>👉</span> <span>Wählen Sie ein Modul für die Live-Vorschau:</span>
+          </p>
+          <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5">
+            <button type="button" onclick="switchShowcaseTab('zeiterfassung')" id="hero-tab-zeiterfassung" class="hero-module-btn px-4 py-2 rounded-xl border text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-2 bg-cyan-600 text-white border-cyan-600 shadow-cyan-600/20 scale-105">
+              <i data-lucide="clock" class="w-4 h-4"></i> <span data-i18n="tabZeiterfassung">1. Zeiterfassung</span>
+            </button>
+            <button type="button" onclick="switchShowcaseTab('rechnungen')" id="hero-tab-rechnungen" class="hero-module-btn px-4 py-2 rounded-xl border text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-2 bg-white text-slate-700 border-slate-300 hover:border-cyan-400 hover:text-cyan-700">
+              <i data-lucide="receipt" class="w-4 h-4 text-emerald-600"></i> <span data-i18n="tabRechnungen">2. 1-Klick Rechnungen</span>
+            </button>
+            <button type="button" onclick="switchShowcaseTab('crm')" id="hero-tab-crm" class="hero-module-btn px-4 py-2 rounded-xl border text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-2 bg-white text-slate-700 border-slate-300 hover:border-cyan-400 hover:text-cyan-700">
+              <i data-lucide="users" class="w-4 h-4 text-blue-600"></i> <span data-i18n="tabCrm">3. Kundenverwaltung (CRM)</span>
+            </button>
+            <button type="button" onclick="switchShowcaseTab('logistik')" id="hero-tab-logistik" class="hero-module-btn px-4 py-2 rounded-xl border text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-2 bg-white text-slate-700 border-slate-300 hover:border-cyan-400 hover:text-cyan-700">
+              <i data-lucide="truck" class="w-4 h-4 text-indigo-600"></i> <span data-i18n="tabLogistik">4. Logistik & Touren</span>
+            </button>
+            <button type="button" onclick="switchShowcaseTab('fuhrpark')" id="hero-tab-fuhrpark" class="hero-module-btn px-4 py-2 rounded-xl border text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-2 bg-white text-slate-700 border-slate-300 hover:border-cyan-400 hover:text-cyan-700">
+              <i data-lucide="package-search" class="w-4 h-4 text-amber-600"></i> <span data-i18n="tabFuhrpark">5. Fuhrpark & Material</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ENLARGED HD SHOWCASE HERO PREVIEW -->
+      <div id="showcase" class="relative max-w-6xl mx-auto rounded-3xl p-3 sm:p-5 bg-gradient-to-b from-slate-200/90 via-slate-300/50 to-slate-200/90 shadow-2xl border border-slate-200/80 backdrop-blur-xl">
+        
+        <!-- Showcase Main Module Tabs (Header) -->
+        <div class="bg-cyan-950 text-cyan-200 px-4 sm:px-5 py-3 rounded-t-2xl text-xs sm:text-sm font-semibold flex flex-col md:flex-row items-center justify-between gap-3 border border-cyan-800/80">
+          <div class="flex items-center gap-2.5">
+            <span class="bg-cyan-600 text-white text-[11px] font-black px-2.5 py-1 rounded-md uppercase" data-i18n="showcaseBadge">SHOWCASE REFERENZ</span>
+            <span id="showcase-current-title" class="font-bold text-white text-base">Zeiterfassung & Stempeluhr</span>
+          </div>
+          <div class="flex flex-wrap items-center justify-center gap-1.5 bg-slate-900/95 p-1 rounded-xl border border-cyan-800 text-xs notranslate" translate="no">
+            <button type="button" onclick="switchShowcaseTab('zeiterfassung')" id="bar-tab-zeiterfassung" class="px-2.5 sm:px-3 py-1.5 rounded-lg bg-cyan-600 text-white font-bold transition">1. Zeiterfassung</button>
+            <button type="button" onclick="switchShowcaseTab('rechnungen')" id="bar-tab-rechnungen" class="px-2.5 sm:px-3 py-1.5 rounded-lg text-slate-300 hover:text-white transition">2. Rechnungen</button>
+            <button type="button" onclick="switchShowcaseTab('crm')" id="bar-tab-crm" class="px-2.5 sm:px-3 py-1.5 rounded-lg text-slate-300 hover:text-white transition">3. CRM</button>
+            <button type="button" onclick="switchShowcaseTab('logistik')" id="bar-tab-logistik" class="px-2.5 sm:px-3 py-1.5 rounded-lg text-slate-300 hover:text-white transition">4. Logistik</button>
+            <button type="button" onclick="switchShowcaseTab('fuhrpark')" id="bar-tab-fuhrpark" class="px-2.5 sm:px-3 py-1.5 rounded-lg text-slate-300 hover:text-white transition">5. Fuhrpark</button>
+          </div>
+        </div>
+
+        <div class="bg-slate-900 rounded-b-2xl overflow-hidden border-x border-b border-slate-800 text-slate-100 shadow-inner">
+          
+          <!-- Mockup Top Bar & URL -->
+          <div class="bg-slate-950 px-4 sm:px-5 py-3 border-b border-slate-800 flex flex-wrap items-center justify-between gap-2">
+            <div class="flex items-center gap-2.5">
+              <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+              <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+              <span class="text-xs text-slate-400 font-mono ml-2 notranslate" translate="no" id="mockup-url-bar">ihre-firma.teamtrack.cloud/zeiterfassung/live-stempeluhr</span>
+            </div>
+            <div class="flex items-center gap-3 text-xs sm:text-sm">
+              <span class="flex items-center gap-1.5 text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded-lg border border-emerald-800/60" id="mockup-status-indicator">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+                <span data-i18n="mockupLive">System aktiv</span>
+              </span>
+              <span class="text-slate-400 font-medium notranslate" translate="no">Admin: Alexander K.</span>
+            </div>
+          </div>
+
+          <!-- SUB-MODEL / VARIANT SELECTOR BAR (A, B, C) -->
+          <div class="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 px-4 sm:px-6 py-3 border-b border-slate-800 flex flex-col md:flex-row items-center justify-between gap-3 shadow-md">
+            <div class="flex items-center gap-2 text-xs sm:text-sm font-bold text-slate-300">
+              <span class="bg-slate-900/90 text-cyan-300 px-3 py-1.5 rounded-xl border border-cyan-500/30 font-bold uppercase tracking-wider shadow-sm" data-i18n="variantPrompt">
+                Modell-Variante wählen (A, B, C):
+              </span>
+              <span class="text-base sm:text-lg animate-bounce inline-block">👉</span>
+            </div>
+            <div id="showcase-variant-buttons" class="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5">
+              <!-- Dynamically populated with prominent A, B, C buttons -->
+            </div>
+          </div>
+
+          <!-- Dynamic Mockup Body Container (Populated via JS) -->
+          <div id="showcase-content" class="p-4 sm:p-7 bg-slate-900 transition-all duration-300 min-h-[390px]">
+            <!-- Dynamically populated -->
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ACTION BUTTONS (PLACED RIGHT UNDER THE SHOWCASE MOCKUP) -->
+      <div class="mt-8 max-w-2xl mx-auto text-center">
+        <p class="text-xs text-slate-500 font-semibold mb-3 uppercase tracking-wider" data-i18n="ctaSubPrompt">Gefällt Ihnen die Demo? Lassen Sie uns Ihre eigene Firmen-WebApp besprechen:</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#kontakt" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl font-extrabold text-base text-white bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-500 hover:to-blue-600 shadow-xl shadow-cyan-600/30 hover:shadow-cyan-600/45 transition-all transform hover:-translate-y-0.5">
+            <i data-lucide="message-square" class="w-5 h-5"></i>
+            <span data-i18n="heroBtnPrimary">Kostenloses Erstgespräch anfragen</span>
+          </a>
+          <a href="#calculator" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl font-bold text-base text-slate-700 bg-white border border-slate-300 hover:bg-slate-50 hover:border-slate-400 shadow-md transition">
+            <i data-lucide="calculator" class="w-5 h-5 text-cyan-600"></i>
+            <span data-i18n="heroBtnSecondary">Ersparnis berechnen</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- LEISTUNGEN / SERVICES SECTION -->
+  <section id="leistungen" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-xs font-extrabold text-cyan-600 tracking-wider uppercase mb-3" data-i18n="servicesCategory">Dienstleistungen & Kernkompetenzen</h2>
+        <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4" data-i18n="servicesHeading">
+          Was ich für Ihr Unternehmen entwickeln kann
+        </h3>
+        <p class="text-slate-600 text-lg" data-i18n="servicesSub">
+          Vom einfachen internen Tool bis zur umfassenden Unternehmens-Plattform mit eigenem Branding.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Service 1: Custom WebApps & CRM -->
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-cyan-400 hover:shadow-xl hover:shadow-cyan-500/5 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-cyan-100 text-cyan-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="layout" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3" data-i18n="srv1Title">Individuelle WebApps & CRM-Portale</h4>
+          <p class="text-slate-600 leading-relaxed text-sm" data-i18n="srv1Desc">
+            Maßgeschneiderte Webanwendungen für Kundenverwaltung, Mitarbeiter-Disposition oder Lieferanten. Genau auf Ihre spezifischen Arbeitsabläufe programmiert.
+          </p>
+        </div>
+
+        <!-- Service 2: White Label -->
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-cyan-400 hover:shadow-xl hover:shadow-cyan-500/5 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="palette" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3" data-i18n="srv2Title">100% Eigenes Firmen-Branding</h4>
+          <p class="text-slate-600 leading-relaxed text-sm" data-i18n="srv2Desc">
+            Ihre Software läuft unter Ihrer eigenen Domain, mit Ihrem Firmenlogo, Ihren Unternehmensfarben und CI-Richtlinien (White-Label).
+          </p>
+        </div>
+
+        <!-- Service 3: Logistics & Fleet -->
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-cyan-400 hover:shadow-xl hover:shadow-cyan-500/5 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="truck" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3" data-i18n="srv3Title">Logistik, Touren & Fuhrpark</h4>
+          <p class="text-slate-600 leading-relaxed text-sm" data-i18n="srv3Desc">
+            Smarte Systeme zur Auftragsdisposition, Routenplanung, Baustellen-Logistik, Fahrzeug-Verwaltung und Materialverfolgung in Echtzeit.
+          </p>
+        </div>
+
+        <!-- Service 4: Mobile Web Apps (PWA) -->
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-cyan-400 hover:shadow-xl hover:shadow-cyan-500/5 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="smartphone" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3" data-i18n="srv4Title">Mobile App (PWA) für Baustelle & Fahrer</h4>
+          <p class="text-slate-600 leading-relaxed text-sm" data-i18n="srv4Desc">
+            Web-Apps, die sich auf Smartphones anfühlen wie native Apps – ohne Download im App Store. Sofort auf der Baustelle, im LKW oder unterwegs nutzbar.
+          </p>
+        </div>
+
+        <!-- Service 5: APIs & DATEV -->
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-cyan-400 hover:shadow-xl hover:shadow-cyan-500/5 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="database" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3" data-i18n="srv5Title">Schnittstellen & DATEV / ERP Integration</h4>
+          <p class="text-slate-600 leading-relaxed text-sm" data-i18n="srv5Desc">
+            Anbindung an bestehende ERP-Systeme, Buchhaltungsprogramme (DATEV, Lexware, SevDesk) und automatische PDF-Rechnungserstellung.
+          </p>
+        </div>
+
+        <!-- Service 6: IT Consulting & Care -->
+        <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-cyan-400 hover:shadow-xl hover:shadow-cyan-500/5 transition-all group">
+          <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i data-lucide="shield-check" class="w-6 h-6"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3" data-i18n="srv6Title">IT-Beratung & Dauerhafte Betreuung</h4>
+          <p class="text-slate-600 leading-relaxed text-sm" data-i18n="srv6Desc">
+            Sie erhalten nicht nur den Code, sondern einen verlässlichen Partner für Server-Hosting, Datensicherheit (DSGVO), Wartung und Weiterentwicklung.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKFLOW / PROCESS SECTION -->
+  <section id="ablauf" class="py-20 bg-slate-50 border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="bg-cyan-100 text-cyan-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block" data-i18n="workflowBadge">Transparenter Ablauf</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4" data-i18n="workflowTitle">
+          In 4 Schritten zu Ihrer maßgeschneiderten Firmen-Software
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Step 1 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative group hover:shadow-md transition">
+          <div class="w-10 h-10 rounded-full bg-cyan-600 text-white font-extrabold text-base flex items-center justify-center mb-4">
+            1
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2" data-i18n="wfStep1Title">1. Beratung & Analyse</h4>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="wfStep1Desc">
+            Wir besprechen Ihre aktuellen Abläufe, Wünsche und Einsparpotenziale unverbindlich.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative group hover:shadow-md transition">
+          <div class="w-10 h-10 rounded-full bg-cyan-600 text-white font-extrabold text-base flex items-center justify-center mb-4">
+            2
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2" data-i18n="wfStep2Title">2. Konzept & Prototyp</h4>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="wfStep2Desc">
+            Sie sehen vor der Entwicklung, wie Ihre WebApp aussehen wird (inklusive Ihrem Logo).
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative group hover:shadow-md transition">
+          <div class="w-10 h-10 rounded-full bg-cyan-600 text-white font-extrabold text-base flex items-center justify-center mb-4">
+            3
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2" data-i18n="wfStep3Title">3. Entwicklung & Testing</h4>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="wfStep3Desc">
+            Schnelle Umsetzung mit modernstem Tech-Stack, sicher, performant und DSGVO-konform.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm relative group hover:shadow-md transition">
+          <div class="w-10 h-10 rounded-full bg-emerald-600 text-white font-extrabold text-base flex items-center justify-center mb-4">
+            4
+          </div>
+          <h4 class="text-lg font-bold text-slate-900 mb-2" data-i18n="wfStep4Title">4. Go-Live & Betreuung</h4>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="wfStep4Desc">
+            Einführung in Ihrem Betrieb, Schulung der Mitarbeiter und dauerhafter Support.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SAVINGS CALCULATOR (INTERACTIVE ROI CALCULATOR) -->
+  <section id="calculator" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="bg-cyan-500/20 text-cyan-300 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block border border-cyan-500/30" data-i18n="calcBadge">ROI & Einspar-Rechner</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4" data-i18n="calcTitle">
+          Was bringt Ihnen eine individuelle Digitalisierung?
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base" data-i18n="calcSub">
+          Berechnen Sie die Zeit- und Kostenersparnis durch automatisierte Web-Prozesse.
+        </p>
+      </div>
+
+      <div class="bg-slate-800/80 rounded-3xl p-6 sm:p-10 border border-slate-700 shadow-2xl backdrop-blur-md">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          
+          <div class="space-y-6">
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label for="calc-workers" class="text-sm font-semibold text-slate-300" data-i18n="calcWorkersLabel">Anzahl Mitarbeiter / Fahrer / Monteure:</label>
+                <span id="calc-workers-val" class="font-mono font-bold text-cyan-400 text-lg">15</span>
+              </div>
+              <input type="range" id="calc-workers" min="2" max="100" value="15" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-cyan-500">
+            </div>
+
+            <div>
+              <div class="flex justify-between items-center mb-2">
+                <label for="calc-rate" class="text-sm font-semibold text-slate-300" data-i18n="calcRateLabel">Durchschnittlicher Stundensatz (€):</label>
+                <span id="calc-rate-val" class="font-mono font-bold text-cyan-400 text-lg">65 €</span>
+              </div>
+              <input type="range" id="calc-rate" min="30" max="150" step="5" value="65" class="w-full h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer accent-cyan-500">
+            </div>
+
+            <div class="p-4 bg-slate-900/80 rounded-xl border border-slate-700/80 text-xs text-slate-400 space-y-2">
+              <div class="flex items-center gap-2 text-slate-300">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                <span data-i18n="calcFact1">Durchschnittlich ~4,5 Stunden manuelle Büroarbeit pro Mitarbeiter eingespart</span>
+              </div>
+              <div class="flex items-center gap-2 text-slate-300">
+                <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
+                <span data-i18n="calcFact2">Rechnungen & Freigaben erfolgen tagesaktuell ohne Verzögerung</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Result Display Card -->
+          <div class="bg-gradient-to-br from-cyan-950 via-slate-900 to-slate-950 p-6 sm:p-8 rounded-2xl border border-cyan-700/50 text-center flex flex-col justify-between shadow-xl">
+            <div>
+              <p class="text-xs uppercase font-bold tracking-wider text-cyan-300 mb-1" data-i18n="calcResultYearly">Ihre geschätzte jährliche Ersparnis:</p>
+              <div class="text-4xl sm:text-5xl font-black font-mono text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-emerald-300 to-teal-200 my-4" id="calc-total-savings">
+                52.650 €
+              </div>
+              <div class="grid grid-cols-2 gap-3 pt-4 border-t border-slate-800 text-xs text-left">
+                <div>
+                  <span class="text-slate-400 block" data-i18n="calcSavedHours">Gewonnene Arbeitszeit:</span>
+                  <span class="font-bold text-white font-mono text-sm" id="calc-total-hours">810 Std / Jahr</span>
+                </div>
+                <div>
+                  <span class="text-slate-400 block" data-i18n="calcErrorReduction">Fehlerreduktion:</span>
+                  <span class="font-bold text-emerald-400 font-mono text-sm">> 90%</span>
+                </div>
+              </div>
+            </div>
+            
+            <a href="#kontakt" class="mt-6 w-full py-3.5 px-4 rounded-xl font-bold text-sm text-slate-900 bg-gradient-to-r from-cyan-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 transition transform hover:-translate-y-0.5 shadow-lg shadow-cyan-500/20" data-i18n="calcCtaBtn">
+              Jetzt individuelles Angebot anfragen
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COLLABORATION MODELS -->
+  <section id="modelle" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="bg-cyan-100 text-cyan-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block" data-i18n="modelsBadge">Kooperationsmodelle</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4" data-i18n="modelsHeading">
+          Flexible Zusammenarbeit nach Ihren Bedürfnissen
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg" data-i18n="modelsSub">
+          Ob ein einzelnes schlüsselfertiges Projekt, laufende 7/24 Betreuung oder modulare System-Erweiterung.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Model 1: Reines Festpreis-Projekt (Einmalig) -->
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col justify-between hover:border-slate-300 transition">
+          <div>
+            <h4 class="text-xl font-bold text-slate-900 mb-2" data-i18n="m1Title">Reines Festpreis-Projekt</h4>
+            <p class="text-slate-600 text-xs mb-5 leading-relaxed" data-i18n="m1Desc">
+              Für Unternehmen, die eine maßgeschneiderte WebApp einmalig schlüsselfertig entwickeln lassen möchten.
+            </p>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 mb-6">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block" data-i18n="priceModelLabel">Preise & Abrechnung</span>
+              <div class="text-lg font-black text-slate-900 font-mono" data-i18n="m1Price">
+                Festpreis nach Projektumfang
+              </div>
+            </div>
+            <ul class="space-y-3 text-xs text-slate-700 mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-600"></i> <span data-i18n="m1Item1">100% Individuelle Entwicklung & White-Label</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-600"></i> <span data-i18n="m1Item2">Altdaten-Übernahme & Erstkonfiguration</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-600"></i> <span data-i18n="m1Item3">DSGVO-Konformität & Sicherheits-Tests</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-600"></i> <span data-i18n="m1Item4">Schlüsselfertige Übergabe & 30 Tage Gewährleistung</span></li>
+            </ul>
+          </div>
+          <a href="#kontakt" class="w-full py-3.5 text-center rounded-xl font-bold text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 transition" data-i18n="m1Btn">
+            Projekt anfragen &rarr;
+          </a>
+        </div>
+
+        <!-- Model 2: Setup + 7/24 Abo-Betreuung (Featured) -->
+        <div class="p-8 rounded-3xl bg-slate-900 text-white border-2 border-cyan-500 flex flex-col justify-between shadow-2xl relative">
+          <span class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-[10px] font-black tracking-wider uppercase px-3.5 py-1 rounded-full shadow" data-i18n="m2Badge">
+            Meistgewählt
+          </span>
+          <div>
+            <h4 class="text-xl font-bold text-white mb-2" data-i18n="m2Title">Setup + 7/24 Abo-Betreuung</h4>
+            <p class="text-slate-300 text-xs mb-5 leading-relaxed" data-i18n="m2Desc">
+              Ihr persönlicher externer IT-Entwicklungspartner für kontinuierliche Updates, Hosting & 7/24 Notfall-Support.
+            </p>
+            <div class="p-3 rounded-xl bg-slate-800 border border-slate-700 mb-6">
+              <span class="text-[11px] font-bold text-cyan-400 uppercase tracking-wider block" data-i18n="priceModelLabel">Preise & Abrechnung</span>
+              <div class="text-lg font-black text-white font-mono" data-i18n="m2Price">
+                Initial-Setup + Flexibles Abo
+              </div>
+              <p class="text-[11px] text-cyan-300 font-semibold mt-0.5" data-i18n="m2AboIntervals">Monatlich • Quartal • Jährlich wählbar</p>
+            </div>
+            <ul class="space-y-3 text-xs text-slate-300 mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> <span data-i18n="m2Item1">Vergünstigtes Initial-Setup & schlüsselfertige WebApp</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> <span data-i18n="m2Item2">7/24 Notfall-Support & Schnelle Reaktionszeit</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> <span data-i18n="m2Item3">Hochleistungs-Cloud-Hosting & Tägliche Backups</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-400"></i> <span data-i18n="m2Item4">DSGVO-Wartung, Sicherheitsupdates & Laufende Features</span></li>
+            </ul>
+          </div>
+          <a href="#kontakt" class="w-full py-3.5 text-center rounded-xl font-bold text-xs bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white shadow-lg transition" data-i18n="m2Btn">
+            Kennenlernen vereinbaren &rarr;
+          </a>
+        </div>
+
+        <!-- Model 3: System-Erweiterung & Schnittstellen -->
+        <div class="p-8 rounded-3xl bg-slate-50 border border-slate-200 flex flex-col justify-between hover:border-slate-300 transition">
+          <div>
+            <h4 class="text-xl font-bold text-slate-900 mb-2" data-i18n="m3Title">System-Erweiterung & Schnittstellen</h4>
+            <p class="text-slate-600 text-xs mb-5 leading-relaxed" data-i18n="m3Desc">
+              Modulare Ergänzung bestehender Webseiten oder Software durch einzelne Spezial-Module & APIs.
+            </p>
+            <div class="p-3 rounded-xl bg-white border border-slate-200 mb-6">
+              <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block" data-i18n="priceModelLabel">Preise & Abrechnung</span>
+              <div class="text-lg font-black text-slate-900 font-mono" data-i18n="m3Price">
+                Modulpreis nach Anforderung
+              </div>
+            </div>
+            <ul class="space-y-3 text-xs text-slate-700 mb-8">
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-600"></i> <span data-i18n="m3Item1">Modulweise Integration (z.B. Zeiterfassung, Fatura, CRM)</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-600"></i> <span data-i18n="m3Item2">Subdomain-Portallösung (portal.kundenfirma.de)</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-600"></i> <span data-i18n="m3Item3">API-Schnittstellen (DATEV, SevDesk, ERP-Systeme)</span></li>
+              <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-cyan-600"></i> <span data-i18n="m3Item4">Direkte Datenbank-Kopplung ohne doppelte Datenpflege</span></li>
+            </ul>
+          </div>
+          <a href="#kontakt" class="w-full py-3.5 text-center rounded-xl font-bold text-xs bg-slate-200 hover:bg-slate-300 text-slate-800 transition" data-i18n="m3Btn">
+            Erweiterung anfragen &rarr;
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ME SECTION -->
+  <section id="ueber-mich" class="py-20 bg-gradient-to-b from-white via-slate-50 to-white border-t border-slate-200/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="bg-indigo-100 text-indigo-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3 inline-block" data-i18n="aboutBadge">Über mich & Arbeitsweise</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-4" data-i18n="aboutHeading">
+          Ihr persönlicher Entwickler & Digitalisierungspartner
+        </h2>
+        <p class="text-slate-600 text-base sm:text-lg leading-relaxed" data-i18n="aboutSub">
+          Ich helfe mittelständischen Unternehmen, Handwerksbetrieben und Logistikern dabei, zeitraubende Papierprozesse und unübersichtliche Zettelwirtschaft durch maßgeschneiderte, intuitive Web-Software zu ersetzen.
+        </p>
+      </div>
+
+      <!-- Main Story & Highlight Box -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Left: Developer Profile Story with Clean Tech Pills -->
+        <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div class="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+            <div class="flex items-center gap-3 mb-2">
+              <div class="w-12 h-12 rounded-2xl bg-cyan-600/10 text-cyan-700 flex items-center justify-center font-black text-xl">
+                <i data-lucide="code-2" class="w-6 h-6 text-cyan-600"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-lg sm:text-xl" data-i18n="aboutStoryTitle">Maßarbeit statt Massenware</h3>
+                <p class="text-xs text-slate-500 font-medium" data-i18n="aboutStorySub">Pragmatisch, partnerschaftlich & lösungsorientiert</p>
+              </div>
+            </div>
+
+            <p data-i18n="aboutText1">
+              Als freiberuflicher Softwareentwickler und IT-Berater programmiere ich keine starre Standard-Software von der Stange, sondern maßgeschneiderte Webanwendungen und PWAs, die exakt zu Ihren Betriebsabläufen passen. Ob Zeiterfassung, automatische Rechnungserstellung, Fuhrpark- und Tourenverwaltung oder ein vollständiges Kunden-CRM – jedes Modul wird nach Ihren individuellen Vorgaben und mit Ihrem Firmen-Branding entwickelt.
+            </p>
+
+            <p data-i18n="aboutText2">
+              Dabei setze ich auf schlanke, bewährte und extrem zuverlässige Web-Technologien:
+            </p>
+
+            <!-- Simple, Clean Tech Stack Pills -->
+            <div class="flex flex-wrap items-center gap-2 py-1 notranslate" translate="no">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-bold text-slate-800">
+                <span class="w-2 h-2 rounded-full bg-cyan-500"></span> PHP
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-bold text-slate-800">
+                <span class="w-2 h-2 rounded-full bg-blue-500"></span> MySQL
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-bold text-slate-800">
+                <span class="w-2 h-2 rounded-full bg-amber-500"></span> JavaScript / jQuery
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-bold text-slate-800">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span> HTML5 / CSS3
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-bold text-slate-800">
+                <span class="w-2 h-2 rounded-full bg-indigo-500"></span> Mobile PWA
+              </span>
+              <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200 text-xs font-bold text-slate-800">
+                <span class="w-2 h-2 rounded-full bg-purple-500"></span> REST APIs
+              </span>
+            </div>
+
+            <p data-i18n="aboutText3">
+              Bei mir sprechen Sie nicht mit wechselnden Vertrieblern oder Agentur-Projektmanagern, sondern arbeiten direkt mit dem Entwickler, der Ihren Code schreibt. Das bedeutet: kurze Kommunikationswege, blitzschnelle Anpassungen, transparente Festpreise und ein partnerschaftlicher Austausch auf Augenhöhe.
+            </p>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-100 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-2 text-xs font-semibold text-slate-600">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+              <span data-i18n="aboutStatus">Aktuell verfügbar für neue Projekte & IT-Beratung</span>
+            </div>
+            <a href="#kontakt" class="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-cyan-600 hover:text-cyan-700 hover:underline">
+              <span data-i18n="aboutCtaLink">Jetzt unverbindlich kennenlernen</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: 4 Key Pillars Grid -->
+        <div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
+          
+          <div class="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-start gap-4 hover:border-cyan-400/60 transition">
+            <div class="p-3 rounded-xl bg-cyan-50 text-cyan-700 flex-shrink-0">
+              <i data-lucide="message-square" class="w-5 h-5 text-cyan-600"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1" data-i18n="aboutPillar1Title">Direkter Kontakt ohne Agentur-Bürokratie</h4>
+              <p class="text-xs text-slate-600 leading-relaxed" data-i18n="aboutPillar1Desc">Sie kommunizieren direkt mit dem Programmierer. Schnelle Entscheidungen und agile Umsetzung ohne Reibungsverluste.</p>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-start gap-4 hover:border-cyan-400/60 transition">
+            <div class="p-3 rounded-xl bg-emerald-50 text-emerald-700 flex-shrink-0">
+              <i data-lucide="sparkles" class="w-5 h-5 text-emerald-600"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1" data-i18n="aboutPillar2Title">100% White-Label & Firmen-Branding</h4>
+              <p class="text-xs text-slate-600 leading-relaxed" data-i18n="aboutPillar2Desc">Ihre Software läuft unter Ihrer Domain, mit Ihrem Firmenlogo und exakt auf Ihre Teams und Kunden zugeschnitten.</p>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-start gap-4 hover:border-cyan-400/60 transition">
+            <div class="p-3 rounded-xl bg-indigo-50 text-indigo-700 flex-shrink-0">
+              <i data-lucide="smartphone" class="w-5 h-5 text-indigo-600"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1" data-i18n="aboutPillar3Title">Mobile WebApp (PWA) für die Baustelle & unterwegs</h4>
+              <p class="text-xs text-slate-600 leading-relaxed" data-i18n="aboutPillar3Desc">Funktioniert auf jedem Smartphone, Tablet und PC ohne mühsame App-Store-Installationen sofort im Browser.</p>
+            </div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white border border-slate-200/90 shadow-sm flex items-start gap-4 hover:border-cyan-400/60 transition">
+            <div class="p-3 rounded-xl bg-amber-50 text-amber-700 flex-shrink-0">
+              <i data-lucide="shield-check" class="w-5 h-5 text-amber-600"></i>
+            </div>
+            <div>
+              <h4 class="text-sm font-bold text-slate-900 mb-1" data-i18n="aboutPillar4Title">Datenschutz (DSGVO), Sicherheit & Betreuung</h4>
+              <p class="text-xs text-slate-600 leading-relaxed" data-i18n="aboutPillar4Desc">Sichere Cloud-Server, automatische Backups, volle Code-Übergabe und verlässliche Betreuung nach dem Go-Live.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Tech Stack & Architecture Cards (Bottom Section) -->
+      <div class="mt-12 pt-10 border-t border-slate-200">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+          <span class="bg-cyan-100 text-cyan-800 text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-2 inline-block notranslate" translate="no">TECH-STACK & ARCHITEKTUR</span>
+          <h3 class="text-xl sm:text-2xl font-bold text-slate-900" data-i18n="aboutTechHeading">
+            Eingesetzte Technologien & Tech-Stack
+          </h3>
+          <p class="text-slate-500 text-xs sm:text-sm mt-1" data-i18n="aboutTechSub">
+            Bewährte, robuste und zukunftssichere Web-Technologien für höchste Geschwindigkeit, Zuverlässigkeit und Sicherheit.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          
+          <!-- Tech 1: PHP -->
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-cyan-500/50 hover:shadow-md transition group">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-lg font-black text-slate-900 font-mono group-hover:text-cyan-600 transition notranslate" translate="no">PHP</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-cyan-50 text-cyan-700 border border-cyan-200/60" data-i18n="tech1Role">Backend & Business-Logik</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="tech1Desc">
+              Sichere Server-Architektur, automatische PDF-Rechnungserstellung, API-Schnittstellen und performante Datenverarbeitung.
+            </p>
+          </div>
+
+          <!-- Tech 2: MySQL -->
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-cyan-500/50 hover:shadow-md transition group">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-lg font-black text-slate-900 font-mono group-hover:text-cyan-600 transition notranslate" translate="no">MySQL</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-blue-50 text-blue-700 border border-blue-200/60" data-i18n="tech2Role">Datenbank & Archivierung</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="tech2Desc">
+              Strukturierte relationale Datenspeicherung, automatische Backups, hohe Ausfallsicherheit und strikte DSGVO-Konformität.
+            </p>
+          </div>
+
+          <!-- Tech 3: JavaScript & jQuery -->
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-cyan-500/50 hover:shadow-md transition group">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-lg font-black text-slate-900 font-mono group-hover:text-cyan-600 transition notranslate" translate="no">JavaScript / jQuery</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-amber-50 text-amber-700 border border-amber-200/60" data-i18n="tech3Role">Frontend & Interaktivität</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="tech3Desc">
+              Reaktive Benutzeroberflächen, dynamische Live-Berechnungen und blitzschnelle Datenaktualisierung ohne Neuladen.
+            </p>
+          </div>
+
+          <!-- Tech 4: HTML5 & PWA -->
+          <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm hover:border-cyan-500/50 hover:shadow-md transition group">
+            <div class="flex items-center justify-between mb-3">
+              <span class="text-lg font-black text-slate-900 font-mono group-hover:text-cyan-600 transition notranslate" translate="no">HTML5 / PWA</span>
+              <span class="text-[10px] font-bold px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 border border-emerald-200/60" data-i18n="tech4Role">Responsive & White-Label</span>
+            </div>
+            <p class="text-xs text-slate-600 leading-relaxed" data-i18n="tech4Desc">
+              Optimiert für Desktop, Tablets und Smartphones auf der Baustelle – 100% in Ihrem Firmen-Branding.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section id="faq" class="py-20 bg-slate-50 border-t border-slate-200">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight mb-3" data-i18n="faqTitle">
+          Häufig gestellte Fragen
+        </h2>
+      </div>
+
+      <div class="space-y-4">
+        
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h4 class="font-bold text-slate-900 text-base mb-2" data-i18n="faqQ1">
+            Wie unterscheidet sich eine individuelle WebApp von Standard-Programmen?
+          </h4>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="faqA1">
+            Bei Standard-Software müssen Sie Ihre Betriebsabläufe an das Programm anpassen und zahlen oft für 50 Funktionen, die Sie gar nicht brauchen. Eine individuelle WebApp wird exakt für Ihren Workflow, mit Ihren Formularfeldern und Ihrem Firmenlogo entwickelt – schnell, einfach und ohne Ballast.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h4 class="font-bold text-slate-900 text-base mb-2" data-i18n="faqQ2">
+            Wem gehört der Quellcode und die entwickelte Software?
+          </h4>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="faqA2">
+            Ihnen! Bei einer individuellen Entwicklung erhalten Sie die vollen Nutzungsrechte. Sie sind an kein starres Lizenzmodell gebunden und haben die volle Kontrolle über Ihre Daten und Ihr System.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h4 class="font-bold text-slate-900 text-base mb-2" data-i18n="faqQ3">
+            Wie lange dauert die Entwicklung einer individuellen WebApp?
+          </h4>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="faqA3">
+            Dank moderner Technologien und modularer Bausteine steht ein erster voll funktionsfähiger Prototyp oft schon innerhalb von 1 bis 2 Wochen bereit. Kleinere Tools sind in wenigen Tagen einsatzbereit, größere Plattformen realisieren wir schrittweise in 3 bis 6 Wochen.
+          </p>
+        </div>
+
+        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <h4 class="font-bold text-slate-900 text-base mb-2" data-i18n="faqQ4">
+            Können Sie auch bestehende Unternehmens- und Kundendaten integrieren?
+          </h4>
+          <p class="text-slate-600 text-sm leading-relaxed" data-i18n="faqA4">
+            Ja, absolut. Ich kann Ihre bisherigen Unternehmens- und Kundendaten nahtlos in die neue WebApp überführen, sodass Ihre Kunden-, Mitarbeiter- und Auftragsdaten sofort einsatzbereit sind und Sie ohne Unterbrechung oder Datenverlust direkt durchstarten können.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / INQUIRY SECTION -->
+  <section id="kontakt" class="py-20 bg-slate-900 text-white relative">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4" data-i18n="formHeading">
+          Lassen Sie uns über Ihr Projekt sprechen!
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base" data-i18n="formSub">
+          Beschreiben Sie kurz Ihre Anforderungen. Ich melde mich innerhalb von 24 Stunden für ein kostenloses, unverbindliches Erstgespräch.
+        </p>
+      </div>
+
+      <!-- Direct Contact Info Badges -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+        <div class="p-4 bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-500/50 rounded-2xl flex items-center gap-3.5 transition group shadow-lg">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+          </div>
+          <div class="min-w-0 flex-1">
+            <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider" data-i18n="contactBadgePhone">Direkt Anrufen / WhatsApp</p>
+            <div class="flex flex-col sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-2 text-xs font-bold font-mono">
+              <a href="tel:+491726125371" class="text-cyan-300 hover:text-cyan-100 hover:underline transition">+49 172 6125371</a>
+              <span class="text-slate-600 hidden sm:inline">•</span>
+              <a href="tel:+491724690446" class="text-cyan-300 hover:text-cyan-100 hover:underline transition">+49 172 4690446</a>
+            </div>
+          </div>
+        </div>
+
+        <a href="mailto:teamtrack.software@hotmail.com" class="p-4 bg-slate-800/80 hover:bg-slate-800 border border-slate-700/80 hover:border-cyan-500/50 rounded-2xl flex items-center gap-3.5 transition group shadow-lg">
+          <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+            <i data-lucide="mail" class="w-5 h-5"></i>
+          </div>
+          <div class="min-w-0">
+            <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider" data-i18n="contactBadgeEmail">E-Mail schreiben</p>
+            <p class="text-xs font-bold text-emerald-300 break-all">teamtrack.software@hotmail.com</p>
+          </div>
+        </a>
+
+        <div class="p-4 bg-slate-800/80 border border-slate-700/80 rounded-2xl flex items-center gap-3.5 shadow-lg">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-500/30 text-indigo-400 flex items-center justify-center flex-shrink-0">
+            <i data-lucide="map-pin" class="w-5 h-5"></i>
+          </div>
+          <div class="min-w-0">
+            <p class="text-[10px] uppercase font-bold text-slate-400 tracking-wider" data-i18n="contactBadgeLocation">Standort & Büro</p>
+            <p class="text-xs sm:text-sm font-bold text-slate-200">97236 Randersacker</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-850 p-6 sm:p-10 rounded-3xl border border-slate-700 shadow-2xl bg-slate-800/90">
+        <form id="contact-form" onsubmit="handleContactSubmit(event)" class="space-y-4">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1" data-i18n="formName">Vor- & Nachname *</label>
+              <input type="text" id="input-name" required placeholder="Max Mustermann" class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1" data-i18n="formCompany">Firmenname *</label>
+              <input type="text" id="input-company" required placeholder="Mustermann Bau GmbH" class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1" data-i18n="formEmail">Geschäftliche E-Mail *</label>
+              <input type="email" id="input-email" required placeholder="m.mustermann@firma.de" class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400">
+            </div>
+            <div>
+              <label class="block text-xs font-semibold text-slate-300 mb-1" data-i18n="formPhone">Telefonnummer</label>
+              <input type="tel" id="input-phone" placeholder="+49 170 1234567" class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" data-i18n="formProjectInterest">Was möchten Sie digitalisieren / entwickeln?</label>
+            <select id="input-interest" class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm focus:outline-none focus:border-cyan-400">
+              <option value="Zeiterfassung" data-i18n="opt1">Individuelle Zeiterfassung & Stundenzettel</option>
+              <option value="Rechnungen" data-i18n="opt2">1-Klick Abrechnung & Rechnungsstellung</option>
+              <option value="CRM" data-i18n="opt3">Kundenverwaltung (CRM) & Kunden-Portal</option>
+              <option value="Logistik" data-i18n="opt4">Logistik, Disposition & Tourenplanung</option>
+              <option value="Fuhrpark" data-i18n="opt5">Auftrags-, Material- & Fuhrparkverwaltung</option>
+              <option value="Gesamtprojekt" data-i18n="opt6">Komplette maßgeschneiderte Unternehmens-WebApp</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-semibold text-slate-300 mb-1" data-i18n="formMessage">Kurze Projektbeschreibung (Optional)</label>
+            <textarea id="input-msg" rows="3" placeholder="Beschreiben Sie kurz, worum es geht..." class="w-full px-4 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-500 text-sm focus:outline-none focus:border-cyan-400"></textarea>
+          </div>
+
+          <button type="submit" class="w-full py-3.5 px-6 rounded-xl font-bold text-sm text-slate-900 bg-gradient-to-r from-cyan-400 to-emerald-400 hover:from-cyan-300 hover:to-emerald-300 shadow-lg shadow-cyan-500/25 transition">
+            <span data-i18n="formSubmitBtn">Kostenlose Projektberatung anfragen</span>
+          </button>
+
+          <p class="text-[11px] text-center text-slate-500 mt-2" data-i18n="formPrivacy">
+            Ihre Angaben werden vertraulich behandelt und ausschließlich zur Beantwortung Ihrer Anfrage genutzt.
+          </p>
+        </form>
+
+        <div id="form-success" class="hidden text-center py-8">
+          <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 border border-emerald-500/40">
+            <i data-lucide="check" class="w-8 h-8"></i>
+          </div>
+          <h4 class="text-xl font-bold text-white mb-2" data-i18n="formSuccessTitle">Vielen Dank für Ihre Anfrage!</h4>
+          <p class="text-slate-300 text-sm" data-i18n="formSuccessSub">Ich habe Ihre Nachricht erhalten und melde mich innerhalb von 24 Stunden bei Ihnen.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <div class="flex items-center gap-3.5">
+          <img src="assets/teamtrack_logo_v2_1788330726427.jpg" alt="TeamTrack Logo" class="h-14 w-14 object-contain rounded-xl">
+          <div>
+            <span class="text-xl font-black tracking-tight text-white flex items-center gap-0.5">
+              <span>Team</span><span class="text-cyan-400">Track</span>
+            </span>
+            <p class="text-slate-400 text-xs font-semibold" data-i18n="footerSub">Freiberufliche Softwareentwicklung & IT-Beratung</p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-6">
+          <button type="button" onclick="openLegalModal('agb')" class="hover:text-white transition cursor-pointer" data-i18n="footerTerms">AGB</button>
+          <button type="button" onclick="openLegalModal('datenschutz')" class="hover:text-white transition cursor-pointer" data-i18n="footerPrivacy">Datenschutz</button>
+          <button type="button" onclick="openLegalModal('impressum')" class="hover:text-white transition cursor-pointer" data-i18n="footerImprint">Impressum</button>
+          <button type="button" onclick="openLegalModal('kontakt')" class="hover:text-white transition cursor-pointer" data-i18n="footerContact">Kontakt</button>
+        </div>
+
+        <div class="text-slate-500 notranslate" translate="no">
+          &copy; 2026 TeamTrack Softwareentwicklung & IT-Beratung. Alle Rechte vorbehalten.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LEGAL MODAL (DATENSCHUTZ / IMPRESSUM / AGB / KONTAKT) -->
+  <div id="legal-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-3 sm:p-6 overflow-y-auto">
+    <div class="bg-slate-900 border border-slate-700 w-full max-w-4xl max-h-[90vh] rounded-3xl shadow-2xl flex flex-col overflow-hidden text-slate-200">
+      
+      <!-- Modal Header -->
+      <div class="px-6 py-4 border-b border-slate-800 flex items-center justify-between bg-slate-950/60">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 flex items-center justify-center">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <h3 id="legal-modal-title" class="font-extrabold text-base sm:text-lg text-white">Rechtliche Hinweise & Datenschutz</h3>
+            <p class="text-[11px] text-slate-400">TeamTrack Softwareentwicklung & IT-Beratung</p>
+          </div>
+        </div>
+
+        <!-- Close Button -->
+        <button type="button" onclick="closeLegalModal()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-400 hover:text-white flex items-center justify-center transition cursor-pointer">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+      <!-- Tab Buttons Navigation -->
+      <div class="px-6 pt-3 pb-2 border-b border-slate-800 bg-slate-900 flex gap-2 sm:gap-3 overflow-x-auto text-xs font-bold">
+        <button type="button" id="tab-btn-datenschutz" onclick="switchLegalTab('datenschutz')" class="px-4 py-2 rounded-xl transition cursor-pointer flex items-center gap-2 bg-cyan-600 text-white shadow-md shadow-cyan-600/20 whitespace-nowrap">
+          <i data-lucide="shield" class="w-4 h-4"></i>
+          <span data-i18n="legalTabDatenschutz">Datenschutzerklärung</span>
+        </button>
+        <button type="button" id="tab-btn-agb" onclick="switchLegalTab('agb')" class="px-4 py-2 rounded-xl transition cursor-pointer flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white whitespace-nowrap">
+          <i data-lucide="file-text" class="w-4 h-4"></i>
+          <span data-i18n="legalTabAgb">AGB & Vertragsbedingungen</span>
+        </button>
+        <button type="button" id="tab-btn-impressum" onclick="switchLegalTab('impressum')" class="px-4 py-2 rounded-xl transition cursor-pointer flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white whitespace-nowrap">
+          <i data-lucide="info" class="w-4 h-4"></i>
+          <span data-i18n="legalTabImpressum">Impressum</span>
+        </button>
+        <button type="button" id="tab-btn-kontakt" onclick="switchLegalTab('kontakt')" class="px-4 py-2 rounded-xl transition cursor-pointer flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white whitespace-nowrap">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          <span data-i18n="legalTabKontakt">Kontakt & Beratung</span>
+        </button>
+      </div>
+
+      <!-- Modal Body Content -->
+      <div id="legal-modal-body" class="p-6 sm:p-8 overflow-y-auto space-y-6 text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="px-6 py-3.5 border-t border-slate-800 bg-slate-950/60 flex items-center justify-between text-xs text-slate-400">
+        <span>Stand: September 2026 • DSGVO- & DDG-konform</span>
+        <button type="button" onclick="closeLegalModal()" class="px-5 py-2 rounded-xl font-bold bg-slate-800 hover:bg-slate-700 text-white transition cursor-pointer">
+          Schließen
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
