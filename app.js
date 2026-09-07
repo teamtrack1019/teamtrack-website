@@ -121,17 +121,22 @@ const translations = {
     m2AboIntervals: "Monatlich • Quartal • Jährlich wählbar",
     m2Item1: "Vergünstigtes Initial-Setup & schlüsselfertige WebApp",
     m2Item2: "7/24 Notfall-Support & Schnelle Reaktionszeit",
-    m2Item3: "Hochleistungs-Cloud-Hosting & Tägliche Backups",
-    m2Item4: "DSGVO-Wartung, Sicherheitsupdates & Laufende Features",
+    m2Item3: "Cloud-Hosting & Tägliche Backups",
+    m2Item4: "DSGVO-Wartung & Laufende Features",
     m2Btn: "Kennenlernen vereinbaren →",
     m3Title: "System-Erweiterung & Schnittstellen",
-    m3Desc: "Modulare Ergänzung bestehender Webseiten oder Software durch einzelne Spezial-Module & APIs.",
+    m3Desc: "Modulare Ergänzung bestehender Webseiten oder Software durch Spezial-Module & APIs.",
     m3Price: "Modulpreis nach Anforderung",
-    m3Item1: "Modulweise Integration (z.B. Zeiterfassung, Fatura, CRM)",
-    m3Item2: "Subdomain-Portallösung (portal.kundenfirma.de)",
-    m3Item3: "API-Schnittstellen (DATEV, SevDesk, ERP-Systeme)",
-    m3Item4: "Direkte Datenbank-Kopplung ohne doppelte Datenpflege",
+    m3Item1: "Modulweise Integration (z.B. Zeiterfassung, CRM)",
+    m3Item2: "Subdomain-Portal für Kunden & Teams",
+    m3Item3: "API-Schnittstellen (DATEV, SevDesk, ERP)",
+    m3Item4: "Direkte Datenbank-Kopplung ohne Doppelpflege",
     m3Btn: "Erweiterung anfragen →",
+    demoBadge: "KOSTENLOSE LIVE-DEMO & TESTZUGANG",
+    demoBadgeFree: "100% Kostenlos & Unverbindlich",
+    demoBannerTitle: "Möchten Sie das System selbst testen oder live erleben?",
+    demoBannerDesc: "Auf Wunsch stellen wir Ihnen gerne einen kostenlosen Demo-Zugang zur Verfügung oder führen Ihnen das System kurz unverbindlich vor, damit Sie und Ihr Team sich direkt selbst von den Vorteilen überzeugen können.",
+    demoBannerBtn: "Kostenlosen Demo-Zugang anfragen →",
     faqTitle: "Häufig gestellte Fragen",
     faqQ1: "Wie unterscheidet sich eine individuelle WebApp von Standard-Programmen?",
     faqA1: "Bei Standard-Software müssen Sie Ihre Betriebsabläufe an das Programm anpassen und zahlen oft für 50 Funktionen, die Sie gar nicht brauchen. Eine individuelle WebApp wird exakt für Ihren Workflow, mit Ihren Formularfeldern und Ihrem Firmenlogo entwickelt – schnell, einfach und ohne Ballast.",
@@ -141,6 +146,8 @@ const translations = {
     faqA3: "Dank moderner Technologien und modularer Bausteine steht ein erster voll funktionsfähiger Prototyp oft schon innerhalb von 1 bis 2 Wochen bereit. Kleinere Tools sind in wenigen Tagen einsatzbereit, größere Plattformen realisieren wir schrittweise in 3 bis 6 Wochen.",
     faqQ4: "Können Sie auch bestehende Unternehmens- und Kundendaten integrieren?",
     faqA4: "Ja, absolut. Ich kann Ihre bisherigen Unternehmens- und Kundendaten nahtlos in die neue WebApp überführen, sodass Ihre Kunden-, Mitarbeiter- und Auftragsdaten sofort einsatzbereit sind und Sie ohne Unterbrechung oder Datenverlust direkt durchstarten können.",
+    faqQ5: "Gibt es eine kostenlose Live-Demo oder einen Testzugang?",
+    faqA5: "Ja, absolut! Auf Wunsch stellen wir Ihnen gerne einen kostenlosen Demo-Zugang zur Verfügung oder führen Ihnen das System in einem kurzen, unverbindlichen Online-Termin vor, damit Sie und Ihr Team alle Module direkt in der Praxis ausprobieren können.",
     formHeading: "Lassen Sie uns über Ihr Projekt sprechen!",
     formSub: "Beschreiben Sie kurz Ihre Anforderungen. Ich melde mich innerhalb von 24 Stunden für ein kostenloses, unverbindliches Erstgespräch.",
     formName: "Vor- & Nachname *",
@@ -148,6 +155,7 @@ const translations = {
     formEmail: "Geschäftliche E-Mail *",
     formPhone: "Telefonnummer",
     formProjectInterest: "Was möchten Sie digitalisieren / entwickeln?",
+    optDemo: "🎯 Kostenlose Live-Demo & Testzugang gewünscht",
     opt1: "Individuelle Zeiterfassung & Stundenzettel",
     opt2: "1-Klick Abrechnung & Rechnungsstellung",
     opt3: "Kundenverwaltung (CRM) & Kunden-Portal",
@@ -159,7 +167,7 @@ const translations = {
     formPrivacy: "Ihre Angaben werden vertraulich behandelt und ausschließlich zur Beantwortung Ihrer Anfrage genutzt.",
     formSuccessTitle: "Vielen Dank für Ihre Anfrage!",
     formSuccessSub: "Ich habe Ihre Nachricht erhalten und melde mich innerhalb von 24 Stunden bei Ihnen.",
-    footerSub: "Freiberufliche Softwareentwicklung & IT-Beratung",
+    footerSub: "Softwareentwicklung & IT-Beratung",
     footerTerms: "AGB",
     footerPrivacy: "Datenschutz",
     footerImprint: "Impressum",
@@ -306,6 +314,11 @@ const translations = {
     m3Item3: "Muhasebe / DATEV / ERP API Entegrasyonu",
     m3Item4: "Mevcut Veritabanıyla Tam Uyumlu Çalışma",
     m3Btn: "Modül Ekleme İste →",
+    demoBadge: "ÜCRETSİZ CANLI DEMO & TEST HESABI",
+    demoBadgeFree: "%100 Ücretsiz & Bağlayıcı Değil",
+    demoBannerTitle: "Sistemi kendiniz test etmek veya canlı görmek ister misiniz?",
+    demoBannerDesc: "İstemeniz halinde size ve ekibinize sistemi doğrudan deneyimleyebilmeniz için ücretsiz bir demo hesabı açabilir veya kısa bir görüşmeyle sistemi canlı tanıtabiliriz.",
+    demoBannerBtn: "Ücretsiz Demo Hesabı İsteyin →",
     faqTitle: "Sıkça Sorulan Sorular",
     faqQ1: "Özel bir Web Uygulamasının hazır programlardan farkı nedir?",
     faqA1: "Hazır programlar işletmenizi kendi kalıbına sokmaya çalışır ve kullanmadığınız yüzlerce gereksiz özellik için her ay yüksek lisans ücreti alır. Size özel bir web yazılımı ise tam olarak sizin iş adımlarınıza, şantiye/ofis kurallarınıza ve kendi logonuzla sıfırdan üretilir.",
@@ -315,6 +328,8 @@ const translations = {
     faqA3: "Modern altyapımız ve modüler mimarimiz sayesinde çalışan ilk prototip genellikle 1-2 hafta içinde hazır olur. Küçük araç ve paneller birkaç günde teslim edilirken, kapsamlı kurumsal yazılımlar 3 ila 6 hafta içinde adım adım kullanıma açılır.",
     faqQ4: "Mevcut şirket ve müşteri verilerimizi yeni sisteme aktarabilir miyiz?",
     faqA4: "Evet, kesinlikle. Mevcut müşteri, çalışan ve geçmiş sipariş verilerinizi yeni web paneline eksiksiz olarak aktarabilirim. Böylece hiçbir veri kaybı yaşamadan ve işleriniz aksamadan doğrudan yeni sisteminizle çalışmaya devam edebilirsiniz.",
+    faqQ5: "Ücretsiz canlı demo veya deneme hesabı var mı?",
+    faqA5: "Evet, kesinlikle! İstemeniz halinde size ve ekibinize sistemi doğrudan test edebilmeniz için ücretsiz bir demo hesabı açabilir veya 15 dakikalık kısa bir sunumla sistemi canlı gösterebiliriz.",
     formHeading: "Projenizi Birlikte Hayata Geçirelim!",
     formSub: "İhtiyaçlarınızı kısaca paylaşın. 24 saat içinde ücretsiz ön değerlendirme için size dönüş yapayım.",
     formName: "Adınız & Soyadınız *",
@@ -322,6 +337,7 @@ const translations = {
     formEmail: "Kurumsal E-Posta *",
     formPhone: "Telefon Numarası",
     formProjectInterest: "Hangi alanı dijitalleştirmek istiyorsunuz?",
+    optDemo: "🎯 Ücretsiz Canlı Demo & Test Hesabı Talebi",
     opt1: "Özel Saat Takibi & Şantiye Puantajı",
     opt2: "1-Tıkla Otomatik Fatura & Hakediş",
     opt3: "Müşteri Yönetimi (CRM) & Müşteri Portalı",
@@ -333,7 +349,7 @@ const translations = {
     formPrivacy: "Bilgileriniz gizli tutulur ve yalnızca talebinize dönüş yapmak amacıyla kullanılır.",
     formSuccessTitle: "Talebiniz Başarıyla Alındı!",
     formSuccessSub: "Mesajınızı aldım, 24 saat içinde sizinle iletişime geçeceğim.",
-    footerSub: "Serbest Yazılım Geliştirme & IT Danışmanlığı",
+    footerSub: "Yazılım Geliştirme & IT Danışmanlığı",
     footerTerms: "Kullanım Şartları",
     footerPrivacy: "Gizlilik Politikası",
     footerImprint: "Künye / Yasal",
@@ -480,6 +496,11 @@ const translations = {
     m3Item3: "API Interfaces (DATEV, QuickBooks, ERPs)",
     m3Item4: "Direct SQL Database Sync Without Redundancy",
     m3Btn: "Inquire for Add-on →",
+    demoBadge: "FREE LIVE DEMO & TRIAL ACCESS",
+    demoBadgeFree: "100% Free & No Obligation",
+    demoBannerTitle: "Would you like to test the system or see a live walkthrough?",
+    demoBannerDesc: "Upon request, we gladly provide you with free demo access or a brief, non-binding walkthrough so you and your team can experience the benefits firsthand.",
+    demoBannerBtn: "Request Free Demo Access →",
     faqTitle: "Frequently Asked Questions",
     faqQ1: "How does custom software differ from off-the-shelf SaaS?",
     faqA1: "Standard software forces you to adapt your business to rigid templates and charges endless monthly fees for features you do not need. A custom web app is built 100% around your rules, your fields, and your logo – clean, fast, and scalable.",
@@ -489,6 +510,8 @@ const translations = {
     faqA3: "Thanks to modern web technologies and modular architectures, a fully working prototype is often ready within 1 to 2 weeks. Lean tools launch in a few days, while full-scale platforms are delivered iteratively in 3 to 6 weeks.",
     faqQ4: "Can you integrate our existing business and customer data?",
     faqA4: "Yes, absolutely. I can seamlessly migrate your existing business, customer, and historical records into the new WebApp so you can transition immediately without any data loss or operational downtime.",
+    faqQ5: "Is there a free live demo or trial access?",
+    faqA5: "Yes, absolutely! Upon request, we will gladly provide you with free demo access or walk you through the system in a brief online session so you and your team can experience it firsthand.",
     formHeading: "Let's Discuss Your Next Software Project!",
     formSub: "Share your requirements. I will get back to you within 24 hours for a free, non-binding initial consultation.",
     formName: "Full Name *",
@@ -507,7 +530,7 @@ const translations = {
     formPrivacy: "Your information is strictly confidential and used solely to answer your inquiry.",
     formSuccessTitle: "Thank you for reaching out!",
     formSuccessSub: "I have received your message and will respond within 24 hours.",
-    footerSub: "Freelance Software Engineering & IT Consulting",
+    footerSub: "Software Development & IT Consulting",
     footerTerms: "Terms",
     footerPrivacy: "Privacy",
     footerImprint: "Legal Notice",
@@ -528,6 +551,12 @@ const translations = {
 let currentLang = 'de';
 let currentTab = 'zeiterfassung';
 let currentVariant = 0; // 0 for A, 1 for B, 2 for C
+let stempelSubMode = 'craft'; // 'craft' | 'lkw'
+
+function switchStempelSubMode(mode) {
+  stempelSubMode = mode;
+  renderShowcaseContent();
+}
 
 // Rich Showcase Data: 5 Modules, each with 3 distinct models (A, B, C)
 const showcaseData = {
@@ -549,92 +578,155 @@ const showcaseData = {
         render: (lang) => {
           const isTr = lang === "tr";
           const isEn = lang === "en";
+          const isLkw = stempelSubMode === 'lkw';
           return `
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
-              <div class="bg-gradient-to-b from-slate-900 to-slate-950 p-5 rounded-2xl border-2 border-cyan-500/50 flex flex-col justify-between shadow-2xl">
+              <!-- Column 1: Live Stempel (Craft & LKW Dual Mode) -->
+              <div class="bg-gradient-to-b from-slate-900 to-slate-950 p-4 sm:p-5 rounded-2xl border-2 ${isLkw ? 'border-amber-500/60 shadow-amber-500/10' : 'border-cyan-500/50 shadow-cyan-500/10'} flex flex-col justify-between shadow-2xl transition-all duration-300">
                 <div>
                   <div class="flex items-center justify-between mb-3">
-                    <h4 class="font-bold text-sm text-cyan-300 flex items-center gap-1.5">
-                      <i data-lucide="smartphone" class="w-4 h-4 text-cyan-400"></i>
-                      <span>${isTr ? "Saha Mobil Puantaj" : (isEn ? "Mobile Job Clock" : "Mobile Baustellen-Stempeluhr")}</span>
+                    <h4 class="font-bold text-xs sm:text-sm ${isLkw ? 'text-amber-300' : 'text-cyan-300'} flex items-center gap-1.5 uppercase tracking-wider">
+                      <span class="w-2.5 h-2.5 rounded-full ${isLkw ? 'bg-amber-400' : 'bg-emerald-400'} animate-pulse"></span>
+                      <span>${isTr ? "CANLI PUANTAJ EKRANI" : (isEn ? "PERSONAL LIVE CLOCK" : "MEIN PERSÖNLICHER LIVE-STEMPEL")}</span>
                     </h4>
-                    <span class="text-[10px] bg-cyan-950 text-cyan-300 px-2 py-0.5 rounded border border-cyan-700 font-mono">GPS-LOCK</span>
+                    <span class="text-[10px] bg-slate-950 text-emerald-400 px-2 py-0.5 rounded-full border border-emerald-800/80 font-mono font-bold tracking-tight">
+                      ${isTr ? "STEMPEL'E HAZIR" : (isEn ? "READY TO CLOCK" : "BEREIT ZUM STEMPELN")}
+                    </span>
                   </div>
-                  <div class="p-4 bg-slate-950/90 rounded-xl border border-cyan-900/40 text-center mb-3">
-                    <p class="text-xs text-slate-400"><span>${isTr ? "Çalışan:" : (isEn ? "Worker:" : "Mitarbeiter:")}</span> <strong class="text-white">${isTr ? "Ahmet Yılmaz" : (isEn ? "Thomas Baker" : "Thomas Becker")}</strong></p>
-                    <p class="text-xs text-slate-400 mb-2"><span>${isTr ? "Proje:" : (isEn ? "Project:" : "Projekt:")}</span> <span class="text-cyan-300">${isTr ? "Kadıköy Plaza Şantiyesi #402" : (isEn ? "Downtown Plaza Site #402" : "Baustelle Schwabing #402")}</span></p>
-                    <div class="text-3xl font-mono font-black text-cyan-400 tracking-wider my-2" id="live-timer-display">06:45:17</div>
-                    <p class="text-[11px] text-emerald-400 flex items-center justify-center gap-1 font-medium">
-                      <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> <span>${isTr ? "GPS Doğrulandı: İstanbul / Kadıköy" : (isEn ? "GPS Verified: Central Zone" : "GPS verifiziert: München")}</span>
-                    </p>
+
+                  <!-- Sub-Mode Switcher Tabs -->
+                  <div class="grid grid-cols-2 gap-1.5 p-1 bg-slate-950 rounded-xl border border-slate-800 mb-3">
+                    <button type="button" onclick="switchStempelSubMode('craft')" class="py-1.5 px-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${!isLkw ? 'bg-blue-600 text-white shadow-md shadow-blue-500/30' : 'text-slate-400 hover:text-slate-200'}">
+                      <i data-lucide="hammer" class="w-3.5 h-3.5"></i>
+                      <span class="truncate">${isTr ? "Zanaat & Temizlik" : (isEn ? "Craft & Cleaning" : "Handwerk & Reinigung")}</span>
+                    </button>
+                    <button type="button" onclick="switchStempelSubMode('lkw')" class="py-1.5 px-2 rounded-lg text-xs font-bold transition flex items-center justify-center gap-1.5 cursor-pointer ${isLkw ? 'bg-amber-600 text-white shadow-md shadow-amber-500/30' : 'text-slate-400 hover:text-slate-200'}">
+                      <i data-lucide="truck" class="w-3.5 h-3.5"></i>
+                      <span class="truncate">${isTr ? "LKW & Sürüş (VO 561)" : (isEn ? "Truck & Drive (VO 561)" : "LKW & Fahrtzeit (VO 561)")}</span>
+                    </button>
                   </div>
-                </div>
-                <div class="grid grid-cols-2 gap-2">
-                  <button type="button" class="py-2.5 px-2 bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 rounded-xl text-xs font-bold flex items-center justify-center gap-1 transition">
-                    <i data-lucide="coffee" class="w-3.5 h-3.5"></i> <span>${isTr ? "Mola (30 dk)" : (isEn ? "Break (30m)" : "Pause (30m)")}</span>
-                  </button>
-                  <button type="button" class="py-2.5 px-2 bg-red-500/20 hover:bg-red-500/30 text-red-300 border border-red-500/40 rounded-xl text-xs font-bold flex items-center justify-center gap-1 transition">
-                    <i data-lucide="square" class="w-3.5 h-3.5"></i> <span>${isTr ? "Mesaiyi Bitir" : (isEn ? "End Shift" : "Feierabend")}</span>
-                  </button>
+
+                  ${!isLkw ? `
+                    <!-- Handwerk & Reinigung View -->
+                    <div class="p-3.5 bg-slate-950/90 rounded-xl border border-blue-900/40 text-center mb-3">
+                      <div class="flex justify-between text-[11px] text-slate-400 mb-1">
+                        <span>${isTr ? "Çalışan:" : (isEn ? "Worker:" : "Mitarbeiter:")} <strong class="text-white">${isTr ? "Ahmet Yılmaz" : (isEn ? "Thomas Baker" : "Thomas Becker")}</strong></span>
+                        <span class="text-cyan-300 font-mono font-bold">${isTr ? "Şantiye #402" : (isEn ? "Site #402" : "Baustelle #402")}</span>
+                      </div>
+                      <div class="text-3xl sm:text-4xl font-mono font-black text-white tracking-widest my-2.5">00:00:00</div>
+                      <p class="text-[11px] text-slate-400 mb-3">${isTr ? "Tippen Sie unten auf „Arbeitsbeginn“ zum Stempeln" : (isEn ? "Tap „Start Shift“ below to clock in" : "Tippen Sie unten auf „Arbeitsbeginn“ zum Stempeln")}</p>
+                      <button type="button" class="w-full py-2.5 px-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-600/30">
+                        <i data-lucide="play" class="w-4 h-4 fill-white"></i> <span>${isTr ? "İşe Başla (Giriş Yap)" : (isEn ? "Start Shift (Clock In)" : "Arbeitsbeginn (Kommen)")}</span>
+                      </button>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] px-1 text-slate-400">
+                      <span>${isTr ? "Bugün çalışılan:" : (isEn ? "Logged today:" : "Heute geleistet:")} <strong class="text-slate-200">8.0 ${isTr ? "Sa" : (isEn ? "hrs" : "Std.")}</strong></span>
+                      <span class="text-emerald-400 font-semibold">${isTr ? "Haftalık: 38.5 / 40 Sa. ✓" : (isEn ? "Weekly: 38.5 / 40 hrs ✓" : "Wochenkonto: 38.5 / 40 Std. ✓")}</span>
+                    </div>
+                  ` : `
+                    <!-- LKW & VO 561 View -->
+                    <div class="p-3 bg-slate-950/90 rounded-xl border border-amber-500/40 text-center mb-3 space-y-2">
+                      <div class="p-2.5 bg-amber-950/40 rounded-lg border border-amber-500/30 text-left">
+                        <div class="flex items-center justify-between mb-1.5">
+                          <span class="font-bold text-amber-300 text-[11px] flex items-center gap-1">
+                            <i data-lucide="shield-check" class="w-3.5 h-3.5 text-amber-400"></i>
+                            <span>VO (EG) 561/2006 Lenkzeit-Assistent</span>
+                          </span>
+                          <span class="text-[9px] bg-emerald-950 text-emerald-300 px-1.5 py-0.5 rounded border border-emerald-800 font-bold">BALM/BAG Konform ✓</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 text-[10px] text-slate-300 border-t border-amber-500/20 pt-1.5">
+                          <div>
+                            <span class="text-slate-400 block">${isTr ? "45 dk Zorunlu Molaya:" : (isEn ? "To 45-min Break:" : "Bis 45-Min-Pflichtpause:")}</span>
+                            <strong class="text-amber-300 font-mono text-xs">04:30:00 Std.</strong> <span class="text-[9px] text-slate-400">(Max 4,5h)</span>
+                          </div>
+                          <div class="text-right">
+                            <span class="text-slate-400 block">${isTr ? "Günlük Sürüş:" : (isEn ? "Daily Driving:" : "Tageslenkzeit:")}</span>
+                            <strong class="text-amber-300 font-mono text-xs">3.8 / 9.0 Std.</strong>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="text-3xl sm:text-4xl font-mono font-black text-white tracking-widest my-1.5">00:00:00</div>
+                      <p class="text-[11px] text-slate-400 mb-2">${isTr ? "Tippen Sie auf „Lenkzeit starten (Fahrtantritt)“" : (isEn ? "Tap „Start Driving Time“ to begin trip" : "Tippen Sie auf „Lenkzeit starten (Fahrtantritt)“")}</p>
+                      <button type="button" class="w-full py-2.5 px-3 bg-amber-600 hover:bg-amber-500 text-white rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center gap-2 transition shadow-lg shadow-amber-600/30">
+                        <i data-lucide="play" class="w-4 h-4 fill-white"></i> <span>${isTr ? "Sürüşü Başlat (Yola Çıkış)" : (isEn ? "Start Driving Time (Departure)" : "Lenkzeit starten (Fahrtantritt)")}</span>
+                      </button>
+                    </div>
+                    <div class="flex items-center justify-between text-[11px] px-1 text-slate-400">
+                      <span>${isTr ? "Bugün çalışılan:" : (isEn ? "Logged today:" : "Heute geleistet:")} <strong class="text-slate-200">8.0 ${isTr ? "Sa" : (isEn ? "hrs" : "Std.")}</strong></span>
+                      <span class="text-emerald-400 font-semibold">BALM / BAG Konform ✓</span>
+                    </div>
+                  `}
                 </div>
               </div>
 
-              <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 shadow-xl">
-                <div class="flex items-center justify-between mb-3">
-                  <h4 class="font-bold text-sm text-slate-200 flex items-center gap-2">
-                    <i data-lucide="users" class="w-4 h-4 text-emerald-400"></i>
-                    <span>${isTr ? "Günün Ekip Durumu" : (isEn ? "Active Crew Overview" : "Heutige Team-Übersicht")}</span>
-                  </h4>
-                  <span class="text-[11px] text-emerald-400 font-mono font-bold">${isTr ? "8 / 8 sahada aktif" : (isEn ? "8 / 8 on site" : "8 / 8 im Einsatz")}</span>
+              <!-- Column 2: Heutige Team-Übersicht -->
+              <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 shadow-xl flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-3">
+                    <h4 class="font-bold text-sm text-slate-200 flex items-center gap-2">
+                      <i data-lucide="users" class="w-4 h-4 text-emerald-400"></i>
+                      <span>${isTr ? "Günün Ekip Durumu" : (isEn ? "Active Crew Overview" : "Heutige Team-Übersicht")}</span>
+                    </h4>
+                    <span class="text-[11px] text-emerald-400 font-mono font-bold">${isTr ? "8 / 8 sahada aktif" : (isEn ? "8 / 8 on site" : "8 / 8 im Einsatz")}</span>
+                  </div>
+                  <div class="space-y-2 text-xs">
+                    <div class="flex items-center justify-between p-2.5 bg-slate-950/60 rounded-xl border border-slate-800">
+                      <div class="flex items-center gap-2">
+                        <div class="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
+                        <div>
+                          <p class="font-bold text-slate-200">${isTr ? "Ahmet Yılmaz" : (isEn ? "Thomas Baker" : "Thomas Becker")}</p>
+                          <p class="text-[10px] text-slate-400">${isTr ? "Elektrik & Montaj" : (isEn ? "Electrical & Assembly" : "Elektroinstallation")}</p>
+                        </div>
+                      </div>
+                      <span class="font-mono text-cyan-300 font-bold">6.8 ${isTr ? "Sa" : (isEn ? "hrs" : "Std")}</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2.5 bg-slate-950/60 rounded-xl border border-slate-800">
+                      <div class="flex items-center gap-2">
+                        <div class="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
+                        <div>
+                          <p class="font-bold text-slate-200">${isTr ? "Murat Demir (LKW Şoförü)" : (isEn ? "Stephen Weber (Truck Driver)" : "Stefan Weber (LKW-Fahrer)")}</p>
+                          <p class="text-[10px] text-amber-300/90">${isTr ? "Tour #104 (Münih → Nürnberg) • Sürüş: 3.8 Sa" : (isEn ? "Tour #104 (Munich → Nuremberg) • Drive: 3.8h" : "Tour #104 (München → Nürnberg) • Lenk: 3.8h")}</p>
+                        </div>
+                      </div>
+                      <span class="font-mono text-amber-300 font-bold">8.0 ${isTr ? "Sa" : (isEn ? "hrs" : "Std")}</span>
+                    </div>
+                    <div class="flex items-center justify-between p-2.5 bg-slate-950/60 rounded-xl border border-slate-800">
+                      <div class="flex items-center gap-2">
+                        <div class="w-2.5 h-2.5 rounded-full bg-blue-400"></div>
+                        <div>
+                          <p class="font-bold text-slate-200">${isTr ? "Emre Kaya" : (isEn ? "Julian Smith" : "Julian Schmidt")}</p>
+                          <p class="text-[10px] text-slate-400">${isTr ? "Bina Temizliği / Obje #12" : (isEn ? "Facility Cleaning / Site #12" : "Gebäudereinigung #12")}</p>
+                        </div>
+                      </div>
+                      <span class="font-mono text-cyan-300 font-bold">7.5 ${isTr ? "Sa" : (isEn ? "hrs" : "Std")}</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="space-y-2 text-xs">
-                  <div class="flex items-center justify-between p-2.5 bg-slate-950/60 rounded-xl border border-slate-800">
-                    <div class="flex items-center gap-2">
-                      <div class="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-                      <div>
-                        <p class="font-bold text-slate-200">${isTr ? "Ahmet Yılmaz" : (isEn ? "Thomas Baker" : "Thomas Becker")}</p>
-                        <p class="text-[10px] text-slate-400">${isTr ? "Elektrik Tesisatı" : (isEn ? "Electrical Installation" : "Elektroinstallation")}</p>
-                      </div>
-                    </div>
-                    <span class="font-mono text-cyan-300 font-bold">6.8 ${isTr ? "Sa" : (isEn ? "hrs" : "Std")}</span>
-                  </div>
-                  <div class="flex items-center justify-between p-2.5 bg-slate-950/60 rounded-xl border border-slate-800">
-                    <div class="flex items-center gap-2">
-                      <div class="w-2.5 h-2.5 rounded-full bg-emerald-400"></div>
-                      <div>
-                        <p class="font-bold text-slate-200">${isTr ? "Murat Demir" : (isEn ? "Stephen Weber" : "Stefan Weber")}</p>
-                        <p class="text-[10px] text-slate-400">${isTr ? "Bakım & Onarım" : (isEn ? "Maintenance & Repair" : "Wartung & Reparatur")}</p>
-                      </div>
-                    </div>
-                    <span class="font-mono text-cyan-300 font-bold">8.0 ${isTr ? "Sa" : (isEn ? "hrs" : "Std")}</span>
-                  </div>
-                  <div class="flex items-center justify-between p-2.5 bg-slate-950/60 rounded-xl border border-slate-800">
-                    <div class="flex items-center gap-2">
-                      <div class="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
-                      <div>
-                        <p class="font-bold text-slate-200">${isTr ? "Emre Kaya" : (isEn ? "Julian Smith" : "Julian Schmidt")}</p>
-                        <p class="text-[10px] text-slate-400">${isTr ? "Yıllık İzin" : (isEn ? "Annual Leave" : "Urlaub")}</p>
-                      </div>
-                    </div>
-                    <span class="text-[11px] text-amber-300 font-bold">${isTr ? "İzinli" : (isEn ? "On Leave" : "Urlaub")}</span>
-                  </div>
+                <div class="mt-3 pt-2.5 border-t border-slate-700/80 text-[11px] text-slate-400 flex items-center justify-between">
+                  <span>${isTr ? "Zanaat, Lojistik & Temizlik tek panelde" : (isEn ? "Craft, Trucking & Cleaning united" : "Handwerk, LKW & Reinigung vereint")}</span>
+                  <span class="text-emerald-400 font-bold font-mono">Live GPS-Sync ✓</span>
                 </div>
               </div>
 
+              <!-- Column 3: Compliance & Check Card -->
               <div class="bg-gradient-to-b from-cyan-950/40 via-slate-800 to-slate-850 p-5 rounded-2xl border border-cyan-500/30 flex flex-col justify-between shadow-xl">
                 <div>
                   <h4 class="font-bold text-sm text-slate-200 flex items-center gap-2 mb-3">
                     <i data-lucide="shield-check" class="w-4 h-4 text-cyan-400"></i>
-                    <span>${isTr ? "Yasal Mola (ArbZG) Kontrolü" : (isEn ? "ArbZG & Break Compliance" : "ArbZG & Pausen-Check")}</span>
+                    <span>${isTr ? "Yasal Süre & Mola Uyumu" : (isEn ? "Legal & Rest Compliance" : "ArbZG & VO 561 Compliance")}</span>
                   </h4>
-                  <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-2 text-xs">
+                  <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-2.5 text-xs">
                     <div class="flex justify-between text-emerald-400 font-semibold">
-                      <span>${isTr ? "Mola Uyumu:" : (isEn ? "Break Compliance:" : "Pausen-Einhaltung:")}</span>
-                      <span>${isTr ? "%100 Uygun" : (isEn ? "100% OK" : "100% OK")}</span>
+                      <span>${isTr ? "ArbZG Mola Uyumu:" : (isEn ? "ArbZG Break Compliance:" : "ArbZG Pausen-Einhaltung:")}</span>
+                      <span>100% OK</span>
                     </div>
-                    <div class="flex justify-between text-cyan-300">
-                      <span>${isTr ? "Aylık Toplam Ekip Saati:" : (isEn ? "Total Monthly Team Hours:" : "Monatsstunden Team:")}</span>
-                      <span class="font-mono font-bold">1.248,5 ${isTr ? "Sa" : (isEn ? "hrs" : "Std")}</span>
+                    <div class="flex justify-between text-amber-300 font-semibold">
+                      <span>${isTr ? "VO 561 Sürüş Uyumu:" : (isEn ? "EC 561 Driving Rules:" : "VO 561 Lenkzeit-Check:")}</span>
+                      <span>BALM / BAG Konform ✓</span>
+                    </div>
+                    <div class="flex justify-between text-cyan-300 pt-1 border-t border-slate-800 font-mono font-bold">
+                      <span>${isTr ? "Aylık Toplam Ekip Saati:" : (isEn ? "Total Monthly Hours:" : "Monatsstunden Gesamt:")}</span>
+                      <span>1.248,5 ${isTr ? "Sa" : (isEn ? "hrs" : "Std")}</span>
                     </div>
                   </div>
                 </div>
@@ -663,16 +755,16 @@ const showcaseData = {
                 <div class="flex items-center justify-between mb-3">
                   <div class="flex items-center gap-2">
                     <i data-lucide="table" class="w-4 h-4 text-indigo-400"></i>
-                    <h4 class="font-bold text-sm text-indigo-200">${isTr ? "Haftalık Proje Puantaj Matrisi (36. Hafta)" : (isEn ? "Weekly Project Timesheet Matrix (Week 36)" : "Wöchentliche Projekt-Matrix (KW 36)")}</h4>
+                    <h4 class="font-bold text-sm text-indigo-200">${isTr ? "Haftalık Puantaj Matrisi (Zanaat, Lojistik, Temizlik)" : (isEn ? "Weekly Timesheet Matrix (Multi-Industry)" : "Wöchentliche Arbeits- & Lenkzeit-Matrix (KW 36)")}</h4>
                   </div>
-                  <span class="text-xs bg-indigo-950 text-indigo-300 px-2.5 py-0.5 rounded border border-indigo-700 font-bold">${isTr ? "Usta Onaylı" : (isEn ? "Supervisor Approved" : "Meister-Freigabe")}</span>
+                  <span class="text-xs bg-indigo-950 text-indigo-300 px-2.5 py-0.5 rounded border border-indigo-700 font-bold">${isTr ? "Usta & Dispo Onaylı" : (isEn ? "Approved" : "Meister-Freigabe")}</span>
                 </div>
                 <div class="overflow-x-auto">
                   <table class="w-full text-xs text-left text-slate-300">
                     <thead class="bg-slate-950 text-slate-400 text-[11px] uppercase">
                       <tr>
                         <th class="p-2">${isTr ? "Çalışan" : (isEn ? "Employee" : "Mitarbeiter")}</th>
-                        <th class="p-2">${isTr ? "Proje" : (isEn ? "Project" : "Projekt")}</th>
+                        <th class="p-2">${isTr ? "Sektör / Görev" : (isEn ? "Role / Assignment" : "Bereich / Auftrag")}</th>
                         <th class="p-2 text-center">${isTr ? "Pzt" : (isEn ? "Mon" : "Mo")}</th>
                         <th class="p-2 text-center">${isTr ? "Sal" : (isEn ? "Tue" : "Di")}</th>
                         <th class="p-2 text-center">${isTr ? "Çar" : (isEn ? "Wed" : "Mi")}</th>
@@ -684,7 +776,7 @@ const showcaseData = {
                     <tbody class="divide-y divide-slate-800">
                       <tr>
                         <td class="p-2 font-bold text-white">${isTr ? "A. Yılmaz" : (isEn ? "T. Baker" : "T. Becker")}</td>
-                        <td class="p-2 text-slate-400">${isTr ? "Metro Plaza Ticaret Merkezi #402" : (isEn ? "Metro Plaza Business Park #402" : "Gewerbepark #402")}</td>
+                        <td class="p-2 text-slate-400">${isTr ? "Şantiye Montaj #402" : (isEn ? "Job Site Schwabing #402" : "Montage Schwabing #402")}</td>
                         <td class="p-2 text-center font-mono">8.0</td>
                         <td class="p-2 text-center font-mono">8.5</td>
                         <td class="p-2 text-center font-mono">8.0</td>
@@ -693,18 +785,18 @@ const showcaseData = {
                         <td class="p-2 text-right font-mono font-bold text-indigo-300">40.0 h</td>
                       </tr>
                       <tr>
-                        <td class="p-2 font-bold text-white">${isTr ? "M. Demir" : (isEn ? "S. Weber" : "S. Weber")}</td>
-                        <td class="p-2 text-slate-400">${isTr ? "Şehir Hastanesi Bakım Projesi" : (isEn ? "City Hospital Maintenance" : "Wartung Klinik Süd")}</td>
+                        <td class="p-2 font-bold text-white">${isTr ? "M. Demir (LKW)" : (isEn ? "S. Weber (Truck)" : "S. Weber (LKW)")}</td>
+                        <td class="p-2 text-amber-300/90">${isTr ? "Lojistik Tour #84 (Fahrt: 22h)" : (isEn ? "Tour #84 (Drive: 22h)" : "LKW-Tour #84 (Lenk: 22h)")}</td>
                         <td class="p-2 text-center font-mono">8.0</td>
                         <td class="p-2 text-center font-mono">8.0</td>
                         <td class="p-2 text-center font-mono">8.0</td>
                         <td class="p-2 text-center font-mono">8.5</td>
                         <td class="p-2 text-center font-mono">7.5</td>
-                        <td class="p-2 text-right font-mono font-bold text-indigo-300">40.0 h</td>
+                        <td class="p-2 text-right font-mono font-bold text-amber-300">40.0 h</td>
                       </tr>
                       <tr>
                         <td class="p-2 font-bold text-white">${isTr ? "E. Kaya" : (isEn ? "J. Smith" : "M. Bauer")}</td>
-                        <td class="p-2 text-slate-400">${isTr ? "Vadi Konutları Yeni İnşaat" : (isEn ? "Valley Residential Project" : "Neubau Wohnpark")}</td>
+                        <td class="p-2 text-slate-400">${isTr ? "Bina Temizliği / Plaza" : (isEn ? "Facility Cleaning Site" : "Objektreinigung Park")}</td>
                         <td class="p-2 text-center font-mono">8.0</td>
                         <td class="p-2 text-center font-mono">8.0</td>
                         <td class="p-2 text-center font-mono">8.0</td>
@@ -722,11 +814,11 @@ const showcaseData = {
                   <div class="bg-indigo-600/20 text-indigo-300 text-[10px] font-bold px-2 py-0.5 rounded w-fit mb-2">1-KLICK DATEV / EXCEL</div>
                   <h4 class="font-bold text-sm text-slate-200 mb-2">${isTr ? "Bordro & Muhasebe Dışa Aktarımı" : (isEn ? "Payroll & DATEV Export" : "Lohnexport & Freigabe")}</h4>
                   <p class="text-xs text-slate-400 mb-3 leading-relaxed">
-                    ${isTr ? "Onaylanmış puantaj saatleri tek tıkla muhasebe ve Excel formatında dışa aktarılır. Fazla mesai otomatik hesaplanır." : (isEn ? "Export approved timesheets directly into DATEV / payroll systems with 1 click." : "Geprüfte Wochenstunden mit einem Klick an DATEV Lodas oder Lohn und Gehalt übergeben.")}
+                    ${isTr ? "Çalışma, mola ve LKW sürüş saatleri (ArbZG + MiLoG + VO 561) otomatik ayrıştırılarak tek tıkla DATEV ve Excel bordro formatında aktarılır." : (isEn ? "Export approved hours with automatic separation of work, driving and rest times directly into DATEV / payroll systems." : "Geprüfte Wochenstunden inkl. automatischer Trennung von Arbeits-, Fahrt- & Lenkzeiten (ArbZG, MiLoG, VO 561) mit einem Klick an DATEV Lodas übergeben.")}
                   </p>
                 </div>
                 <button type="button" class="w-full py-2.5 px-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition">
-                  <i data-lucide="file-spreadsheet" class="w-4 h-4"></i> <span>${isTr ? "Bordro / Excel Çıktısı Al (.csv)" : (isEn ? "Export Timesheet (.csv)" : "DATEV-Export erstellen")}</span>
+                  <i data-lucide="file-spreadsheet" class="w-4 h-4"></i> <span>${isTr ? "Bordro / DATEV Çıktısı Al (.csv)" : (isEn ? "Export Timesheet (.csv)" : "DATEV-Export erstellen")}</span>
                 </button>
               </div>
             </div>
@@ -763,7 +855,7 @@ const showcaseData = {
                       <span class="w-3 h-3 rounded-full bg-amber-400"></span>
                       <span class="w-3 h-3 rounded-full bg-slate-700"></span>
                     </div>
-                    <span class="text-xs font-mono text-emerald-400 font-bold">${isTr ? "● Ahmet Yılmaz tanındı" : (isEn ? "● Thomas Baker recognized" : "● Thomas Becker erkannt")}</span>
+                    <span class="text-xs font-mono text-emerald-400 font-bold">${isTr ? "● Ahmet Yılmaz tanındı (Montaj)" : (isEn ? "● Thomas Baker recognized" : "● Thomas Becker erkannt (Montage)")}</span>
                   </div>
                 </div>
                 <div class="grid grid-cols-2 gap-2.5">
@@ -780,21 +872,23 @@ const showcaseData = {
                 <div class="flex items-center justify-between mb-3">
                   <h4 class="font-bold text-sm text-slate-200 flex items-center gap-2">
                     <i data-lucide="building" class="w-4 h-4 text-amber-400"></i>
-                    <span>${isTr ? "Atölye / Tesiste Mevcut Personel" : (isEn ? "Present on Floor" : "Anwesend in Halle / Werkstatt")}</span>
+                    <span>${isTr ? "Atölye & Depoda Mevcut Personel" : (isEn ? "Present on Floor & Depot" : "Anwesend in Halle / Werkstatt")}</span>
                   </h4>
                   <span class="text-xs font-mono font-bold text-emerald-400">${isTr ? "14 / 16 mevcut" : (isEn ? "14 / 16 present" : "14 / 16 anwesend")}</span>
                 </div>
                 <div class="space-y-2 text-xs">
                   <div class="p-2.5 bg-slate-950/70 rounded-xl border border-slate-800 flex justify-between items-center">
-                    <span class="font-bold text-white">${isTr ? "Ali Kemal (Usta Başı)" : (isEn ? "Alexander K. (Supervisor)" : "Alexander K. (Meister)")}</span>
+                    <span class="font-bold text-white">${isTr ? "Ali Kemal (Usta Başı - Atölye)" : (isEn ? "Alexander K. (Supervisor)" : "Alexander K. (Meister Werkstatt)")}</span>
                     <span class="text-[11px] text-emerald-400 font-mono">${isTr ? "07:02" : (isEn ? "07:02 AM" : "07:02 Uhr")}</span>
                   </div>
                   <div class="p-2.5 bg-slate-950/70 rounded-xl border border-slate-800 flex justify-between items-center">
-                    <span class="font-bold text-white">${isTr ? "Deniz Meriç (Depo Sorumlusu)" : (isEn ? "Dennis Miller (Warehouse)" : "Dennis M. (Lagerist)")}</span>
+                    <div>
+                      <span class="font-bold text-amber-300">${isTr ? "Stefan Weber (LKW Tur 3 - Yola Çıkış)" : (isEn ? "Stefan W. (Truck Tour 3 - Departure)" : "Stefan W. (LKW Tour 3 - Abfahrt)")}</span>
+                    </div>
                     <span class="text-[11px] text-emerald-400 font-mono">${isTr ? "07:14" : (isEn ? "07:14 AM" : "07:14 Uhr")}</span>
                   </div>
                   <div class="p-2.5 bg-slate-950/70 rounded-xl border border-slate-800 flex justify-between items-center">
-                    <span class="font-bold text-white">${isTr ? "Kemal Reis (Kaynak Ustası)" : (isEn ? "Klaus Roberts (Welder)" : "Klaus R. (Schweißer)")}</span>
+                    <span class="font-bold text-white">${isTr ? "Deniz Meriç (Depo & Malzeme)" : (isEn ? "Dennis Miller (Warehouse)" : "Dennis M. (Lagerist)")}</span>
                     <span class="text-[11px] text-emerald-400 font-mono">${isTr ? "07:29" : (isEn ? "07:29 AM" : "07:29 Uhr")}</span>
                   </div>
                 </div>
@@ -804,7 +898,7 @@ const showcaseData = {
                 <div>
                   <h4 class="font-bold text-sm text-slate-200 mb-2">${isTr ? "İş Güvenliği & Acil Durum Yoklaması" : (isEn ? "Safety & Evacuation Muster List" : "Sicherheit & Evakuierungsliste")}</h4>
                   <p class="text-xs text-slate-400 mb-3 leading-relaxed">
-                    ${isTr ? "Olası bir yangın veya acil tahliye durumunda kimin tesiste olduğu tek tıkla kurtarma ekipleri listesi olarak ekrana dökülür." : (isEn ? "Instant evacuation muster list shows exactly who is inside the facility in real time." : "Im Brandfall sofort per Tablet abrufbar: Vollständige Anwesenheitsliste für Rettungskräfte.")}
+                    ${isTr ? "Olası bir yangın veya acil tahliye durumunda tesisteki ustalar, depo personeli ve sahaya çıkan şoförlerin anlık listesi tek tıkla alınır." : (isEn ? "Instant evacuation muster list shows exactly who is inside the facility in real time." : "Im Brandfall sofort per Tablet abrufbar: Vollständige Anwesenheitsliste für Rettungskräfte.")}
                   </p>
                 </div>
                 <button type="button" class="w-full py-2.5 px-3 bg-amber-600 hover:bg-amber-500 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition">
@@ -1465,11 +1559,11 @@ const showcaseData = {
 
               <div class="bg-gradient-to-b from-emerald-950/40 via-slate-800 to-slate-850 p-5 rounded-2xl border border-emerald-500/30 flex flex-col justify-between shadow-xl">
                 <div>
-                  <h4 class="font-bold text-sm text-slate-200 mb-2">${isTr ? "Sürüş & Dinlenme Süresi Kontrolü" : (isEn ? "Driver Shift & Rest Compliance" : "Lenk- & Ruhezeiten Check")}</h4>
-                  <p class="text-xs text-slate-400 mb-3">${isTr ? "Yasal sürüş süreleri aşıldığında sistem şoförü ve merkezi uyarır." : (isEn ? "Automatic alerts prevent legal driver shift limit breaches." : "Automatische Warnung bei Überschreitung der gesetzlichen Fahrzeiten.")}</p>
+                  <h4 class="font-bold text-sm text-slate-200 mb-2">${isTr ? "Çalışma & Mola Süresi Uyumu (ArbZG)" : (isEn ? "Shift & Rest-Time Compliance" : "Pausen- & Arbeitszeit-Compliance")}</h4>
+                  <p class="text-xs text-slate-400 mb-3">${isTr ? "Maksimum çalışma ve sürüş süreleri aşılmadan ÖNCE erken uyarı – ekibi yorgunluktan, şirketi cezalardan korur." : (isEn ? "Preventive early warning before maximum work/driving shifts are exceeded – protecting staff and company." : "Präventive Frühwarnung vor Überschreitung maximaler Arbeits- & Fahrzeiten – schützt Teams und Betriebe.")}</p>
                 </div>
                 <button type="button" class="w-full py-2.5 px-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold transition">
-                  ${isTr ? "Takograf Raporunu Dışa Aktar" : (isEn ? "Export Tachograph Report" : "Tachographen-Bericht exportieren")}
+                  ${isTr ? "Görev & Çalışma Raporunu Dışa Aktar" : (isEn ? "Export Shift & Timesheet Report" : "Einsatz- & Arbeitszeitbericht exportieren")}
                 </button>
               </div>
             </div>
@@ -1727,13 +1821,13 @@ function renderVariantButtons() {
     
     // Distinct glowing active badge for A, B, C
     const activeClass = isActive 
-      ? "bg-gradient-to-r from-cyan-500 via-blue-600 to-cyan-600 text-white font-black shadow-lg shadow-cyan-500/30 border-2 border-cyan-400 scale-105 px-3.5 sm:px-4 py-2" 
-      : "bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 px-3 sm:px-3.5 py-2 font-bold";
+      ? "bg-gradient-to-r from-cyan-500 via-blue-600 to-cyan-600 text-white font-black shadow-lg shadow-cyan-500/30 border-2 border-cyan-400 scale-[1.02] px-2.5 sm:px-4 py-1.5 sm:py-2" 
+      : "bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 px-2.5 sm:px-3.5 py-1.5 sm:py-2 font-bold";
     
     html += `
-      <button type="button" onclick="switchShowcaseVariant(${idx})" class="rounded-xl text-xs sm:text-sm transition-all duration-200 flex items-center gap-2 ${activeClass}">
-        <span class="w-5 h-5 rounded-full ${isActive ? 'bg-white text-slate-900' : 'bg-slate-800 text-cyan-400'} font-black text-xs flex items-center justify-center">${v.badge}</span>
-        <span>${name}</span>
+      <button type="button" onclick="switchShowcaseVariant(${idx})" class="rounded-xl text-[11px] sm:text-xs md:text-sm transition-all duration-200 flex items-center gap-1.5 sm:gap-2 ${activeClass}">
+        <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full ${isActive ? 'bg-white text-slate-900' : 'bg-slate-800 text-cyan-400'} font-black text-[10px] sm:text-xs flex items-center justify-center flex-shrink-0">${v.badge}</span>
+        <span class="truncate">${name}</span>
       </button>
     `;
   });
@@ -1787,9 +1881,9 @@ function changeLanguage(lang) {
     const btn = document.getElementById('lang-btn-' + l);
     if (btn) {
       if (l === lang) {
-        btn.className = "px-3 py-1.5 rounded-lg bg-white shadow-sm text-cyan-700 font-extrabold transition";
+        btn.className = "px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg bg-white shadow-sm text-cyan-700 font-extrabold transition";
       } else {
-        btn.className = "px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition";
+        btn.className = "px-2 sm:px-2.5 py-1 sm:py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition";
       }
     }
   });
@@ -1825,6 +1919,55 @@ function simulateInvoiceDownload() {
   }, 900);
 }
 
+function scrollToContactForm(reason, optionValue) {
+  const formCard = document.getElementById('kontakt-formular') || document.getElementById('kontakt');
+  if (formCard) {
+    const navbarHeight = 85;
+    const elementPosition = formCard.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+    
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+    
+    if (optionValue) {
+      const interestSelect = document.getElementById('input-interest');
+      if (interestSelect) {
+        interestSelect.value = optionValue;
+      }
+    }
+    
+    if (reason) {
+      const msgInput = document.getElementById('input-msg');
+      if (msgInput && !msgInput.value) {
+        msgInput.value = reason;
+      }
+    }
+  }
+}
+
+function selectDemoInContactForm() {
+  const select = document.getElementById('input-interest');
+  if (select) {
+    select.value = 'Demo-Zugang';
+  }
+  const formCard = document.getElementById('kontakt-formular') || document.getElementById('kontakt');
+  if (formCard) {
+    const navbarHeight = 85;
+    const elementPosition = formCard.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+  const nameInput = document.getElementById('input-name');
+  if (nameInput) {
+    setTimeout(() => nameInput.focus(), 600);
+  }
+}
+
 async function handleContactSubmit(e) {
   e.preventDefault();
   const form = document.getElementById('contact-form');
@@ -1851,22 +1994,12 @@ async function handleContactSubmit(e) {
     `;
   }
 
-  const payload = {
-    _subject: `Neue Projektanfrage: ${company} - ${name}`,
-    name: name,
-    company: company,
-    email: email,
-    phone: phone,
-    interest: interest,
-    message: message,
-    _template: "table",
-    _captcha: "false"
-  };
+  const payload = { name, company, email, phone, interest, message };
 
   try {
-    // 1. Send via FormSubmit API to teamtrack.software@hotmail.com
-    await fetch("https://formsubmit.co/ajax/teamtrack.software@hotmail.com", {
-      method: "POST",
+    // 1. Send via native Vercel Serverless Function with Resend
+    const res = await fetch('/api/contact', {
+      method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
@@ -1874,15 +2007,13 @@ async function handleContactSubmit(e) {
       body: JSON.stringify(payload)
     });
 
-    // 2. Also dispatch to local send_mail.php if hosted on PHP server
+    if (!res.ok) {
+      console.warn("API response status:", res.status);
+    }
+
+    // 2. Fallback to PHP backend if available
     try {
-      const formData = new FormData();
-      formData.append('name', name);
-      formData.append('company', company);
-      formData.append('email', email);
-      formData.append('phone', phone);
-      formData.append('interest', interest);
-      formData.append('message', message);
+      const formData = new FormData(form);
       fetch('send_mail.php', { method: 'POST', body: formData }).catch(() => {});
     } catch (_) {}
 
@@ -1981,7 +2112,7 @@ const legalTexts = {
             <p class="text-cyan-300 font-semibold">TeamTrack Softwareentwicklung & IT-Beratung</p>
             <p>Inhaberin: <strong>Huriye Ünalsoy</strong></p>
             <p>Balthasar-Neumann-Straße 38, 97236 Randersacker, Deutschland</p>
-            <p>E-Mail: <a href="mailto:teamtrack.software@hotmail.com" class="text-cyan-400 hover:underline">teamtrack.software@hotmail.com</a></p>
+            <p>E-Mail: <a href="mailto:kontakt@team-track.de" class="text-cyan-400 hover:underline">kontakt@team-track.de</a></p>
             <p>Telefon: <span class="font-mono text-slate-200">+49 172 6125371</span> | <span class="font-mono text-slate-200">+49 172 4690446</span></p>
           </div>
         </div>
@@ -2013,7 +2144,7 @@ const legalTexts = {
             <div>
               <p class="font-bold text-white mb-1">b) Alleinige Verantwortlichkeit des Auftraggebers (Art. 4 Nr. 7 DSGVO, § 26 BDSG):</p>
               <p class="leading-relaxed">
-                Der Auftraggeber (Kunde) ist und bleibt die alleinige verantwortliche Stelle im Sinne des Datenschutzrechts. Der Auftraggeber trägt die volle Verantwortung für die Rechtmäßigkeit der Datenerhebung (z. B. Erfassung von Arbeitszeiten gem. EuGH/BAG-Rechtsprechung, § 26 BDSG für Beschäftigtendaten) sowie für die Erfüllung aller Informationspflichten gegenüber seinen Mitarbeitern, Fahrern und Kunden.
+                Der Auftraggeber (Kunde) ist und bleibt die alleinige verantwortliche Stelle im Sinne des Datenschutzrechts. Der Auftraggeber trägt die volle Verantwortung für die Rechtmäßigkeit der Datenerhebung und -speicherung (z. B. Erfassung von Arbeitszeiten gem. EuGH/BAG-Rechtsprechung, § 26 BDSG für Beschäftigtendaten, Lenk- und Ruhezeiten), für die Wahrung der betrieblichen Aufbewahrungsfristen sowie für die Erfüllung aller Informations- und Nachweispflichten gegenüber Beschäftigten, Kontrollbehörden und Versicherungen.
               </p>
             </div>
           </div>
@@ -2047,10 +2178,11 @@ const legalTexts = {
         <div class="space-y-3">
           <h4 class="text-sm font-bold text-white flex items-center gap-2">
             <i data-lucide="server" class="w-4 h-4 text-cyan-400"></i>
-            5. Serverstandort & Drittanbieter-Schnittstellen
+            5. Serverstandort, Entwicklungs-Infrastruktur (GitHub / Vercel) & Drittanbieter-Schnittstellen
           </h4>
           <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
             <p><strong class="text-slate-100">Serverstandort Deutschland / EU:</strong> Alle Cloud-Server und Datenbanken werden ausschließlich in nach ISO/IEC 27001 zertifizierten Hochsicherheits-Rechenzentren innerhalb der Europäischen Union (vorrangig Frankfurt am Main / Deutschland) betrieben.</p>
+            <p><strong class="text-slate-100">Entwicklungs-Repositories & Live-Deployment (GitHub / Vercel):</strong> Zur kontinuierlichen Systempflege, Bereitstellung von Sicherheits-Updates und schnellen Einspielung von Kundenanpassungen nutzt TeamTrack modernste, verschlüsselte Entwicklungs-Pipelines und Repositories (z. B. GitHub, Vercel Cloud). Personenbezogene Geschäftsdaten der Kunden verbleiben dabei strikt in den separaten Kundendatenbanken und werden nicht in Quellcode-Repositories gespeichert (Art. 32 DSGVO).</p>
             <p><strong class="text-slate-100">Drittanbieter-Schnittstellen (DATEV, SevDesk, ERP, Telematik):</strong> Die Anbindung von externen Schnittstellen erfolgt ausschließlich auf explizite Weisung des Kunden. Für die Datenverarbeitung bei den Drittanbietern gelten deren Datenschutzbestimmungen. TeamTrack übernimmt keine Haftung für außerhalb der eigenen Software liegende Drittanbieter-Dienste.</p>
           </div>
         </div>
@@ -2086,7 +2218,7 @@ const legalTexts = {
             <p class="text-cyan-300 font-semibold">TeamTrack Softwareentwicklung & IT-Beratung</p>
             <p>Firma Sahibi: <strong>Huriye Ünalsoy</strong></p>
             <p>Balthasar-Neumann-Straße 38, 97236 Randersacker, Almanya</p>
-            <p>E-Posta: <a href="mailto:teamtrack.software@hotmail.com" class="text-cyan-400 hover:underline">teamtrack.software@hotmail.com</a></p>
+            <p>E-Posta: <a href="mailto:kontakt@team-track.de" class="text-cyan-400 hover:underline">kontakt@team-track.de</a></p>
             <p>Telefon: <span class="font-mono text-slate-200">+49 172 6125371</span> | <span class="font-mono text-slate-200">+49 172 4690446</span></p>
           </div>
         </div>
@@ -2118,7 +2250,7 @@ const legalTexts = {
             <div>
               <p class="font-bold text-white mb-1">b) Müşterinin (İşverenin) Asli Sorumluluğu:</p>
               <p class="leading-relaxed">
-                Sistemi kullanan müşteri (işveren), çalışanlarının puantaj/çalışma saatleri ve müşteri verilerinin sisteme girilmesinin hukuki dayanağından (çalışan rızaları, şirket içi yönergeler, yasal saat kayıt zorunluluğu) münhasıran sorumludur.
+                Sistemi kullanan müşteri (işveren), çalışanlarının puantaj/çalışma saatleri, mola ve sürüş kayıtları ile müşteri verilerinin sisteme girilmesinin hukuki dayanağından (çalışan rızaları, şirket içi yönergeler, yasal saat kayıt zorunluluğu, ArbZG) ve resmi kurumlara/sigortalara karşı bilgi ve ibraz yükümlülüklerinden münhasıran sorumludur.
               </p>
             </div>
           </div>
@@ -2152,10 +2284,11 @@ const legalTexts = {
         <div class="space-y-3">
           <h4 class="text-sm font-bold text-white flex items-center gap-2">
             <i data-lucide="server" class="w-4 h-4 text-cyan-400"></i>
-            5. Sunucu Lokasyonu & Entegrasyonlar
+            5. Sunucu Lokasyonu, Geliştirme Altyapısı (GitHub / Vercel) & Entegrasyonlar
           </h4>
           <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
             <p><strong class="text-slate-100">Almanya ve AB Sunucuları:</strong> Bulut sunucuları ve veritabanları yalnızca ISO/IEC 27001 sertifikalı Almanya ve Avrupa Birliği merkezli veri merkezlerinde barındırılır.</p>
+            <p><strong class="text-slate-100">Kaynak Kod & Canlı Güncelleme Altyapısı (GitHub / Vercel):</strong> Yazılımın sürekli bakımı, acil güvenlik yamaları ve müşterinin talep ettiği yeni özelliklerin anında canlıya alınabilmesi (deployment) için şifreli profesyonel geliştirme depoları (GitHub, Vercel vb.) kullanılır. Müşterinin ticari ve personel verileri kesinlikle kod depolarında tutulmaz, yalnızca şifreli müşteri veritabanlarında saklanır (DSGVO Madde 32).</p>
             <p><strong class="text-slate-100">Dış Entegrasyonlar (DATEV, ERP, Muhasebe):</strong> Harici sistemlere veri aktarımı yalnızca müşterinin onayı ile yapılır; üçüncü parti platformların kendi altyapı değişikliklerinden TeamTrack sorumlu tutulamaz.</p>
           </div>
         </div>
@@ -2190,7 +2323,7 @@ const legalTexts = {
             <p class="text-cyan-300 font-semibold">TeamTrack Softwareentwicklung & IT-Beratung</p>
             <p>Proprietor: <strong>Huriye Ünalsoy</strong></p>
             <p>Balthasar-Neumann-Straße 38, 97236 Randersacker, Germany</p>
-            <p>Email: <a href="mailto:teamtrack.software@hotmail.com" class="text-cyan-400 hover:underline">teamtrack.software@hotmail.com</a></p>
+            <p>Email: <a href="mailto:kontakt@team-track.de" class="text-cyan-400 hover:underline">kontakt@team-track.de</a></p>
             <p>Phone: <span class="font-mono text-slate-200">+49 172 6125371</span> | <span class="font-mono text-slate-200">+49 172 4690446</span></p>
           </div>
         </div>
@@ -2222,7 +2355,7 @@ const legalTexts = {
             <div>
               <p class="font-bold text-white mb-1">b) Sole Controller Responsibility of the Client:</p>
               <p class="leading-relaxed">
-                The client remains the sole Data Controller (Art. 4 No. 7 GDPR) responsible for the lawful basis of employee time logging (§ 26 BDSG, working time records), employee notifications, and customer data compliance.
+                The client remains the sole Data Controller (Art. 4 No. 7 GDPR) responsible for the lawful basis of employee time and shift logging (§ 26 BDSG, working hours, break/driving records), statutory retention periods, and fulfilling all notification and proof obligations towards employees, regulatory authorities, and insurance providers.
               </p>
             </div>
           </div>
@@ -2256,10 +2389,11 @@ const legalTexts = {
         <div class="space-y-3">
           <h4 class="text-sm font-bold text-white flex items-center gap-2">
             <i data-lucide="server" class="w-4 h-4 text-cyan-400"></i>
-            5. Server Hosting & Third-Party APIs
+            5. Server Hosting, Deployment Infrastructure (GitHub / Vercel) & Third-Party APIs
           </h4>
           <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
             <p><strong class="text-slate-100">ISO 27001 German / EU Data Centers:</strong> All application servers and databases are exclusively hosted in ISO/IEC 27001 certified facilities within Germany and the European Union.</p>
+            <p><strong class="text-slate-100">Development Repositories & CI/CD Pipelines (GitHub / Vercel):</strong> To provide continuous maintenance, zero-downtime updates, and rapid implementation of client change requests, TeamTrack utilizes secure development pipelines (e.g., GitHub, Vercel). Operational client and employee data is stored strictly in isolated customer databases and never committed to source code repositories (Art. 32 GDPR).</p>
             <p><strong class="text-slate-100">Third-Party Integrations (DATEV, ERPs):</strong> Data synchronization with external services occurs strictly upon client authorization; third-party provider terms govern outside TeamTrack's infrastructure.</p>
           </div>
         </div>
@@ -2308,18 +2442,24 @@ const legalTexts = {
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 4 Nutzungsrechte & Urheberrecht</h4>
-            <p>Nach vollständiger Begleichung der vereinbarten Vergütung erhält der Auftraggeber das vertraglich vereinbarte Nutzungsrecht an der für ihn erstellten Software. Bei Festpreis-Projekten umfasst dies den uneingeschränkten Einsatz für die eigenen betrieblichen Zwecke.</p>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 4 Nutzungsrechte, Quellcode-Verwaltung & Live-Deployment</h4>
+            <p>1. Nach vollständiger Begleichung der vereinbarten Vergütung erhält der Auftraggeber das vertraglich vereinbarte, einfache Nutzungsrecht an der für ihn erstellten WebApp für eigene betriebliche Zwecke.<br>
+            2. Im Rahmen laufender Betreuungsverträge (Paket 2) und individueller System-Erweiterungen (Paket 3) verwaltet TeamTrack den Quellcode auf gesicherten Entwicklungs-Repositories (z. B. GitHub / Vercel / Cloud-Infrastruktur), um vereinbarte Aktualisierungen, Funktionserweiterungen, Sicherheits-Patches und Kundenwünsche direkt und verzögerungsfrei in das Produktivsystem einzuspielen (Live-Deployment). Das Urheberrecht und die Systemarchitektur verbleiben bei TeamTrack.</p>
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 5 Gewährleistung & Haftungsbeschränkung</h4>
-            <p>TeamTrack gewährleistet eine fachgerechte und sorgfältige Programmierung nach aktuellem Stand der Technik. Für Mängel bei Festpreis-Werken gilt eine 30-tägige Nachbesserungsfrist. Eine Haftung für Ausfälle von Drittanbieter-Schnittstellen (z.B. DATEV, ERP-Systeme, Zahlungsdienstleister) oder Telekommunikationsstörungen ist ausgeschlossen.</p>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 5 Gewährleistung, Datensicherung & SLA</h4>
+            <p>TeamTrack gewährleistet eine fachgerechte Programmierung nach aktuellem Stand der Technik und hostet Cloud-Systeme in ISO 27001 zertifizierten deutschen Rechenzentren (SLA 99,5% Verfügbarkeit) mit automatisierten täglichen Backups. Für Mängel bei Festpreis-Werken gilt eine 30-tägige Nachbesserungsfrist. Eine Haftung für Ausfälle von Drittanbieter-Schnittstellen (z.B. DATEV, ERP-Systeme) oder Telekommunikationsstörungen Dritter ist ausgeschlossen.</p>
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 6 Datenschutz, Geheimhaltung & Gerichtsstand</h4>
-            <p>Beide Parteien verpflichten sich zur vertraulichen Behandlung aller Geschäftsgeheimnisse. Soweit personenbezogene Daten verarbeitet werden, gilt die DSGVO nebst AVV. Es gilt deutsches Recht. Gerichtsstand ist Würzburg.</p>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 6 Gesetzliche Aufzeichnungs- und Einhaltungspflichten & Haftungsausschluss (ArbZG, MiLoG, FPersV, VO (EG) 561/2006)</h4>
+            <p>Die von TeamTrack bereitgestellten Software-Module und Funktionen (z. B. mobile Zeiterfassung, Pausen- & Schichtprüfungen, Touren- und Fuhrparkdisposition, automatische Warnhinweise) stellen rein technische Hilfsmittel zur betrieblichen Unterstützung und Organisation dar. Die alleinige rechtliche und tatsächliche Verantwortung für die gesetzeskonforme Erfassung, Dokumentation und Einhaltung sämtlicher gesetzlicher Arbeits-, Lenk- und Ruhezeitvorschriften (insb. Arbeitszeitgesetz – ArbZG, Mindestlohngesetz – MiLoG, Fahrpersonalverordnung – FPersV, Verordnung (EG) Nr. 561/2006 sowie Arbeitnehmer-Entsendegesetz – AEntG), aller arbeitsschutzrechtlichen Fürsorgepflichten sowie aller versicherungsrechtlichen Obliegenheiten verbleibt uneingeschränkt beim Auftraggeber (Arbeitgeber / Unternehmer). TeamTrack übernimmt keinerlei Haftung für behördliche Bußgelder, Nachzahlungsforderungen, Schadensersatzansprüche, Unfallfolgen oder Leistungskürzungen bzw. Regressansprüche von Versicherungen, Berufsgenossenschaften oder Kontrollbehörden infolge fehlerhafter Bedienung, unterlassener betrieblicher Kontrollen, falscher Dateneingaben oder gesetzlicher Pflichtverletzungen seitens des Auftraggebers oder dessen Beschäftigten.</p>
+          </div>
+
+          <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
+            <h4 class="font-bold text-cyan-300 mb-1">§ 7 Datenschutz, Auftragsverarbeitung (AVV) & Gerichtsstand</h4>
+            <p>Beide Parteien verpflichten sich zur strengen Vertraulichkeit. Soweit TeamTrack im Rahmen des Betriebs personenbezogene Daten (z.B. Arbeitszeiten, Kundendaten) im Auftrag verarbeitet, stellt TeamTrack dem Kunden einen rechtskonformen Auftragsverarbeitungsvertrag (AVV gem. Art. 28 DSGVO) zur Verfügung. Es gilt deutsches Recht. Gerichtsstand ist Würzburg.</p>
           </div>
         </div>
       </div>
@@ -2350,8 +2490,9 @@ const legalTexts = {
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 4 Fikri Mülkiyet ve Kullanım Hakları</h4>
-            <p>Sözleşme bedelinin tamamı ödendiğinde, müşteriye geliştirilen sistem üzerinde kendi ticari faaliyetlerinde süresiz kullanım hakkı devredilir.</p>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 4 Fikri Mülkiyet, Kaynak Kod Yönetimi ve Canlı Güncelleme (Live-Deployment)</h4>
+            <p>1. Sözleşme bedelinin tamamı ödendiğinde, müşteriye geliştirilen sistem üzerinde kendi ticari faaliyetlerinde süresiz kullanım hakkı verilir.<br>
+            2. Düzenli bakım ve abonelik hizmeti (Paket 2) veya sistem genişletme (Paket 3) kapsamında, müşterinin sonradan talep edeceği ilave özellikleri, güncellemeleri ve güvenlik yamalarını anında ve kesintisiz şekilde sistemine aktarabilmek (deploy edebilmek) amacıyla kaynak kodları ve bulut altyapısı (GitHub / Vercel vb.) TeamTrack güvencesinde saklanır ve yönetilir. Fikri mülkiyet ve sistem geliştirme hakları TeamTrack'e aittir.</p>
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
@@ -2360,8 +2501,13 @@ const legalTexts = {
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 6 Gizlilik ve Yetkili Mahkeme</h4>
-            <p>Taraflar tüm ticari sırları korumayı taahhüt eder. Alman hukuku geçerlidir; uyuşmazlıklarda Würzburg mahkemeleri yetkilidir.</p>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 6 Yasal Kayıt ve Uyumluluk Yükümlülükleri & Sigorta Sorumluluk Muafiyeti (ArbZG, MiLoG, FPersV, VO (EG) 561/2006)</h4>
+            <p>TeamTrack tarafından sunulan yazılım modülleri ve fonksiyonları (çalışma saati ve puantaj kaydı, mola ve vardiya kontrolleri, rota/görev planlama, otomatik uyarılar) yalnızca işletmeye yardımcı teknik destek ve organizasyon araçlarıdır. Yasal çalışma, sürüş ve dinlenme sürelerine (ArbZG, MiLoG, FPersV, AB 561/2006 Tüzüğü vb.), kayıt tutma ve belgeleme yükümlülüklerine, iş güvenliği kurallarına ve işletmenin kendi sigorta poliçesi yükümlülüklerine uyulması münhasıran müşterinin (işverenin) sorumluluğundadır. Müşterinin veya personelinin kural ihlallerinden, hatalı veri girişlerinden, yetersiz denetimlerinden veya sistem uyarılarına uymamasından doğabilecek idari para cezalarından, kaza tazminatlarından, iş kazası sonuçlarından veya sigorta şirketleri/resmi kurumlar nezdinde oluşabilecek ödeme kesintilerinden ve rüculardan TeamTrack hiçbir şekilde sorumlu tutulamaz.</p>
+          </div>
+
+          <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
+            <h4 class="font-bold text-cyan-300 mb-1">§ 7 Gizlilik, Veri İşleme (AVV) ve Yetkili Mahkeme</h4>
+            <p>Taraflar tüm ticari sırları ve müşteri verilerini korumayı taahhüt eder. TeamTrack, müşteri adına veri işlediği durumlarda standart bir Veri İşleme Sözleşmesi (AVV - DSGVO Madde 28) sunar. Alman hukuku geçerlidir; uyuşmazlıklarda Würzburg mahkemeleri yetkilidir.</p>
           </div>
         </div>
       </div>
@@ -2392,8 +2538,9 @@ const legalTexts = {
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 4 Intellectual Property & Usage Rights</h4>
-            <p>Upon full settlement of agreed remuneration, the client receives contractually agreed rights to use and operate the software for their commercial operations.</p>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 4 Intellectual Property, Source Code Management & Live Deployment</h4>
+            <p>1. Upon full settlement of agreed remuneration, the client receives contractually agreed usage rights to operate the software for their internal business operations.<br>
+            2. Under ongoing retainer plans (Package 2) and system add-ons (Package 3), TeamTrack securely maintains the source code repositories (e.g. GitHub / Vercel / Cloud Infrastructure) to deploy requested feature additions, framework updates, and security patches directly and without delay to the live system (Live Deployment). Intellectual property and system architecture remain with TeamTrack.</p>
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
@@ -2402,8 +2549,13 @@ const legalTexts = {
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 6 Privacy, Confidentiality & Jurisdiction</h4>
-            <p>Both parties maintain strict commercial confidentiality and GDPR compliance. German law applies. Legal venue is Würzburg, Germany.</p>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 6 Statutory Recording & Compliance Obligations, Liability Exclusion (ArbZG, MiLoG, FPersV, Regulation (EC) 561/2006)</h4>
+            <p>Software features provided by TeamTrack (e.g., digital time recording, break compliance checks, route and dispatch management, automated alerts) serve strictly as operational and administrative technical aids. Full and sole legal responsibility for compliance with and documentation of all statutory working hours, minimum wage recording rules, driving and rest periods (specifically ArbZG, MiLoG, FPersV, Regulation (EC) No 561/2006, AEntG), occupational safety mandates, and insurance covenants rests unconditionally with the client (employer). TeamTrack assumes zero liability for regulatory fines, back-pay claims, damages, accident consequences, or insurance claim denials/deductions by insurance providers or authorities resulting from user error, lack of employer supervision, incorrect data input, or compliance breaches by the client or its personnel.</p>
+          </div>
+
+          <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
+            <h4 class="font-bold text-cyan-300 mb-1">§ 7 Privacy, Data Processing (DPA) & Jurisdiction</h4>
+            <p>Both parties maintain strict commercial confidentiality and GDPR compliance. Where TeamTrack processes data on behalf of the client, a standardized Data Processing Agreement (DPA / AVV pursuant to Art. 28 GDPR) is executed. German law applies. Legal venue is Würzburg, Germany.</p>
           </div>
         </div>
       </div>
@@ -2428,8 +2580,8 @@ const legalTexts = {
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-3 text-xs text-slate-300">
           <h4 class="font-bold text-white text-xs">Kontaktmöglichkeiten</h4>
           <p>Telefon: <span class="font-mono text-cyan-300">+49 172 6125371</span> | <span class="font-mono text-cyan-300">+49 172 4690446</span></p>
-          <p>E-Mail: <a href="mailto:teamtrack.software@hotmail.com" class="text-cyan-400 hover:underline">teamtrack.software@hotmail.com</a></p>
-          <p>Website: <a href="https://teamtrack.cloud" class="text-cyan-400 hover:underline">www.teamtrack.cloud</a></p>
+          <p>E-Mail: <a href="mailto:kontakt@team-track.de" class="text-cyan-400 hover:underline">kontakt@team-track.de</a></p>
+          <p>Website: <a href="https://team-track.de" class="text-cyan-400 hover:underline">www.team-track.de</a></p>
         </div>
 
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
@@ -2462,8 +2614,8 @@ const legalTexts = {
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-3 text-xs text-slate-300">
           <h4 class="font-bold text-white text-xs">İletişim Bilgileri</h4>
           <p>Telefon: <span class="font-mono text-cyan-300">+49 172 6125371</span> | <span class="font-mono text-cyan-300">+49 172 4690446</span></p>
-          <p>E-Posta: <a href="mailto:teamtrack.software@hotmail.com" class="text-cyan-400 hover:underline">teamtrack.software@hotmail.com</a></p>
-          <p>Web: <a href="https://teamtrack.cloud" class="text-cyan-400 hover:underline">www.teamtrack.cloud</a></p>
+          <p>E-Posta: <a href="mailto:kontakt@team-track.de" class="text-cyan-400 hover:underline">kontakt@team-track.de</a></p>
+          <p>Web: <a href="https://team-track.de" class="text-cyan-400 hover:underline">www.team-track.de</a></p>
         </div>
 
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
@@ -2490,8 +2642,8 @@ const legalTexts = {
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-3 text-xs text-slate-300">
           <h4 class="font-bold text-white text-xs">Contact Details</h4>
           <p>Phone: <span class="font-mono text-cyan-300">+49 172 6125371</span> | <span class="font-mono text-cyan-300">+49 172 4690446</span></p>
-          <p>Email: <a href="mailto:teamtrack.software@hotmail.com" class="text-cyan-400 hover:underline">teamtrack.software@hotmail.com</a></p>
-          <p>Website: <a href="https://teamtrack.cloud" class="text-cyan-400 hover:underline">www.teamtrack.cloud</a></p>
+          <p>Email: <a href="mailto:kontakt@team-track.de" class="text-cyan-400 hover:underline">kontakt@team-track.de</a></p>
+          <p>Website: <a href="https://team-track.de" class="text-cyan-400 hover:underline">www.team-track.de</a></p>
         </div>
 
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
@@ -2549,8 +2701,8 @@ const legalTexts = {
                 <span>E-Mail & Projektanfragen</span>
               </div>
               <p class="text-slate-400 text-[11px] mb-2">Senden Sie uns Skizzen, Anforderungen oder Lastenhefte:</p>
-              <a href="mailto:teamtrack.software@hotmail.com" class="block p-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-emerald-300 font-bold border border-slate-800 transition break-all text-xs">
-                teamtrack.software@hotmail.com
+              <a href="mailto:kontakt@team-track.de" class="block p-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-emerald-300 font-bold border border-slate-800 transition break-all text-xs">
+                kontakt@team-track.de
               </a>
             </div>
             <div class="p-2.5 bg-slate-900 rounded-xl text-[11px] text-slate-400 flex items-center gap-2">
@@ -2635,8 +2787,8 @@ const legalTexts = {
                 <span>E-Posta ile Proje Özeti</span>
               </div>
               <p class="text-slate-400 text-[11px] mb-2">Teknik şartname, taslak veya sorularınızı iletin:</p>
-              <a href="mailto:teamtrack.software@hotmail.com" class="block p-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-emerald-300 font-bold border border-slate-800 transition break-all text-xs">
-                teamtrack.software@hotmail.com
+              <a href="mailto:kontakt@team-track.de" class="block p-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-emerald-300 font-bold border border-slate-800 transition break-all text-xs">
+                kontakt@team-track.de
               </a>
             </div>
             <div class="p-2.5 bg-slate-900 rounded-xl text-[11px] text-slate-400 flex items-center gap-2">
@@ -2721,8 +2873,8 @@ const legalTexts = {
                 <span>Email Project Inquiries</span>
               </div>
               <p class="text-slate-400 text-[11px] mb-2">Send specifications, drawings, or project scopes:</p>
-              <a href="mailto:teamtrack.software@hotmail.com" class="block p-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-emerald-300 font-bold border border-slate-800 transition break-all text-xs">
-                teamtrack.software@hotmail.com
+              <a href="mailto:kontakt@team-track.de" class="block p-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-emerald-300 font-bold border border-slate-800 transition break-all text-xs">
+                kontakt@team-track.de
               </a>
             </div>
             <div class="p-2.5 bg-slate-900 rounded-xl text-[11px] text-slate-400 flex items-center gap-2">
@@ -2791,9 +2943,9 @@ function switchLegalTab(tab) {
     const btn = document.getElementById('tab-btn-' + t);
     if (btn) {
       if (t === tab) {
-        btn.className = "px-4 py-2 rounded-xl transition cursor-pointer flex items-center gap-2 bg-cyan-600 text-white shadow-md shadow-cyan-600/20 whitespace-nowrap";
+        btn.className = "px-3 sm:px-4 py-2 rounded-xl transition cursor-pointer flex items-center gap-1.5 sm:gap-2 bg-cyan-600 text-white shadow-md shadow-cyan-600/20 whitespace-nowrap flex-shrink-0";
       } else {
-        btn.className = "px-4 py-2 rounded-xl transition cursor-pointer flex items-center gap-2 bg-slate-800 text-slate-400 hover:text-white whitespace-nowrap";
+        btn.className = "px-3 sm:px-4 py-2 rounded-xl transition cursor-pointer flex items-center gap-1.5 sm:gap-2 bg-slate-800 text-slate-400 hover:text-white whitespace-nowrap flex-shrink-0";
       }
     }
   });
@@ -2862,5 +3014,35 @@ document.addEventListener('DOMContentLoaded', () => {
       timerEl.textContent = `${hStr}:${mStr}:${sStr}`;
     }
   }, 1000);
+
+  // Check if redirected from form submission (#danke)
+  if (window.location.hash === '#danke') {
+    const form = document.getElementById('contact-form');
+    const success = document.getElementById('form-success');
+    if (form && success) {
+      form.classList.add('hidden');
+      success.classList.remove('hidden');
+      document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 });
+
+// Mobile Accordion Toggle for Service Cards
+window.toggleServiceCard = function(card) {
+  if (window.innerWidth >= 768) return; // Desktop remains standard open grid
+  const content = card.querySelector('.service-content');
+  const arrow = card.querySelector('.service-arrow');
+  if (!content) return;
+
+  const isOpen = !content.classList.contains('hidden');
+  if (isOpen) {
+    content.classList.add('hidden');
+    if (arrow) arrow.style.transform = 'rotate(0deg)';
+    card.classList.remove('ring-2', 'ring-cyan-500/30', 'bg-white', 'shadow-md');
+  } else {
+    content.classList.remove('hidden');
+    if (arrow) arrow.style.transform = 'rotate(180deg)';
+    card.classList.add('ring-2', 'ring-cyan-500/30', 'bg-white', 'shadow-md');
+  }
+};
 
