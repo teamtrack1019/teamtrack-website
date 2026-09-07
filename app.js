@@ -1779,156 +1779,189 @@ const showcaseData = {
 
   website: {
     title: { 
-      de: "6. Moderne Firmen-Webseiten & Kunden-Portale", 
-      tr: "6. Modern Kurumsal Web Siteleri & Müşteri Portalları", 
-      en: "6. Modern Corporate Websites & Client Portals" 
+      de: "6. Professionelle Firmen-Webseiten (Branchen-Beispiele)", 
+      tr: "6. Profesyonel Kurumsal Web Siteleri (Sektörel Örnekler)", 
+      en: "6. Professional Corporate Websites (Industry Showcase)" 
     },
     variants: [
       {
         badge: "A",
         name: { 
-          de: "Variante A: High-Speed Firmen-Webseite & SEO", 
-          tr: "Varyant A: Yüksek Hızlı Kurumsal Web Sitesi & SEO", 
-          en: "Variant A: High-Speed Corporate Website & SEO" 
+          de: "Variante A: Handwerk & Meisterbetrieb (Elektro/Bau)", 
+          tr: "Varyant A: Zanaat & Usta İşletmesi (Elektrik/İnşaat)", 
+          en: "Variant A: Crafts & Contracting Website" 
         },
-        url: "ihre-firma.de/kurumsal-web-sitesi",
+        url: "www.elektro-mueller-meisterbetrieb.de",
         render: (lang) => {
           const isTr = lang === "tr";
           const isEn = lang === "en";
           return `
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
-              <!-- Column 1: Live Interactive Website Preview -->
-              <div class="bg-gradient-to-b from-slate-900 to-slate-950 p-4 sm:p-5 rounded-2xl border-2 border-purple-500/50 shadow-2xl flex flex-col justify-between">
+              <!-- Column 1: Live Interactive Website Preview (Hero & Trust) -->
+              <div class="bg-gradient-to-b from-slate-900 to-slate-950 p-4 sm:p-5 rounded-2xl border-2 border-purple-500/60 shadow-2xl flex flex-col justify-between">
                 <div>
                   <div class="flex items-center justify-between mb-3">
                     <h4 class="font-bold text-xs sm:text-sm text-purple-300 flex items-center gap-1.5 uppercase tracking-wider">
                       <span class="w-2.5 h-2.5 rounded-full bg-purple-400 animate-pulse"></span>
-                      <span>${isTr ? "CANLI KURUMSAL WEB SİTESİ" : (isEn ? "LIVE CORPORATE WEBSITE" : "LIVE-WEBSEITEN VORSCHAU")}</span>
+                      <span>${isTr ? "WEB SİTESİ CANLI ÖNİZLEME" : (isEn ? "LIVE WEBSITE HOMEPAGE" : "WEBSEITEN-VORSCHAU")}</span>
                     </h4>
                     <span class="text-[10px] bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-800 font-bold font-mono">
-                      ⚡ 100/100 SPEED
+                      ⚡ 99/100 SPEED
                     </span>
                   </div>
 
-                  <!-- Mini Browser Mockup -->
-                  <div class="bg-slate-950 rounded-xl border border-purple-900/40 p-3 mb-3">
-                    <div class="flex items-center justify-between pb-2 border-b border-slate-800 text-[10px] text-slate-400">
-                      <span class="font-bold text-white flex items-center gap-1">
-                        <i data-lucide="globe" class="w-3 h-3 text-purple-400"></i> ${isTr ? "Müller & Partner Usta İşletmesi" : (isEn ? "Mueller & Partner Master Craftsmen" : "Müller & Partner Meisterbetrieb")}
-                      </span>
-                      <span class="text-purple-300 font-mono">.de / .com</span>
+                  <!-- Mini Browser Window Mockup -->
+                  <div class="bg-slate-950 rounded-xl border border-purple-900/50 p-3 mb-3 shadow-inner">
+                    <!-- Website Navigation Bar -->
+                    <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800 text-[10px]">
+                      <div class="flex items-center gap-1.5 font-bold text-white">
+                        <span class="w-5 h-5 rounded-lg bg-purple-600 flex items-center justify-center text-white text-[10px]">⚡</span>
+                        <span>MÜLLER <span class="text-purple-400 font-normal">ELEKTRO</span></span>
+                      </div>
+                      <div class="hidden sm:flex items-center gap-2 text-[9px] text-slate-400">
+                        <span class="text-purple-300 font-semibold">${isTr ? "Hizmetler" : (isEn ? "Services" : "Leistungen")}</span>
+                        <span>${isTr ? "Referanslar" : (isEn ? "Projects" : "Referenzen")}</span>
+                        <span>${isTr ? "İletişim" : (isEn ? "Contact" : "Kontakt")}</span>
+                      </div>
+                      <span class="text-[9px] bg-purple-950 text-purple-300 px-1.5 py-0.5 rounded border border-purple-800 font-bold font-mono">24/7 Acil</span>
                     </div>
-                    <div class="py-3 text-center">
-                      <span class="text-[10px] bg-purple-900/50 text-purple-200 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider inline-block mb-1.5">
-                        ${isTr ? "Modern & Prestijli Tasarım" : (isEn ? "Modern & High-End Design" : "Modernes Handwerker-Design")}
+
+                    <!-- Website Hero Banner -->
+                    <div class="py-2 text-center">
+                      <span class="text-[9px] bg-purple-900/40 text-purple-200 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider inline-block mb-1.5 border border-purple-700/50">
+                        ${isTr ? "Münih & Çevresinde Yetkili Usta İşletmesi" : (isEn ? "Certified Master Electrician in Munich & Region" : "Innungsfachbetrieb München & Umland")}
                       </span>
-                      <h5 class="text-sm font-extrabold text-white leading-tight mb-1">
-                        ${isTr ? "Kaliteli Hizmet, Zamanında Teslimat" : (isEn ? "Premium Quality, Guaranteed On-Time" : "Ihr Meisterbetrieb für Qualität & Service")}
+                      <h5 class="text-xs sm:text-sm font-extrabold text-white leading-snug mb-1.5">
+                        ${isTr ? "Modern Elektrik & Akıllı Bina Tesisatı" : (isEn ? "Smart Electrical & Building Engineering" : "Ihr Meisterbetrieb für moderne Gebäude- & Elektrotechnik")}
                       </h5>
-                      <p class="text-[10px] text-slate-400 max-w-[240px] mx-auto mb-2.5">
-                        ${isTr ? "Bölgenizin lider ustaları ile hayalinizdeki projeleri gerçeğe dönüştürün." : (isEn ? "Transforming projects into reality with certified experts in your region." : "Zuverlässige Umsetzung aller Projekte aus einer Hand in Ihrer Region.")}
+                      <p class="text-[10px] text-slate-400 max-w-[250px] mx-auto mb-3 leading-relaxed">
+                        ${isTr ? "25 yıllık tecrübe, garantili işçilik ve şeffaf sabit fiyatlar. Eviniz ve fabrikanız için güvenli çözümler." : (isEn ? "25+ years experience, guaranteed craftsmanship and transparent pricing for homes and commercial sites." : "Über 25 Jahre Erfahrung, Meisterqualität und transparente Festpreise für Privat- und Gewerbekunden.")}
                       </p>
-                      <div class="flex items-center justify-center gap-1.5">
-                        <a href="#kontakt" class="py-1 px-2.5 bg-purple-600 hover:bg-purple-500 text-white rounded-lg text-[10px] font-bold transition flex items-center gap-1 shadow-md shadow-purple-600/30">
-                          <i data-lucide="phone-call" class="w-3 h-3"></i> <span>${isTr ? "Hemen Teklif Al" : (isEn ? "Get Fast Quote" : "Angebot anfordern")}</span>
-                        </a>
-                        <button type="button" class="py-1 px-2 bg-emerald-600/30 hover:bg-emerald-600/50 text-emerald-300 rounded-lg text-[10px] font-bold transition flex items-center gap-1 border border-emerald-500/40">
+
+                      <!-- Trust Pills -->
+                      <div class="grid grid-cols-2 gap-1.5 mb-3 text-[9px] text-slate-300">
+                        <div class="bg-slate-900/80 p-1.5 rounded-lg border border-slate-800 flex items-center justify-center gap-1">
+                          <i data-lucide="award" class="w-3 h-3 text-amber-400"></i>
+                          <span>${isTr ? "Meister Sertifikalı" : (isEn ? "Master Certified" : "Meisterbrief Handwerk")}</span>
+                        </div>
+                        <div class="bg-slate-900/80 p-1.5 rounded-lg border border-slate-800 flex items-center justify-center gap-1">
+                          <i data-lucide="star" class="w-3 h-3 text-amber-400 fill-amber-400"></i>
+                          <span>4.9 / 5.0 (140+ ${isTr ? "Yorum" : (isEn ? "Reviews" : "Bewertungen")})</span>
+                        </div>
+                      </div>
+
+                      <!-- Hero CTA Buttons -->
+                      <div class="flex items-center justify-center gap-2">
+                        <button type="button" class="py-1.5 px-3 bg-purple-600 hover:bg-purple-500 text-white rounded-lg text-[10px] font-bold transition flex items-center gap-1 shadow-md shadow-purple-600/30">
+                          <i data-lucide="phone-call" class="w-3 h-3"></i> <span>${isTr ? "Teklif İste" : (isEn ? "Get Quote" : "Angebot anfragen")}</span>
+                        </button>
+                        <button type="button" class="py-1.5 px-2.5 bg-emerald-600/30 hover:bg-emerald-600/50 text-emerald-300 rounded-lg text-[10px] font-bold transition flex items-center gap-1 border border-emerald-500/40">
                           <i data-lucide="message-circle" class="w-3 h-3 text-emerald-400"></i> <span>WhatsApp</span>
                         </button>
                       </div>
                     </div>
                   </div>
 
-                  <div class="space-y-1.5 text-[11px] text-slate-400">
+                  <div class="space-y-1 text-[11px] text-slate-400">
                     <div class="flex items-center justify-between">
-                      <span>${isTr ? "Mobil & Tablet Uyumu:" : (isEn ? "Mobile & Tablet Optimization:" : "Mobile-First Responsiv:")}</span>
-                      <strong class="text-emerald-400 font-semibold">%100 Uyumlu ✓</strong>
-                    </div>
-                    <div class="flex items-center justify-between">
-                      <span>${isTr ? "SSL & DSGVO / KVKK Uyumlu:" : (isEn ? "GDPR & SSL Certified:" : "DSGVO & SSL Konform:")}</span>
-                      <strong class="text-purple-300 font-semibold">${isTr ? "Sertifikalı Güvenli ✓" : (isEn ? "Certified Secure ✓" : "Rechtssicher ✓")}</strong>
+                      <span>${isTr ? "Tasarım Türü:" : (isEn ? "Design Type:" : "Design-Typ:")}</span>
+                      <strong class="text-white font-medium">${isTr ? "Kurumsal Usta & Zanaat Web Sitesi" : (isEn ? "Craft & Contractor Corporate Site" : "Handwerker- & Meisterbetrieb Website")}</strong>
                     </div>
                   </div>
                 </div>
+
                 <div class="mt-3 pt-2.5 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
-                  <span>${isTr ? "Hazır şablon değil, özel kodlama" : (isEn ? "No slow WordPress, custom coded" : "Kein langsames WordPress, maßcodiert")}</span>
-                  <span class="text-emerald-400 font-bold font-mono">Ultra Fast 🚀</span>
+                  <span>${isTr ? "Mobil, Tablet & Masaüstü %100 Uyumlu" : (isEn ? "100% Mobile & Tablet Responsive" : "100% Responsive & DSGVO-sicher")}</span>
+                  <span class="text-emerald-400 font-bold font-mono">Live Web ✓</span>
                 </div>
               </div>
 
-              <!-- Column 2: Google SEO & Local Ranking -->
+              <!-- Column 2: Core Services & Reference Grid on the Website -->
               <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 shadow-xl flex flex-col justify-between">
                 <div>
                   <div class="flex items-center justify-between mb-3">
                     <h4 class="font-bold text-sm text-slate-200 flex items-center gap-2">
-                      <i data-lucide="search" class="w-4 h-4 text-purple-400"></i>
-                      <span>${isTr ? "Google SEO & Harita Sıralaması" : (isEn ? "Google SEO & Local Maps Ranking" : "Google SEO & Lokales Ranking")}</span>
+                      <i data-lucide="layout-grid" class="w-4 h-4 text-purple-400"></i>
+                      <span>${isTr ? "Web Sitesi Hizmet Kataloğu" : (isEn ? "Website Services & Showcase" : "Leistungs- & Referenzkatalog")}</span>
                     </h4>
-                    <span class="text-[11px] text-emerald-400 font-mono font-bold">Platz #1 Google</span>
+                    <span class="text-xs text-purple-300 font-mono font-bold">${isTr ? "3 Ana Hizmet" : (isEn ? "3 Core Areas" : "3 Kernbereiche")}</span>
                   </div>
 
-                  <!-- Google Search Result Card -->
-                  <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800 text-xs mb-3 space-y-1">
-                    <div class="flex items-center gap-1.5 text-[10px] text-slate-400">
-                      <span class="text-emerald-400 font-bold font-mono">https://ihre-firma.de</span>
-                      <span>› regional</span>
+                  <!-- Service Card 1 -->
+                  <div class="space-y-2 text-xs mb-3">
+                    <div class="p-2.5 bg-slate-950/80 rounded-xl border border-slate-800 flex items-start gap-2.5">
+                      <span class="p-1.5 rounded-lg bg-purple-950 text-purple-300 border border-purple-800/60 mt-0.5">
+                        <i data-lucide="home" class="w-3.5 h-3.5"></i>
+                      </span>
+                      <div class="flex-1">
+                        <p class="font-bold text-white text-xs">${isTr ? "Smart Home & KNX Otomasyonu" : (isEn ? "Smart Home & KNX Automation" : "Smart Home & KNX Gebäude-Automation")}</p>
+                        <p class="text-[10px] text-slate-400 mt-0.5">${isTr ? "Işık, panjur, ısıtma ve güvenlik sistemlerinin akıllı telefonla tam kontrolü." : (isEn ? "Intelligent lighting, shading, HVAC and alarm control via smartphone." : "Intelligente Licht-, Beschattungs- und Heizungssteuerung per Smartphone.")}</p>
+                      </div>
                     </div>
-                    <p class="font-bold text-blue-400 text-xs hover:underline cursor-pointer">
-                      ${isTr ? "Müller Usta İşletmesi | Bölgenizin 1 Numaralı Uzmanı" : (isEn ? "Mueller Master Service | #1 Certified Contractor" : "Müller Meisterbetrieb | Ihr #1 Experte in der Region")}
-                    </p>
-                    <div class="flex items-center gap-1 text-[11px] text-amber-400 font-bold">
-                      <span>★★★★★ 4.9</span>
-                      <span class="text-slate-400 font-normal">(${isTr ? "142 Google Değerlendirmesi" : (isEn ? "142 Google Reviews" : "142 Google-Bewertungen")})</span>
-                    </div>
-                    <p class="text-[10px] text-slate-300 leading-relaxed">
-                      ${isTr ? "Hızlı servis, şeffaf fiyatlandırma, 25 yıllık tecrübe ve garantili işçilik. Hemen online keşif ve teklif alın." : (isEn ? "Fast service, transparent pricing, 25+ years experience. Request an online inspection & quote today." : "Schneller Vor-Ort-Service, transparente Festpreise, 25 Jahre Erfahrung. Jetzt kostenloses Angebot berechnen.")}
-                    </p>
-                  </div>
 
-                  <div class="space-y-1.5 text-xs">
-                    <div class="flex items-center justify-between p-2 bg-slate-950/50 rounded-lg">
-                      <span class="text-slate-300">${isTr ? "Aylık Organik Ziyaretçi:" : (isEn ? "Monthly Organic Leads:" : "Monatliche Website-Besucher:")}</span>
-                      <span class="font-mono text-purple-300 font-bold">+2.450 ${isTr ? "Kişi" : (isEn ? "Visits" : "Besucher")}</span>
+                    <!-- Service Card 2 -->
+                    <div class="p-2.5 bg-slate-950/80 rounded-xl border border-slate-800 flex items-start gap-2.5">
+                      <span class="p-1.5 rounded-lg bg-amber-950 text-amber-300 border border-amber-800/60 mt-0.5">
+                        <i data-lucide="sun" class="w-3.5 h-3.5"></i>
+                      </span>
+                      <div class="flex-1">
+                        <p class="font-bold text-white text-xs">${isTr ? "Fotovoltaik & Wallbox Şarj İstasyonu" : (isEn ? "Solar PV & EV Wallbox Charging" : "Photovoltaik & Wallbox E-Ladestationen")}</p>
+                        <p class="text-[10px] text-slate-400 mt-0.5">${isTr ? "Çatı güneş panelleri ve elektrikli araç şarj istasyonlarının anahtar teslim kurulumu." : (isEn ? "Turnkey solar rooftop systems and certified EV fast charging boxes." : "Schlüsselfertige PV-Anlagen und zertifizierte Wallbox-Montage mit KfW-Förderung.")}</p>
+                      </div>
                     </div>
-                    <div class="flex items-center justify-between p-2 bg-slate-950/50 rounded-lg">
-                      <span class="text-slate-300">${isTr ? "Google Haritalar Görünürlüğü:" : (isEn ? "Google Maps Visibility:" : "Google Maps Sichtbarkeit:")}</span>
-                      <span class="font-mono text-emerald-400 font-bold">+180% 📈</span>
+
+                    <!-- Service Card 3 -->
+                    <div class="p-2.5 bg-slate-950/80 rounded-xl border border-slate-800 flex items-start gap-2.5">
+                      <span class="p-1.5 rounded-lg bg-cyan-950 text-cyan-300 border border-cyan-800/60 mt-0.5">
+                        <i data-lucide="shield-check" class="w-3.5 h-3.5"></i>
+                      </span>
+                      <div class="flex-1">
+                        <p class="font-bold text-white text-xs">${isTr ? "E-Check & DGUV V3 Yasal Muayene" : (isEn ? "E-Check & Commercial Safety Tests" : "E-Check & DGUV V3 Sicherheitsprüfung")}</p>
+                        <p class="text-[10px] text-slate-400 mt-0.5">${isTr ? "İşletmeler ve mülk sahipleri için resmi onaylı elektrik muayene raporları." : (isEn ? "Legally compliant safety test protocols for commercial facilities and landlords." : "Rechtssichere Prüfprotokolle für Gewerbebetriebe, Praxen und Mietobjekte.")}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="mt-3 pt-2.5 border-t border-slate-700/80 text-[11px] text-slate-400 flex items-center justify-between">
-                  <span>${isTr ? "Bölgesel aramalarda rakiplerinizin önüne geçin" : (isEn ? "Outrank local competitors organically" : "Organische Kundenanfragen ohne teure Google Ads")}</span>
-                  <span class="text-purple-400 font-bold font-mono">SEO Ready ✓</span>
+                  <span>${isTr ? "Müşterinin güvenini kazanan şık hizmet vitrini" : (isEn ? "Clean service showcase that builds instant trust" : "Schafft Vertrauen und hohe Abschlussraten")}</span>
+                  <span class="text-purple-300 font-bold font-mono">Referans Vitrini ✓</span>
                 </div>
               </div>
 
-              <!-- Column 3: Lead Capture & CRM Sync -->
+              <!-- Column 3: Conversion & Google Ranking Benefits -->
               <div class="bg-gradient-to-b from-purple-950/40 via-slate-800 to-slate-850 p-5 rounded-2xl border border-purple-500/30 flex flex-col justify-between shadow-xl">
                 <div>
                   <h4 class="font-bold text-sm text-slate-200 flex items-center gap-2 mb-3">
-                    <i data-lucide="inbox" class="w-4 h-4 text-purple-400"></i>
-                    <span>${isTr ? "7/24 Otomatik Teklif & Müşteri Formu" : (isEn ? "24/7 Automated Leads & Inquiries" : "24/7 Automatische Neukunden-Anfragen")}</span>
+                    <i data-lucide="trending-up" class="w-4 h-4 text-purple-400"></i>
+                    <span>${isTr ? "Bu Web Sitesi Neler Sağlar?" : (isEn ? "Why Clients Need This Website:" : "Vorteile dieser Handwerker-Website:")}</span>
                   </h4>
-                  <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-2 text-xs">
-                    <div class="flex items-center justify-between">
-                      <span class="text-purple-300 font-bold">${isTr ? "Son Gelen Web Talebi:" : (isEn ? "Latest Web Inquiry:" : "Letzte Neukunden-Anfrage:")}</span>
-                      <span class="text-[10px] text-emerald-400 font-mono font-bold">${isTr ? "3 dk önce" : (isEn ? "3m ago" : "vor 3 Min")}</span>
+                  <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-2.5 text-xs">
+                    <div class="flex items-start gap-2">
+                      <span class="text-emerald-400 font-bold">✓</span>
+                      <div>
+                        <strong class="text-white block">${isTr ? "Google Yerel Aramada #1 Sıra (SEO)" : (isEn ? "#1 Local Google Ranking (SEO)" : "Google #1 Lokal-SEO")}</strong>
+                        <span class="text-[10px] text-slate-400">${isTr ? "Bölgenizde elektrikçi veya usta arayan müşteriler doğrudan size ulaşır." : (isEn ? "Homeowners searching for local contractors find you before competitors." : "Findet Neukunden bei lokalen Suchen nach Fachbetrieben im Umkreis.")}</span>
+                      </div>
                     </div>
-                    <p class="text-slate-200 font-semibold text-xs">
-                      ${isTr ? "„Komple Daire Yenileme & Banyo Tadilatı“" : (isEn ? "„Full Apartment Renovation & Electrical“" : "„Komplette Badsanierung & Fliesenarbeiten“")}
-                    </p>
-                    <p class="text-[10px] text-slate-400">
-                      ${isTr ? "Müşteri: Serdar A. • Bütçe: € 15.000 • Konum: Merkez" : (isEn ? "Client: Michael S. • Budget: € 15,000 • Location: Central" : "Kunde: Michael S. • Budget: € 15.000 • Ort: München")}
-                    </p>
-                    <div class="pt-2 border-t border-slate-800 flex items-center justify-between text-[10px]">
-                      <span class="text-slate-400">${isTr ? "CRM & WhatsApp Entegrasyonu:" : (isEn ? "CRM & Phone Sync:" : "CRM & WhatsApp-Sync:")}</span>
-                      <span class="text-emerald-400 font-bold">Otomatik Bildirim ✓</span>
+                    <div class="flex items-start gap-2">
+                      <span class="text-purple-400 font-bold">✓</span>
+                      <div>
+                        <strong class="text-white block">${isTr ? "Ultra Hızlı & WordPress Bağımsız" : (isEn ? "Lightning Fast, No WordPress Bloat" : "Kein langsames WordPress")}</strong>
+                        <span class="text-[10px] text-slate-400">${isTr ? "0.5 saniyede açılan hafif ve güvenli modern kodlama, sıfır eklenti hatası." : (isEn ? "0.5s instant load, secure custom code with zero plugin vulnerabilities." : "Lädt in unter 1 Sekunde – ohne Sicherheitslücken und ständige Update-Kosten.")}</span>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-2">
+                      <span class="text-cyan-400 font-bold">✓</span>
+                      <div>
+                        <strong class="text-white block">${isTr ? "Doğrudan WhatsApp & Teklif Hattı" : (isEn ? "Direct WhatsApp & Instant Quote" : "Direkter WhatsApp- & Angebotskontakt")}</strong>
+                        <span class="text-[10px] text-slate-400">${isTr ? "Müşteriler fotoğraf gönderip 60 saniyede keşif talebi oluşturur." : (isEn ? "Customers upload damage photos and request inspection in 60s." : "Kunden können Fotos hochladen und direkt Vor-Ort-Termine anfragen.")}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <a href="#kontakt" class="w-full mt-3 py-2.5 px-3 bg-purple-600 hover:bg-purple-500 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition text-center">
-                  <i data-lucide="sparkles" class="w-4 h-4"></i> <span>${isTr ? "Web Sitenizi Birlikte Tasarlayalım →" : (isEn ? "Start Your Web Project →" : "Eigene Firmen-Webseite anfragen →")}</span>
+                <a href="#kontakt" class="w-full mt-3 py-2.5 px-3 bg-purple-600 hover:bg-purple-500 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition text-center shadow-lg shadow-purple-600/30">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i> <span>${isTr ? "Böyle Bir Web Sitesi İstiyorum →" : (isEn ? "I Want A Website Like This →" : "Eigene Handwerker-Website anfragen →")}</span>
                 </a>
               </div>
             </div>
@@ -1938,125 +1971,175 @@ const showcaseData = {
       {
         badge: "B",
         name: { 
-          de: "Variante B: Interaktiver Preiskalkulator & Portfolio", 
-          tr: "Varyant B: Canlı Fiyat Hesaplayıcı & Portföy", 
-          en: "Variant B: Interactive Quote Calculator & Portfolio" 
+          de: "Variante B: Spedition & Express-Logistik (B2B)", 
+          tr: "Varyant B: Lojistik, Nakliyat & Kargo (B2B)", 
+          en: "Variant B: Logistics & Freight Transport (B2B)" 
         },
-        url: "ihre-firma.de/online-angebot-rechner",
+        url: "www.bavaria-express-logistik.de",
         render: (lang) => {
           const isTr = lang === "tr";
           const isEn = lang === "en";
           return `
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
-              <!-- Column 1: Live Interactive Instant Quote Widget -->
-              <div class="bg-gradient-to-b from-slate-900 to-slate-950 p-5 rounded-2xl border-2 border-indigo-500/50 shadow-2xl flex flex-col justify-between">
+              <!-- Column 1: Logistics Company Website Preview (Hero & Live Tracker) -->
+              <div class="bg-gradient-to-b from-slate-900 to-slate-950 p-4 sm:p-5 rounded-2xl border-2 border-indigo-500/60 shadow-2xl flex flex-col justify-between">
                 <div>
                   <div class="flex items-center justify-between mb-3">
-                    <h4 class="font-bold text-sm text-indigo-300 flex items-center gap-2">
-                      <i data-lucide="calculator" class="w-4 h-4 text-indigo-400"></i>
-                      <span>${isTr ? "60 Saniyede Canlı Fiyat Hesaplayıcı" : (isEn ? "60-Second Instant Quote Widget" : "60-Sekunden Online-Preiskalkulator")}</span>
+                    <h4 class="font-bold text-xs sm:text-sm text-indigo-300 flex items-center gap-1.5 uppercase tracking-wider">
+                      <span class="w-2.5 h-2.5 rounded-full bg-indigo-400 animate-pulse"></span>
+                      <span>${isTr ? "LOJİSTİK WEB SİTESİ ÖRNEĞİ" : (isEn ? "LOGISTICS WEBSITE HOMEPAGE" : "SPEDITIONS-WEBSEITE")}</span>
                     </h4>
-                    <span class="text-[10px] bg-indigo-950 text-indigo-300 px-2 py-0.5 rounded border border-indigo-700 font-bold">INTERAKTIV</span>
+                    <span class="text-[10px] bg-indigo-950 text-indigo-300 px-2 py-0.5 rounded-full border border-indigo-800 font-bold font-mono">
+                      B2B SPEDITION
+                    </span>
                   </div>
 
-                  <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800 space-y-2.5 text-xs mb-3">
-                    <div>
-                      <span class="text-[10px] text-slate-400 block mb-1">${isTr ? "1. Hizmet Türünü Seçin:" : (isEn ? "1. Select Service Category:" : "1. Gewerk / Leistung wählen:")}</span>
-                      <div class="grid grid-cols-3 gap-1">
-                        <span class="p-1.5 bg-indigo-600/40 border border-indigo-500 rounded text-center text-[10px] font-bold text-white cursor-pointer">${isTr ? "Tadilat" : (isEn ? "Renovation" : "Sanierung")}</span>
-                        <span class="p-1.5 bg-slate-900 border border-slate-800 rounded text-center text-[10px] text-slate-400 cursor-pointer hover:text-white">${isTr ? "Elektrik" : (isEn ? "Electrical" : "Elektro")}</span>
-                        <span class="p-1.5 bg-slate-900 border border-slate-800 rounded text-center text-[10px] text-slate-400 cursor-pointer hover:text-white">${isTr ? "Temizlik" : (isEn ? "Cleaning" : "Reinigung")}</span>
+                  <!-- Mini Browser Window Mockup -->
+                  <div class="bg-slate-950 rounded-xl border border-indigo-900/50 p-3 mb-3 shadow-inner">
+                    <!-- Website Navigation Bar -->
+                    <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800 text-[10px]">
+                      <div class="flex items-center gap-1.5 font-bold text-white">
+                        <span class="w-5 h-5 rounded-lg bg-indigo-600 flex items-center justify-center text-white text-[10px]">🚚</span>
+                        <span>BAVARIA <span class="text-indigo-400 font-normal">LOGISTIK</span></span>
                       </div>
+                      <div class="hidden sm:flex items-center gap-2 text-[9px] text-slate-400">
+                        <span class="text-indigo-300 font-semibold">${isTr ? "Taşımacılık" : (isEn ? "Freight" : "Verkehre")}</span>
+                        <span>${isTr ? "Depolama" : (isEn ? "Warehousing" : "Lager")}</span>
+                        <span>${isTr ? "Gönderi Takip" : (isEn ? "Tracking" : "Tracking")}</span>
+                      </div>
+                      <span class="text-[9px] bg-emerald-950 text-emerald-300 px-1.5 py-0.5 rounded border border-emerald-800 font-bold">ISO 9001</span>
                     </div>
 
-                    <div>
-                      <div class="flex justify-between text-[10px] text-slate-400 mb-1">
-                        <span>${isTr ? "2. Alan / Metrekare:" : (isEn ? "2. Project Area:" : "2. Fläche / Raumgröße:")}</span>
-                        <strong class="text-indigo-300 font-mono">85 m²</strong>
-                      </div>
-                      <div class="w-full bg-slate-900 rounded-full h-2">
-                        <div class="bg-indigo-500 h-2 rounded-full w-[65%]"></div>
-                      </div>
-                    </div>
+                    <!-- Website Hero Banner -->
+                    <div class="py-2 text-center">
+                      <span class="text-[9px] bg-indigo-900/40 text-indigo-200 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider inline-block mb-1.5 border border-indigo-700/50">
+                        ${isTr ? "Avrupa Geneli Express & Komple Yük Taşımacılığı" : (isEn ? "Pan-European Express Freight & Partial Loads" : "Europaweite Express- & Komplettladungsverkehre")}
+                      </span>
+                      <h5 class="text-xs sm:text-sm font-extrabold text-white leading-snug mb-1.5">
+                        ${isTr ? "Zamanında, Güvenli ve Sabit Fiyatlı Lojistik" : (isEn ? "Punctual, Reliable & Just-In-Time Freight" : "Zuverlässige Just-in-Time Transporte & Kühl-Logistik")}
+                      </h5>
+                      <p class="text-[10px] text-slate-400 max-w-[250px] mx-auto mb-3 leading-relaxed">
+                        ${isTr ? "48 araçlık modern filomuz ve GPS canlı takip altyapımız ile yükleriniz daima güvende." : (isEn ? "Modern fleet of 48+ vehicles with real-time GPS tracking and 99.2% on-time delivery rate." : "48 moderne Zugmaschinen, GPS-Echtzeitüberwachung und 99,2% Pünktlichkeitsquote.")}
+                      </p>
 
-                    <div class="pt-2 border-t border-slate-800 flex items-center justify-between">
-                      <span class="text-slate-300 font-medium">${isTr ? "Tahmini Bütçe:" : (isEn ? "Estimated Price:" : "Kalkulierter Richtpreis:")}</span>
-                      <span class="text-base font-extrabold font-mono text-emerald-400">€ 2.850,00</span>
+                      <!-- Interactive Live Shipment Tracker on the website -->
+                      <div class="bg-slate-900 p-2 rounded-xl border border-indigo-500/40 text-left mb-2.5">
+                        <div class="flex items-center justify-between text-[9px] text-slate-400 mb-1">
+                          <span class="font-bold text-white">${isTr ? "Canlı Gönderi Takibi:" : (isEn ? "Live Track & Trace:" : "Live-Sendungsverfolgung:")}</span>
+                          <span class="text-emerald-400 font-mono font-bold">🚚 ${isTr ? "Yolda" : (isEn ? "In Transit" : "Unterwegs")}</span>
+                        </div>
+                        <div class="flex items-center justify-between text-[10px] text-slate-300 bg-slate-950 px-2 py-1 rounded">
+                          <span class="font-mono text-indigo-300">#EXP-2026-884</span>
+                          <span class="text-[9px] text-slate-400">München → Hamburg (${isTr ? "Varış: 16:30" : (isEn ? "ETA: 4:30 PM" : "Ankunft: 16:30")})</span>
+                        </div>
+                      </div>
+
+                      <!-- Hero Buttons -->
+                      <div class="flex items-center justify-center gap-2">
+                        <button type="button" class="py-1.5 px-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg text-[10px] font-bold transition flex items-center gap-1 shadow-md shadow-indigo-600/30">
+                          <i data-lucide="file-text" class="w-3 h-3"></i> <span>${isTr ? "Navlun Teklifi İste" : (isEn ? "Freight Quote" : "Frachtanfrage starten")}</span>
+                        </button>
+                        <button type="button" class="py-1.5 px-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-[10px] font-bold transition flex items-center gap-1 border border-slate-700">
+                          <i data-lucide="phone" class="w-3 h-3"></i> <span>${isTr ? "7/24 Dispo" : (isEn ? "24/7 Dispatch" : "24/7 Dispo")}</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
 
-                  <p class="text-[11px] text-slate-400 leading-relaxed">
-                    ${isTr ? "Müşterileriniz web sitenizden saniyeler içinde tahmini fiyat hesaplayıp doğrudan teklif talep eder." : (isEn ? "Clients calculate instant budget estimates right on your website and submit high-intent inquiries." : "Kunden konfigurieren ihr Vorhaben direkt online und senden Ihnen qualifizierte Preisanfragen.")}
-                  </p>
+                  <div class="space-y-1 text-[11px] text-slate-400">
+                    <div class="flex items-center justify-between">
+                      <span>${isTr ? "Tasarım Türü:" : (isEn ? "Design Type:" : "Design-Typ:")}</span>
+                      <strong class="text-white font-medium">${isTr ? "Kurumsal Lojistik & Nakliyat Web Sitesi" : (isEn ? "B2B Freight & Logistics Website" : "B2B Logistik- & Speditionsportal")}</strong>
+                    </div>
+                  </div>
                 </div>
 
-                <button type="button" class="w-full mt-3 py-2 px-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5">
-                  <i data-lucide="send" class="w-3.5 h-3.5"></i> <span>${isTr ? "1 Tıkla Teklife Dönüştür" : (isEn ? "Request Official Proposal" : "Angebot sofort anfordern")}</span>
-                </button>
+                <div class="mt-3 pt-2.5 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
+                  <span>${isTr ? "Büyük sanayi müşterileri için kurumsal B2B prestij" : (isEn ? "Built to win enterprise manufacturing clients" : "Maximale B2B-Glaubwürdigkeit für Großaufträge")}</span>
+                  <span class="text-indigo-400 font-bold font-mono">B2B Ready ✓</span>
+                </div>
               </div>
 
-              <!-- Column 2: Filterable Project Showcase -->
+              <!-- Column 2: 2-Minute Online Freight Quote Form on Website -->
               <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 shadow-xl flex flex-col justify-between">
                 <div>
                   <div class="flex items-center justify-between mb-3">
                     <h4 class="font-bold text-sm text-slate-200 flex items-center gap-2">
-                      <i data-lucide="images" class="w-4 h-4 text-indigo-400"></i>
-                      <span>${isTr ? "Dinamik Referans & Proje Galerisi" : (isEn ? "Dynamic Reference Project Gallery" : "Detaillierte Referenz-Galerie")}</span>
+                      <i data-lucide="calculator" class="w-4 h-4 text-indigo-400"></i>
+                      <span>${isTr ? "2 Dakikada Hızlı Navlun Formu" : (isEn ? "2-Minute Quick Freight Form" : "2-Minuten Fracht-Kalkulator")}</span>
                     </h4>
-                    <span class="text-xs text-slate-400">${isTr ? "Filtrelenebilir" : (isEn ? "Filterable" : "Filterbar")}</span>
+                    <span class="text-xs text-indigo-300 font-mono font-bold">${isTr ? "Akıllı Form" : (isEn ? "Smart Form" : "Online Form")}</span>
                   </div>
 
-                  <div class="flex flex-wrap gap-1.5 mb-3 text-[10px]">
-                    <span class="px-2 py-0.5 rounded-full bg-indigo-600 text-white font-bold">${isTr ? "Tümü" : (isEn ? "All" : "Alle")}</span>
-                    <span class="px-2 py-0.5 rounded-full bg-slate-950 text-slate-400 border border-slate-800">${isTr ? "Konut" : (isEn ? "Residential" : "Wohnbau")}</span>
-                    <span class="px-2 py-0.5 rounded-full bg-slate-950 text-slate-400 border border-slate-800">${isTr ? "Ticari & Ofis" : (isEn ? "Commercial" : "Gewerbe")}</span>
+                  <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800 space-y-2 text-xs mb-3">
+                    <div>
+                      <span class="text-[10px] text-slate-400 block mb-0.5">${isTr ? "Yükleme & Teslimat Noktası:" : (isEn ? "Pickup & Delivery Location:" : "Abhol- & Lieferort:")}</span>
+                      <div class="flex items-center justify-between p-2 bg-slate-900 rounded-lg border border-slate-800 text-[11px]">
+                        <span class="text-white">📍 80331 München</span>
+                        <span class="text-slate-400">➔</span>
+                        <span class="text-white">📍 20095 Hamburg</span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <span class="text-[10px] text-slate-400 block mb-0.5">${isTr ? "Yük Tipi & Palet Sayısı:" : (isEn ? "Cargo Specifications:" : "Ladung & Spezifikation:")}</span>
+                      <div class="grid grid-cols-2 gap-1.5 text-[10px]">
+                        <div class="p-1.5 bg-slate-900 rounded border border-slate-800 text-slate-200">${isTr ? "12 Euro Palet (8.4t)" : (isEn ? "12 Euro Pallets (8.4t)" : "12 Europaletten (8,4t)")}</div>
+                        <div class="p-1.5 bg-indigo-950 text-indigo-300 rounded border border-indigo-800/80 font-semibold">${isTr ? "Soğutmalı (+4°C)" : (isEn ? "Refrigerated (+4°C)" : "Frischekühlung (+4°C)")}</div>
+                      </div>
+                    </div>
+
+                    <div class="pt-1.5 border-t border-slate-800 flex items-center justify-between text-[11px]">
+                      <span class="text-slate-400">${isTr ? "Teslimat Süresi:" : (isEn ? "Transit Time:" : "Laufzeit-Garantie:")}</span>
+                      <strong class="text-emerald-400 font-mono">24h Express ✓</strong>
+                    </div>
                   </div>
 
-                  <div class="space-y-2 text-xs">
-                    <div class="p-2.5 bg-slate-950/70 rounded-xl border border-slate-800 flex justify-between items-center">
-                      <div>
-                        <p class="font-bold text-white">${isTr ? "Modern Çatı & İzolasyon #204" : (isEn ? "Modern Roofing & Solar #204" : "Dachsanierung & Dämmung #204")}</p>
-                        <p class="text-[10px] text-slate-400">${isTr ? "Süre: 5 gün • Öncesi/Sonrası Fotoğraflı" : (isEn ? "Duration: 5 days • Before/After photos" : "Dauer: 5 Tage • Vorher/Nachher Fotos")}</p>
-                      </div>
-                      <span class="text-[10px] bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded border border-emerald-800">${isTr ? "Teslim Edildi ✓" : (isEn ? "Completed ✓" : "Abgeschlossen")}</span>
-                    </div>
-                    <div class="p-2.5 bg-slate-950/70 rounded-xl border border-slate-800 flex justify-between items-center">
-                      <div>
-                        <p class="font-bold text-white">${isTr ? "Lüks Banyo Dönüşümü #108" : (isEn ? "Luxury Bathroom Remodel #108" : "Design-Badezimmer Neugestaltung")}</p>
-                        <p class="text-[10px] text-slate-400">${isTr ? "Müşteri Yorumu: ★★★★★ (5.0)" : (isEn ? "Client Feedback: ★★★★★ (5.0)" : "Kundenbewertung: ★★★★★ (5.0)")}</p>
-                      </div>
-                      <span class="text-[10px] bg-purple-950 text-purple-300 px-2 py-0.5 rounded border border-purple-800">${isTr ? "Öne Çıkan" : (isEn ? "Featured" : "Top Projekt")}</span>
-                    </div>
-                  </div>
+                  <p class="text-[11px] text-slate-400 leading-relaxed">
+                    ${isTr ? "Müşterileriniz telefonla vakit kaybetmeden doğrudan web sitenizden yük parametrelerini girip teklif alır." : (isEn ? "Commercial shippers input pallet count and routes in seconds without back-and-forth emails." : "Versender geben Palettenanzahl und Zielorte direkt online ein – spart stundenlange Telefonate in der Dispo.")}
+                  </p>
                 </div>
 
                 <div class="mt-3 pt-2.5 border-t border-slate-700/80 text-[11px] text-slate-400 flex items-center justify-between">
-                  <span>${isTr ? "Yüksek çözünürlüklü görseller ve vaka analizleri" : (isEn ? "High-res case studies and social proof" : "Vertrauen schaffen durch echte Projekt-Nachweise")}</span>
-                  <span class="text-indigo-400 font-bold font-mono">CMS Sync ✓</span>
+                  <span>${isTr ? "Otomatik e-posta bildirimi ve dispo entegrasyonu" : (isEn ? "Automated email alerts directly to dispatchers" : "Direkte Weiterleitung an Disponenten")}</span>
+                  <span class="text-indigo-400 font-bold font-mono">Auto Lead ✓</span>
                 </div>
               </div>
 
-              <!-- Column 3: Automatic PDF Offer Dispatch -->
+              <!-- Column 3: Why This Website Wins High-Paying B2B Contracts -->
               <div class="bg-gradient-to-b from-indigo-950/40 via-slate-800 to-slate-850 p-5 rounded-2xl border border-indigo-500/30 flex flex-col justify-between shadow-xl">
                 <div>
-                  <h4 class="font-bold text-sm text-slate-200 mb-2">${isTr ? "Otomatik Antetli Teklif PDF'i" : (isEn ? "Automated PDF Estimate Dispatch" : "Automatische PDF-Angebotserstellung")}</h4>
-                  <p class="text-xs text-slate-400 mb-3 leading-relaxed">
-                    ${isTr ? "Web sitenizdeki hesaplayıcıdan çıkan veriler, firmanızın logosu ve antetli şablonuyla anında resmi PDF teklife dönüştürülüp müşteriye e-posta ile iletilir." : (isEn ? "Calculated data is automatically rendered into a branded PDF quote and emailed to the customer within seconds." : "Kalkulierte Angebote werden sekundenschnell als druckfertiges PDF im Firmenbranding generiert und direkt an den Kunden versandt.")}
-                  </p>
-                  <div class="p-2.5 bg-slate-950/80 rounded-xl border border-slate-800 text-[11px] text-slate-300 space-y-1">
-                    <div class="flex justify-between">
-                      <span class="text-slate-400">${isTr ? "Teklif No:" : (isEn ? "Quote No:" : "Angebot-Nr:")}</span>
-                      <span class="font-mono text-white font-bold">ANG-2026-094</span>
+                  <h4 class="font-bold text-sm text-slate-200 flex items-center gap-2 mb-3">
+                    <i data-lucide="shield" class="w-4 h-4 text-indigo-400"></i>
+                    <span>${isTr ? "Lojistik Web Sitesinin Avantajları:" : (isEn ? "Why Speditions Need This Site:" : "Vorteile für Ihr Logistikunternehmen:")}</span>
+                  </h4>
+                  <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-2.5 text-xs">
+                    <div class="flex items-start gap-2">
+                      <span class="text-emerald-400 font-bold">✓</span>
+                      <div>
+                        <strong class="text-white block">${isTr ? "Sanayi & Fabrika Sözleşmeleri" : (isEn ? "Win High-Volume B2B Contracts" : "Großkunden & Industrieaufträge")}</strong>
+                        <span class="text-[10px] text-slate-400">${isTr ? "Kurumsal kimliği ve güven veren altyapısıyla büyük lojistik ihalelerinde öne çıkarır." : (isEn ? "Polished enterprise look gives manufacturing plants confidence in your fleet." : "Professioneller Auftritt für Ausschreibungen und langfristige Rahmenverträge.")}</span>
+                      </div>
                     </div>
-                    <div class="flex justify-between">
-                      <span class="text-slate-400">${isTr ? "Durum:" : (isEn ? "Status:" : "Status:")}</span>
-                      <span class="text-emerald-400 font-semibold">${isTr ? "Müşteriye Gönderildi ✓" : (isEn ? "Sent to Client ✓" : "Automatisch versendet ✓")}</span>
+                    <div class="flex items-start gap-2">
+                      <span class="text-indigo-400 font-bold">✓</span>
+                      <div>
+                        <strong class="text-white block">${isTr ? "Çok Dilli Altyapı (DE / EN / TR)" : (isEn ? "Multi-Language Ready (DE/EN/TR)" : "Mehrsprachig (DE / EN / TR)")}</strong>
+                        <span class="text-[10px] text-slate-400">${isTr ? "Uluslararası taşımacılık ve yabancı müşteriler için tek tıkla dil değişimi." : (isEn ? "International freight clients can navigate in their preferred language." : "Perfekt für grenzüberschreitende Verkehre und internationale Kunden.")}</span>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-2">
+                      <span class="text-cyan-400 font-bold">✓</span>
+                      <div>
+                        <strong class="text-white block">${isTr ? "Şoför & Personel Başvuru Formu" : (isEn ? "Driver Recruitment Landing Page" : "Fahrer-Bewerber-Portal")}</strong>
+                        <span class="text-[10px] text-slate-400">${isTr ? "CE ehliyetli şoför bulmayı kolaylaştıran 1 dakikalık hızlı iş başvuru formu." : (isEn ? "Built-in 1-minute driver application form to solve staffing shortages." : "Integrierte 60-Sekunden Express-Bewerbung gegen Fahrermangel.")}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <button type="button" class="w-full mt-3 py-2.5 px-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-bold transition">
-                  ${isTr ? "Örnek Teklif PDF'ini İndir" : (isEn ? "Download Sample Quote PDF" : "Muster-Angebot (PDF) generieren")}
-                </button>
+                <a href="#kontakt" class="w-full mt-3 py-2.5 px-3 bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition text-center shadow-lg shadow-indigo-600/30">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i> <span>${isTr ? "Lojistik Web Sitesi Yaptır →" : (isEn ? "Build A Logistics Website →" : "Eigene Speditions-Website anfragen →")}</span>
+                </a>
               </div>
             </div>
           `;
@@ -2065,122 +2148,176 @@ const showcaseData = {
       {
         badge: "C",
         name: { 
-          de: "Variante C: 24/7 Kunden-Portal & Online-Termine", 
-          tr: "Varyant C: 7/24 Müşteri Portalı & Online Randevu", 
-          en: "Variant C: 24/7 Client Portal & Booking" 
+          de: "Variante C: Gebäudereinigung & Facility Services", 
+          tr: "Varyant C: Bina Temizliği & Tesis Yönetimi", 
+          en: "Variant C: Commercial Cleaning & Facility Management" 
         },
-        url: "ihre-firma.de/kunden-portal-login",
+        url: "www.alpen-clean-facility.de",
         render: (lang) => {
           const isTr = lang === "tr";
           const isEn = lang === "en";
           return `
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
-              <!-- Column 1: Client VIP Self-Service Login Area -->
-              <div class="bg-gradient-to-b from-slate-900 to-slate-950 p-5 rounded-2xl border-2 border-cyan-500/50 shadow-2xl flex flex-col justify-between">
+              <!-- Column 1: Facility Cleaning Company Website Preview (Hero & Guarantees) -->
+              <div class="bg-gradient-to-b from-slate-900 to-slate-950 p-4 sm:p-5 rounded-2xl border-2 border-cyan-500/60 shadow-2xl flex flex-col justify-between">
                 <div>
                   <div class="flex items-center justify-between mb-3">
-                    <h4 class="font-bold text-sm text-cyan-300 flex items-center gap-2">
-                      <i data-lucide="lock" class="w-4 h-4 text-cyan-400"></i>
-                      <span>${isTr ? "Şifreli Müşteri VIP Giriş Portalı" : (isEn ? "Protected VIP Client Portal" : "Geschütztes Kunden-Portal")}</span>
+                    <h4 class="font-bold text-xs sm:text-sm text-cyan-300 flex items-center gap-1.5 uppercase tracking-wider">
+                      <span class="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse"></span>
+                      <span>${isTr ? "TEMİZLİK WEB SİTESİ ÖRNEĞİ" : (isEn ? "CLEANING COMPANY HOMEPAGE" : "REINIGUNGS-WEBSEITE")}</span>
                     </h4>
-                    <span class="text-[10px] bg-cyan-950 text-cyan-300 px-2 py-0.5 rounded border border-cyan-700 font-bold">LOGIN AREA</span>
+                    <span class="text-[10px] bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded-full border border-emerald-800 font-bold font-mono">
+                      FACILITY SERVICES
+                    </span>
                   </div>
 
-                  <!-- Client Card -->
-                  <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800 space-y-2 text-xs mb-3">
+                  <!-- Mini Browser Window Mockup -->
+                  <div class="bg-slate-950 rounded-xl border border-cyan-900/50 p-3 mb-3 shadow-inner">
+                    <!-- Website Navigation Bar -->
+                    <div class="flex items-center justify-between pb-2 mb-2 border-b border-slate-800 text-[10px]">
+                      <div class="flex items-center gap-1.5 font-bold text-white">
+                        <span class="w-5 h-5 rounded-lg bg-cyan-600 flex items-center justify-center text-white text-[10px]">✨</span>
+                        <span>ALPEN<span class="text-cyan-400 font-normal">CLEAN</span></span>
+                      </div>
+                      <div class="hidden sm:flex items-center gap-2 text-[9px] text-slate-400">
+                        <span class="text-cyan-300 font-semibold">${isTr ? "Ofis Temizliği" : (isEn ? "Office Clean" : "Büroreinigung")}</span>
+                        <span>${isTr ? "Cam & Dış Cephe" : (isEn ? "Glass" : "Glas & Fassade")}</span>
+                        <span>${isTr ? "İnşaat Sonrası" : (isEn ? "Post-Build" : "Bauabnahme")}</span>
+                      </div>
+                      <span class="text-[9px] bg-cyan-950 text-cyan-300 px-1.5 py-0.5 rounded border border-cyan-800 font-bold">%100 Öko</span>
+                    </div>
+
+                    <!-- Website Hero Banner -->
+                    <div class="py-2 text-center">
+                      <span class="text-[9px] bg-cyan-900/40 text-cyan-200 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider inline-block mb-1.5 border border-cyan-700/50">
+                        ${isTr ? "Münih Genelinde Sertifikalı Profesyonel Bina Temizliği" : (isEn ? "Certified Commercial Cleaning Services" : "Professionelle Unterhalts- & Büroreinigung")}
+                      </span>
+                      <h5 class="text-xs sm:text-sm font-extrabold text-white leading-snug mb-1.5">
+                        ${isTr ? "Ofisiniz ve Tesisiniz İçin Kusursuz Temizlik" : (isEn ? "Spotless Cleanliness With Satisfaction Guarantee" : "Glanz & Hygiene mit 100% Zufriedenheitsgarantie")}
+                      </h5>
+                      <p class="text-[10px] text-slate-400 max-w-[250px] mx-auto mb-3 leading-relaxed">
+                        ${isTr ? "Düzenli denetlenen eğitimli personel, çevre dostu ürünler ve 5 Milyon € sigorta teminatı." : (isEn ? "Vetted staff, eco-friendly detergents and €5M liability insurance for peace of mind." : "Geschultes Stammpersonal, ökologische Reinigungsmittel und Betriebshaftpflicht bis 5 Mio. €.")}
+                      </p>
+
+                      <!-- Trust Pills -->
+                      <div class="grid grid-cols-2 gap-1.5 mb-3 text-[9px] text-slate-300">
+                        <div class="bg-slate-900/80 p-1.5 rounded-lg border border-slate-800 flex items-center justify-center gap-1">
+                          <i data-lucide="shield-check" class="w-3 h-3 text-emerald-400"></i>
+                          <span>5 Mio. € ${isTr ? "Sigortalı" : (isEn ? "Insured" : "Versichert")}</span>
+                        </div>
+                        <div class="bg-slate-900/80 p-1.5 rounded-lg border border-slate-800 flex items-center justify-center gap-1">
+                          <i data-lucide="check-circle-2" class="w-3 h-3 text-cyan-400"></i>
+                          <span>200+ ${isTr ? "Kurumsal Müşteri" : (isEn ? "B2B Clients" : "Firmenkunden")}</span>
+                        </div>
+                      </div>
+
+                      <!-- Hero CTA Buttons -->
+                      <div class="flex items-center justify-center gap-2">
+                        <button type="button" class="py-1.5 px-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-lg text-[10px] font-bold transition flex items-center gap-1 shadow-md shadow-cyan-600/30">
+                          <i data-lucide="sparkles" class="w-3 h-3"></i> <span>${isTr ? "Ücretsiz Deneme Temizliği" : (isEn ? "Free Trial Clean" : "Kostenlose Probereinigung")}</span>
+                        </button>
+                        <button type="button" class="py-1.5 px-2.5 bg-slate-800 hover:bg-slate-700 text-slate-200 rounded-lg text-[10px] font-bold transition flex items-center gap-1 border border-slate-700">
+                          <i data-lucide="calculator" class="w-3 h-3 text-cyan-400"></i> <span>${isTr ? "Fiyat Hesapla" : (isEn ? "Calculate" : "Preise")}</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="space-y-1 text-[11px] text-slate-400">
                     <div class="flex items-center justify-between">
-                      <span class="font-bold text-white">${isTr ? "Dr. Schmidt GmbH" : (isEn ? "Dr. Schmidt Corp" : "Dr. Schmidt Immobilien")}</span>
-                      <span class="text-[10px] bg-emerald-950 text-emerald-400 px-1.5 py-0.5 rounded">${isTr ? "Aktif Proje" : (isEn ? "Active Project" : "Laufendes Projekt")}</span>
-                    </div>
-                    <div>
-                      <div class="flex justify-between text-[10px] text-slate-400 mb-1">
-                        <span>${isTr ? "İlerleme Durumu:" : (isEn ? "Project Progress:" : "Projekt-Fortschritt:")}</span>
-                        <strong class="text-cyan-300 font-mono">%80</strong>
-                      </div>
-                      <div class="w-full bg-slate-900 rounded-full h-1.5">
-                        <div class="bg-cyan-400 h-1.5 rounded-full w-[80%]"></div>
-                      </div>
-                    </div>
-                    <div class="pt-1.5 border-t border-slate-800 text-[10px] text-slate-400 flex justify-between">
-                      <span>${isTr ? "Fatura & Belgeler:" : (isEn ? "Docs & Invoices:" : "Rechnungen & Protokolle:")}</span>
-                      <span class="text-cyan-300 font-mono font-bold">4 ${isTr ? "PDF Hazır" : (isEn ? "PDFs ready" : "PDFs verfügbar")}</span>
+                      <span>${isTr ? "Tasarım Türü:" : (isEn ? "Design Type:" : "Design-Typ:")}</span>
+                      <strong class="text-white font-medium">${isTr ? "Bina Yönetimi & Temizlik Şirketi Web Sitesi" : (isEn ? "Commercial Facility & Cleaning Website" : "Gebäudereinigung & Facility Website")}</strong>
                     </div>
                   </div>
-
-                  <p class="text-[11px] text-slate-400 leading-relaxed">
-                    ${isTr ? "Müşterileriniz şantiyedeki ilerlemeyi, fotoğrafları ve faturalarını 7/24 kendi özel panelinden takip eder." : (isEn ? "Clients can view construction milestones, daily site photos, and download invoices 24/7." : "Kunden sehen Baufortschritt, Baustellenfotos und Abrechnungen jederzeit transparent im eigenen Kunden-Cockpit.")}
-                  </p>
                 </div>
 
                 <div class="mt-3 pt-2.5 border-t border-slate-800 text-[11px] text-slate-400 flex items-center justify-between">
-                  <span>${isTr ? "Sıfır telefon trafiği, maksimum memnuniyet" : (isEn ? "Zero phone overhead, higher trust" : "Weniger Rückfragen im Büro")}</span>
-                  <span class="text-cyan-400 font-bold font-mono">Self-Service ✓</span>
+                  <span>${isTr ? "Aylık sabit sözleşmeli kurumsal müşteriler çeker" : (isEn ? "Secures recurring monthly office cleaning contracts" : "Generiert laufende monatliche Reinigungsverträge")}</span>
+                  <span class="text-cyan-400 font-bold font-mono">B2B Growth ✓</span>
                 </div>
               </div>
 
-              <!-- Column 2: 24/7 Online Calendar & Booking -->
+              <!-- Column 2: Interactive Cleaning Calculator on Website -->
               <div class="bg-slate-800/90 p-5 rounded-2xl border border-slate-700 shadow-xl flex flex-col justify-between">
                 <div>
                   <div class="flex items-center justify-between mb-3">
                     <h4 class="font-bold text-sm text-slate-200 flex items-center gap-2">
-                      <i data-lucide="calendar" class="w-4 h-4 text-emerald-400"></i>
-                      <span>${isTr ? "7/24 Online Randevu & Keşif Takvimi" : (isEn ? "24/7 Online Appointment Booking" : "24/7 Online-Terminkalender")}</span>
+                      <i data-lucide="calculator" class="w-4 h-4 text-cyan-400"></i>
+                      <span>${isTr ? "Online Temizlik Fiyat Hesaplayıcı" : (isEn ? "Online Cleaning Cost Calculator" : "Interaktiver Reinigungsrechner")}</span>
                     </h4>
-                    <span class="text-xs text-emerald-400 font-mono font-bold">Live Sync</span>
+                    <span class="text-xs text-cyan-300 font-mono font-bold">${isTr ? "Canlı Araç" : (isEn ? "Live Tool" : "Live Tool")}</span>
                   </div>
 
-                  <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800 space-y-2 text-xs mb-3">
-                    <span class="text-[10px] text-slate-400 block">${isTr ? "Müşterinin Seçtiği Keşif Randevusu:" : (isEn ? "Selected On-Site Inspection Slot:" : "Freier Besichtigungstermin:")}</span>
-                    <div class="flex items-center justify-between p-2 bg-slate-900 rounded-lg border border-emerald-900/50">
-                      <div class="flex items-center gap-2">
-                        <i data-lucide="clock" class="w-4 h-4 text-emerald-400"></i>
-                        <div>
-                          <p class="font-bold text-white text-xs">${isTr ? "12 Eylül 2026 • 10:30" : (isEn ? "Sep 12, 2026 • 10:30 AM" : "12. September 2026 • 10:30 Uhr")}</p>
-                          <p class="text-[10px] text-slate-400">${isTr ? "Ücretsiz Keşif & Ölçüm" : (isEn ? "Free On-Site Measurement" : "Kostenlose Vor-Ort-Besichtigung")}</p>
-                        </div>
+                  <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800 space-y-2.5 text-xs mb-3">
+                    <div>
+                      <span class="text-[10px] text-slate-400 block mb-1">${isTr ? "1. Tesis / Mekan Türü:" : (isEn ? "1. Facility Type:" : "1. Gebäudeart:")}</span>
+                      <div class="grid grid-cols-3 gap-1">
+                        <span class="p-1 bg-cyan-600/40 border border-cyan-500 rounded text-center text-[10px] font-bold text-white cursor-pointer">${isTr ? "Ofis & Büro" : (isEn ? "Office" : "Büro/Praxis")}</span>
+                        <span class="p-1 bg-slate-900 border border-slate-800 rounded text-center text-[10px] text-slate-400 cursor-pointer hover:text-white">${isTr ? "Apartman" : (isEn ? "Staircase" : "Treppenhaus")}</span>
+                        <span class="p-1 bg-slate-900 border border-slate-800 rounded text-center text-[10px] text-slate-400 cursor-pointer hover:text-white">${isTr ? "Cam/Cephe" : (isEn ? "Windows" : "Glasfassade")}</span>
                       </div>
-                      <span class="text-[10px] bg-emerald-950 text-emerald-300 px-2 py-0.5 rounded font-bold">${isTr ? "Onaylandı" : (isEn ? "Confirmed" : "Bestätigt")}</span>
+                    </div>
+
+                    <div>
+                      <div class="flex justify-between text-[10px] text-slate-400 mb-1">
+                        <span>${isTr ? "2. Alan & Temizlik Sıklığı:" : (isEn ? "2. Size & Frequency:" : "2. Fläche & Intervall:")}</span>
+                        <strong class="text-cyan-300 font-mono">250 m² • 3x / ${isTr ? "Hafta" : (isEn ? "Week" : "Woche")}</strong>
+                      </div>
+                      <div class="w-full bg-slate-900 rounded-full h-1.5">
+                        <div class="bg-cyan-500 h-1.5 rounded-full w-[70%]"></div>
+                      </div>
+                    </div>
+
+                    <div class="pt-2 border-t border-slate-800 flex items-center justify-between">
+                      <span class="text-slate-300 text-[11px]">${isTr ? "Tahmini Aylık Maliyet:" : (isEn ? "Estimated Monthly Cost:" : "Kalkulierter Monatspreis:")}</span>
+                      <span class="text-base font-extrabold font-mono text-emerald-400">ab 380,00 €</span>
                     </div>
                   </div>
 
-                  <div class="space-y-1.5 text-xs">
-                    <div class="flex items-center justify-between p-2 bg-slate-950/50 rounded-lg">
-                      <span class="text-slate-300">${isTr ? "Google / Outlook Takvim Senkronizasyonu:" : (isEn ? "Google/Outlook Calendar Sync:" : "Kalender-Abgleich (Outlook/Google):")}</span>
-                      <span class="font-mono text-emerald-400 font-bold">Otomatik ✓</span>
-                    </div>
-                    <div class="flex items-center justify-between p-2 bg-slate-950/50 rounded-lg">
-                      <span class="text-slate-300">${isTr ? "SMS & WhatsApp Hatırlatıcı:" : (isEn ? "SMS & WhatsApp Reminders:" : "SMS & WhatsApp Erinnerungen:")}</span>
-                      <span class="font-mono text-cyan-300 font-bold">0 Boş Randevu</span>
-                    </div>
-                  </div>
+                  <p class="text-[11px] text-slate-400 leading-relaxed">
+                    ${isTr ? "Mekan yöneticileri web sitenizden bütçeyi anında görüp doğrudan resmi teklif ve sözleşme ister." : (isEn ? "Property managers calculate baseline prices instantly and request formal site audits." : "Immobilienverwalter berechnen Richtpreise direkt online und fordern qualifizierte Angebote an.")}
+                  </p>
                 </div>
 
                 <div class="mt-3 pt-2.5 border-t border-slate-700/80 text-[11px] text-slate-400 flex items-center justify-between">
-                  <span>${isTr ? "Gece veya hafta sonu gelen randevuları kaçırmayın" : (isEn ? "Capture appointments 24/7 on autopilot" : "Keine Terminanfragen mehr verpassen")}</span>
-                  <span class="text-emerald-400 font-bold font-mono">Auto Booking ✓</span>
+                  <span>${isTr ? "Tek tıkla müşteriye antetli teklif iletimi" : (isEn ? "Instant branded PDF estimate delivery" : "Schnellere Abschlüsse ohne lange Wartezeiten")}</span>
+                  <span class="text-cyan-400 font-bold font-mono">High Convert ✓</span>
                 </div>
               </div>
 
-              <!-- Column 3: Live Service & Photo Ticket Desk -->
+              <!-- Column 3: Why This Website Generates Massive Recurring Leads -->
               <div class="bg-gradient-to-b from-cyan-950/40 via-slate-800 to-slate-850 p-5 rounded-2xl border border-cyan-500/30 flex flex-col justify-between shadow-xl">
                 <div>
-                  <h4 class="font-bold text-sm text-slate-200 mb-2">${isTr ? "Fotoğraflı Servis & Arıza Masası" : (isEn ? "Photo Ticket & Service Desk" : "Foto-Servicetickets & Support")}</h4>
-                  <p class="text-xs text-slate-400 mb-3 leading-relaxed">
-                    ${isTr ? "Müşteri cep telefonundan arızanın veya bakım yapılacak yerin fotoğrafını çeker; talep doğrudan ekibinizin görev listesine eklenir." : (isEn ? "Clients snap a photo of the repair area; the ticket lands instantly in your TeamTrack dispatch board." : "Kunden fotografieren Schäden oder Reparaturstellen direkt mit dem Smartphone – das Ticket landet sofort im TeamTrack Dispo-Board.")}
-                  </p>
-                  <div class="p-2.5 bg-slate-950/80 rounded-xl border border-slate-800 text-[11px] text-slate-300 space-y-1">
-                    <div class="flex justify-between">
-                      <span class="text-slate-400">${isTr ? "Gelen Ticket:" : (isEn ? "Incoming Ticket:" : "Neues Ticket:")}</span>
-                      <span class="text-cyan-300 font-bold font-mono">#TCK-809</span>
+                  <h4 class="font-bold text-sm text-slate-200 flex items-center gap-2 mb-3">
+                    <i data-lucide="sparkles" class="w-4 h-4 text-cyan-400"></i>
+                    <span>${isTr ? "Temizlik Web Sitesinin Gücü:" : (isEn ? "Why Cleaning Companies Need This:" : "Vorteile dieser Gebäudereiniger-Website:")}</span>
+                  </h4>
+                  <div class="bg-slate-950 p-3.5 rounded-xl border border-slate-800 space-y-2.5 text-xs">
+                    <div class="flex items-start gap-2">
+                      <span class="text-emerald-400 font-bold">✓</span>
+                      <div>
+                        <strong class="text-white block">${isTr ? "Öncesi / Sonrası Referans Vitrini" : (isEn ? "Before/After Visual Proof" : "Vorher/Nachher Leistungsnachweise")}</strong>
+                        <span class="text-[10px] text-slate-400">${isTr ? "Temizlenen cam, zemin ve inşaat alanlarının görsel kanıtı ile tam ikna." : (isEn ? "High-res sliders showcase the quality of your cleaning team." : "Zeigt echte Ergebnisse und überzeugt Hausverwaltungen sofort.")}</span>
+                      </div>
                     </div>
-                    <div class="flex justify-between">
-                      <span class="text-slate-400">${isTr ? "Ekli Dosya:" : (isEn ? "Attachment:" : "Anhang:")}</span>
-                      <span class="text-emerald-400 font-semibold">2x Fotoğraf (Kombi Arızası)</span>
+                    <div class="flex items-start gap-2">
+                      <span class="text-cyan-400 font-bold">✓</span>
+                      <div>
+                        <strong class="text-white block">${isTr ? "Güven & Sigorta Sertifikaları" : (isEn ? "Insurance & ISO Badges" : "Sicherheits- & Umweltsiegel")}</strong>
+                        <span class="text-[10px] text-slate-400">${isTr ? "Kurumsal şirketlerin aradığı iş güvenliği, sigorta ve hijyen belgeleri." : (isEn ? "Highlights safety compliance and environmental certificates." : "Baut Vertrauen bei sensiblen Kunden wie Praxen und Kanzleien auf.")}</span>
+                      </div>
+                    </div>
+                    <div class="flex items-start gap-2">
+                      <span class="text-purple-400 font-bold">✓</span>
+                      <div>
+                        <strong class="text-white block">${isTr ? "Abonelik / Sürekli Sözleşme Çeker" : (isEn ? "Continuous Contract Magnet" : "Laufende Verträge statt Einmalaufträge")}</strong>
+                        <span class="text-[10px] text-slate-400">${isTr ? "Tek seferlik işler yerine haftalık/aylık düzenli bakım anlaşmaları kazandırır." : (isEn ? "Attracts lucrative recurring weekly cleaning accounts." : "Zielt strategisch auf lukrative Dauerverträge für Unterhaltsreinigung ab.")}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <a href="#kontakt" class="w-full mt-3 py-2.5 px-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl text-xs font-bold transition text-center flex items-center justify-center gap-1.5">
-                  <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> <span>${isTr ? "Müşteri Portalı Talebi İletin" : (isEn ? "Request Client Portal" : "Kunden-Portal anfragen")}</span>
+                <a href="#kontakt" class="w-full mt-3 py-2.5 px-3 bg-cyan-600 hover:bg-cyan-500 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition text-center shadow-lg shadow-cyan-600/30">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i> <span>${isTr ? "Temizlik Web Sitesi Yaptır →" : (isEn ? "Build A Cleaning Website →" : "Eigene Reinigungs-Website anfragen →")}</span>
                 </a>
               </div>
             </div>
