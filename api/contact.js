@@ -109,14 +109,14 @@ module.exports = async function handler(req, res) {
             </div>
 
             <div class="btn-container">
-              <a href="mailto:${email}?subject=Ihre%20Anfrage%20bei%20TeamTrack%20Softwareentwickler" class="reply-btn">
+              <a href="mailto:${email}?subject=Ihre%20Anfrage%20bei%20TeamTrack%20B2B%20Softwareentwickler" class="reply-btn">
                 ✉️ Direkt per E-Mail antworten (${name})
               </a>
             </div>
           </div>
 
           <div class="footer">
-            <strong>TeamTrack Softwareentwickler & IT-Berater</strong><br>
+            <strong>TeamTrack B2B Softwareentwickler & IT-Berater</strong><br>
             Balthasar-Neumann-Straße 38, 97236 Randersacker<br>
             Inhaberin: Huriye Ünalsoy • <a href="https://team-track.de" style="color: #64748b;">team-track.de</a>
           </div>
