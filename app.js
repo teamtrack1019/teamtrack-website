@@ -4,7 +4,7 @@ const translations = {
   de: {
     topBanner: "Individuelle WebApps, Webseiten & Software für Handwerk, Logistik & Dienstleister – 100% nach Ihren Wünschen!",
     topBannerLink: "Erstgespräch anfragen →",
-        logoSub: "Softwareentwicklung & IT-Beratung",
+        logoSub: "Softwareentwickler & IT-Berater",
     navMenuBtn: "Menü",
     navServicesSub: "WebApps, CRM, Schnittstellen",
     navShowcaseSub: "Interaktive Demo & Varianten",
@@ -170,7 +170,7 @@ const translations = {
     formPrivacy: "Ihre Angaben werden vertraulich behandelt und ausschließlich zur Beantwortung Ihrer Anfrage genutzt.",
     formSuccessTitle: "Vielen Dank für Ihre Anfrage!",
     formSuccessSub: "Ich habe Ihre Nachricht erhalten und melde mich innerhalb von 24 Stunden bei Ihnen.",
-    footerSub: "Softwareentwicklung & IT-Beratung",
+    footerSub: "Softwareentwickler & IT-Berater",
     footerTerms: "AGB",
     footerPrivacy: "Datenschutz",
     footerImprint: "Impressum",
@@ -2668,7 +2668,7 @@ const legalTexts = {
           </p>
           <div class="p-3.5 bg-slate-950/80 rounded-xl border border-slate-800 text-xs text-slate-300 space-y-1">
             <p><strong class="text-white">Verantwortliche Stelle im Sinne des Art. 4 Nr. 7 DSGVO & § 5 DDG:</strong></p>
-            <p class="text-cyan-300 font-semibold">TeamTrack Softwareentwicklung & IT-Beratung</p>
+            <p class="text-cyan-300 font-semibold">TeamTrack Softwareentwickler & IT-Berater</p>
             <p>Inhaberin: <strong>Huriye Ünalsoy</strong></p>
             <p>Balthasar-Neumann-Straße 38, 97236 Randersacker, Deutschland</p>
             <p>E-Mail: <a href="mailto:kontakt@team-track.de" class="text-cyan-400 hover:underline">kontakt@team-track.de</a></p>
@@ -2774,7 +2774,7 @@ const legalTexts = {
           </p>
           <div class="p-3.5 bg-slate-950/80 rounded-xl border border-slate-800 text-xs text-slate-300 space-y-1">
             <p><strong class="text-white">Veri Sorumlusu & Yasal Muhatap:</strong></p>
-            <p class="text-cyan-300 font-semibold">TeamTrack Softwareentwicklung & IT-Beratung</p>
+            <p class="text-cyan-300 font-semibold">TeamTrack Softwareentwickler & IT-Berater</p>
             <p>Firma Sahibi: <strong>Huriye Ünalsoy</strong></p>
             <p>Balthasar-Neumann-Straße 38, 97236 Randersacker, Almanya</p>
             <p>E-Posta: <a href="mailto:kontakt@team-track.de" class="text-cyan-400 hover:underline">kontakt@team-track.de</a></p>
@@ -2879,7 +2879,7 @@ const legalTexts = {
           </p>
           <div class="p-3.5 bg-slate-950/80 rounded-xl border border-slate-800 text-xs text-slate-300 space-y-1">
             <p><strong class="text-white">Data Controller pursuant to Art. 4 No. 7 GDPR:</strong></p>
-            <p class="text-cyan-300 font-semibold">TeamTrack Softwareentwicklung & IT-Beratung</p>
+            <p class="text-cyan-300 font-semibold">TeamTrack Softwareentwickler & IT-Berater</p>
             <p>Proprietor: <strong>Huriye Ünalsoy</strong></p>
             <p>Balthasar-Neumann-Straße 38, 97236 Randersacker, Germany</p>
             <p>Email: <a href="mailto:kontakt@team-track.de" class="text-cyan-400 hover:underline">kontakt@team-track.de</a></p>
@@ -2987,7 +2987,7 @@ const legalTexts = {
         <div class="space-y-4 text-xs text-slate-300 leading-relaxed">
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
             <h4 class="font-bold text-cyan-300 mb-1">§ 1 Geltungsbereich & Vertragspartner</h4>
-            <p>Diese Bedingungen gelten ausschließlich gegenüber Unternehmern, juristischen Personen des öffentlichen Rechts oder öffentlich-rechtlichen Sondervermögen im Sinne von § 14 BGB. Vertragspartner ist TeamTrack Softwareentwicklung & IT-Beratung, Inhaberin: Huriye Ünalsoy, 97236 Randersacker.</p>
+            <p>Diese Bedingungen gelten ausschließlich gegenüber Unternehmern, juristischen Personen des öffentlichen Rechts oder öffentlich-rechtlichen Sondervermögen im Sinne von § 14 BGB. Vertragspartner ist TeamTrack Softwareentwickler & IT-Berater, Inhaberin: Huriye Ünalsoy, 97236 Randersacker.</p>
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
@@ -3035,7 +3035,7 @@ const legalTexts = {
         <div class="space-y-4 text-xs text-slate-300 leading-relaxed">
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
             <h4 class="font-bold text-cyan-300 mb-1">§ 1 Kapsam ve Taraflar</h4>
-            <p>Bu şartlar yalnızca ticari işletmeler ve kurumsal müşteriler (B2B) için geçerlidir. Hizmet sağlayıcı: TeamTrack Softwareentwicklung & IT-Beratung, Inh. Huriye Ünalsoy, Randersacker / Almanya.</p>
+            <p>Bu şartlar yalnızca ticari işletmeler ve kurumsal müşteriler (B2B) için geçerlidir. Hizmet sağlayıcı: TeamTrack Softwareentwickler & IT-Berater, Inh. Huriye Ünalsoy, Randersacker / Almanya.</p>
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
@@ -3083,7 +3083,7 @@ const legalTexts = {
         <div class="space-y-4 text-xs text-slate-300 leading-relaxed">
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
             <h4 class="font-bold text-cyan-300 mb-1">§ 1 Scope & Contracting Parties</h4>
-            <p>These terms apply exclusively to commercial businesses and corporate clients (B2B). Contracting party is TeamTrack Softwareentwicklung & IT-Beratung, Proprietor: Huriye Ünalsoy, 97236 Randersacker, Germany.</p>
+            <p>These terms apply exclusively to commercial businesses and corporate clients (B2B). Contracting party is TeamTrack Softwareentwickler & IT-Berater, Proprietor: Huriye Ünalsoy, 97236 Randersacker, Germany.</p>
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
@@ -3130,7 +3130,7 @@ const legalTexts = {
             Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz)
           </h3>
           <div class="text-xs text-slate-200 space-y-2">
-            <p class="text-sm font-extrabold text-white">TeamTrack Softwareentwicklung & IT-Beratung</p>
+            <p class="text-sm font-extrabold text-white">TeamTrack Softwareentwickler & IT-Berater</p>
             <p>Inhaberin: <strong class="text-cyan-300">Huriye Ünalsoy</strong></p>
             <p>Balthasar-Neumann-Straße 38<br>97236 Randersacker<br>Deutschland</p>
           </div>
@@ -3146,7 +3146,7 @@ const legalTexts = {
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
           <h4 class="font-bold text-white text-xs">Steuerliche Angaben</h4>
           <p>Umsatzsteuer: Gemäß § 19 UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet bzw. Umsatzsteuer-ID nach Zuteilung.</p>
-          <p>Berufsbezeichnung: Freiberufliche Softwareentwicklung & IT-Beratung (verliehen in der Bundesrepublik Deutschland).</p>
+          <p>Berufsbezeichnung: Freiberuflicher Softwareentwickler & IT-Berater (verliehen in der Bundesrepublik Deutschland).</p>
         </div>
 
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
@@ -3164,7 +3164,7 @@ const legalTexts = {
             Yasal Bilgiler & Künye (§ 5 DDG Uyarınca)
           </h3>
           <div class="text-xs text-slate-200 space-y-2">
-            <p class="text-sm font-extrabold text-white">TeamTrack Softwareentwicklung & IT-Beratung</p>
+            <p class="text-sm font-extrabold text-white">TeamTrack Softwareentwickler & IT-Berater</p>
             <p>Firma Sahibi: <strong class="text-cyan-300">Huriye Ünalsoy</strong></p>
             <p>Balthasar-Neumann-Straße 38<br>97236 Randersacker<br>Almanya</p>
           </div>
@@ -3192,7 +3192,7 @@ const legalTexts = {
             Legal Notice / Imprint (pursuant to § 5 DDG)
           </h3>
           <div class="text-xs text-slate-200 space-y-2">
-            <p class="text-sm font-extrabold text-white">TeamTrack Softwareentwicklung & IT-Beratung</p>
+            <p class="text-sm font-extrabold text-white">TeamTrack Softwareentwickler & IT-Berater</p>
             <p>Proprietor: <strong class="text-cyan-300">Huriye Ünalsoy</strong></p>
             <p>Balthasar-Neumann-Straße 38<br>97236 Randersacker<br>Germany</p>
           </div>
@@ -3275,7 +3275,7 @@ const legalTexts = {
               <i data-lucide="map-pin" class="w-4 h-4"></i>
               <span>Standort & Entwicklungsbüro</span>
             </div>
-            <p class="text-white font-bold text-xs">TeamTrack Softwareentwicklung & IT-Beratung</p>
+            <p class="text-white font-bold text-xs">TeamTrack Softwareentwickler & IT-Berater</p>
             <p class="text-slate-300 text-xs">Inhaberin: Huriye Ünalsoy</p>
             <p class="text-slate-400 text-xs">Balthasar-Neumann-Straße 38<br>97236 Randersacker, Deutschland</p>
           </div>
@@ -3361,7 +3361,7 @@ const legalTexts = {
               <i data-lucide="map-pin" class="w-4 h-4"></i>
               <span>Ofis & Geliştirme Merkezi</span>
             </div>
-            <p class="text-white font-bold text-xs">TeamTrack Softwareentwicklung & IT-Beratung</p>
+            <p class="text-white font-bold text-xs">TeamTrack Softwareentwickler & IT-Berater</p>
             <p class="text-slate-300 text-xs">Firma Sahibi: Huriye Ünalsoy</p>
             <p class="text-slate-400 text-xs">Balthasar-Neumann-Straße 38<br>97236 Randersacker, Almanya</p>
           </div>
@@ -3447,7 +3447,7 @@ const legalTexts = {
               <i data-lucide="map-pin" class="w-4 h-4"></i>
               <span>Engineering Office</span>
             </div>
-            <p class="text-white font-bold text-xs">TeamTrack Softwareentwicklung & IT-Beratung</p>
+            <p class="text-white font-bold text-xs">TeamTrack Softwareentwickler & IT-Berater</p>
             <p class="text-slate-300 text-xs">Proprietor: Huriye Ünalsoy</p>
             <p class="text-slate-400 text-xs">Balthasar-Neumann-Straße 38<br>97236 Randersacker, Germany</p>
           </div>
