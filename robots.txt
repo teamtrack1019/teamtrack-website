@@ -1,4 +1,3 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
-
 Sitemap: https://team-track.de/sitemap.xml
