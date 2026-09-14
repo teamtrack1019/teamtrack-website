@@ -96,7 +96,7 @@ const translations = {
     calcBadge: "ROI & Einspar-Rechner",
     calcTitle: "Was bringt Ihnen eine individuelle Digitalisierung?",
     calcSub: "Berechnen Sie die Zeit- und Kostenersparnis durch automatisierte Web-Prozesse.",
-    calcWorkersLabel: "Anzahl Mitarbeiter / Fahrer / Monteure:",
+    calcWorkersLabel: "Anzahl Mitarbeiter:",
     calcRateLabel: "Durchschnittlicher Stundensatz (€):",
     calcFact1: "Durchschnittlich ~4,5 Stunden manuelle Büroarbeit pro Mitarbeiter eingespart",
     calcFact2: "Rechnungen & Freigaben erfolgen tagesaktuell ohne Verzögerung",
@@ -283,7 +283,7 @@ const translations = {
     calcBadge: "Tasarruf & ROI Hesaplayıcı",
     calcTitle: "Özel Yazılım İşletmenize Ne Kazandırır?",
     calcSub: "Manuel süreçleri web otomasyonuna geçirerek elde edeceğiniz zaman ve maliyet kazancını hesaplayın.",
-    calcWorkersLabel: "Saha Elemanı / Şoför / Usta Sayısı:",
+    calcWorkersLabel: "Çalışan Sayısı:",
     calcRateLabel: "Ortalama Saatlik Maliyet / Ücret (€):",
     calcFact1: "Çalışan başına ayda ortalama ~4.5 saat gereksiz evrak işi tasarrufu",
     calcFact2: "Faturalar ve iş onayları beklemeden aynı gün hazırlanır",
@@ -470,7 +470,7 @@ const translations = {
     calcBadge: "ROI & Cost-Saving Calculator",
     calcTitle: "What Value Does Custom Automation Deliver?",
     calcSub: "Estimate the time and financial savings achievable through tailored web workflows.",
-    calcWorkersLabel: "Number of employees / drivers / technicians:",
+    calcWorkersLabel: "Number of Employees:",
     calcRateLabel: "Average hourly billing rate (€):",
     calcFact1: "Average ~4.5 hours of manual administration saved per worker every month",
     calcFact2: "Invoices and job sign-offs completed on the same day without delays",
@@ -2709,6 +2709,12 @@ async function handleContactSubmit(e) {
   }
 }
 
+// --- INTERACTIVE ROI CALCULATOR & LIVE SIMULATION ---
+let isCalcAutoPlaying = true;
+let calcAnimTimer = null;
+let calcStep = 0;
+let isCalcVisible = false;
+
 function updateCalculator() {
   const workersInput = document.getElementById('calc-workers');
   const rateInput = document.getElementById('calc-rate');
@@ -2734,6 +2740,34 @@ function updateCalculator() {
   }
   if (totalHours) {
     totalHours.textContent = totalSavedHours.toLocaleString() + (currentLang === 'tr' ? ' Saat / Yıl' : (currentLang === 'en' ? ' Hrs / Year' : ' Std / Jahr'));
+  }
+}
+
+function startCalculatorAnimation() {
+  if (!isCalcAutoPlaying || calcAnimTimer) return;
+  calcAnimTimer = setInterval(() => {
+    if (!isCalcAutoPlaying || !isCalcVisible) return;
+    calcStep += 0.04;
+    const workersInput = document.getElementById('calc-workers');
+    const rateInput = document.getElementById('calc-rate');
+    if (workersInput && rateInput) {
+      // Workers oscillates smoothly between 8 and 28
+      const dynamicWorkers = Math.round(18 + Math.sin(calcStep) * 10);
+      // Rate oscillates smoothly between 45 and 85 in steps of 5
+      const dynamicRate = Math.round((65 + Math.sin(calcStep * 0.75 + 1.2) * 20) / 5) * 5;
+      
+      workersInput.value = dynamicWorkers;
+      rateInput.value = dynamicRate;
+      updateCalculator();
+    }
+  }, 100);
+}
+
+function stopCalculatorAnimation() {
+  isCalcAutoPlaying = false;
+  if (calcAnimTimer) {
+    clearInterval(calcAnimTimer);
+    calcAnimTimer = null;
   }
 }
 
@@ -3669,9 +3703,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const workersInput = document.getElementById('calc-workers');
   const rateInput = document.getElementById('calc-rate');
-  if (workersInput) workersInput.addEventListener('input', updateCalculator);
-  if (rateInput) rateInput.addEventListener('input', updateCalculator);
+
+  const onUserTouchCalculator = () => {
+    stopCalculatorAnimation();
+  };
+
+  if (workersInput) {
+    workersInput.addEventListener('input', () => {
+      stopCalculatorAnimation();
+      updateCalculator();
+    });
+    workersInput.addEventListener('mousedown', onUserTouchCalculator);
+    workersInput.addEventListener('touchstart', onUserTouchCalculator, { passive: true });
+    workersInput.addEventListener('pointerdown', onUserTouchCalculator);
+  }
+
+  if (rateInput) {
+    rateInput.addEventListener('input', () => {
+      stopCalculatorAnimation();
+      updateCalculator();
+    });
+    rateInput.addEventListener('mousedown', onUserTouchCalculator);
+    rateInput.addEventListener('touchstart', onUserTouchCalculator, { passive: true });
+    rateInput.addEventListener('pointerdown', onUserTouchCalculator);
+  }
+
   updateCalculator();
+
+  // Observer for calculator section auto-simulation
+  const calcSection = document.getElementById('calculator');
+  if (calcSection && 'IntersectionObserver' in window) {
+    const calcObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        isCalcVisible = entry.isIntersecting;
+        if (isCalcVisible && isCalcAutoPlaying) {
+          startCalculatorAnimation();
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+    calcObserver.observe(calcSection);
+  } else {
+    isCalcVisible = true;
+    startCalculatorAnimation();
+  }
 
   // Live timer tick simulator
   let seconds = 17;
