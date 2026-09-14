@@ -2337,6 +2337,7 @@ const showcaseData = {
 // --- AUTO-TOUR / AUTOPLAY ENGINE ---
 let isAutoplayRunning = true;
 let isUserInteracting = false;
+let isElementVisible = true;
 let autoplayTimer = null;
 let userInteractionTimeout = null;
 const allShowcaseTabs = ['zeiterfassung', 'rechnungen', 'crm', 'logistik', 'fuhrpark', 'website'];
@@ -2345,7 +2346,7 @@ const AUTOPLAY_INTERVAL = 8000; // 8.0 seconds per variant (slow, relaxed & easy
 function startShowcaseAutoplay() {
   stopShowcaseAutoplay();
   autoplayTimer = setInterval(() => {
-    if (!isAutoplayRunning || isUserInteracting) return;
+    if (!isAutoplayRunning || isUserInteracting || !isElementVisible) return;
     advanceShowcaseAuto();
   }, AUTOPLAY_INTERVAL);
 }
@@ -3698,6 +3699,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Showcase Auto-Tour
   startShowcaseAutoplay();
   updateAutoplayUI();
+
+  // Pause autoplay when showcase is scrolled out of view to eliminate page jumping
+  const showcaseEl = document.getElementById('showcase');
+  if (showcaseEl && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        isElementVisible = entry.isIntersecting;
+      });
+    }, {
+      threshold: 0.15
+    });
+    observer.observe(showcaseEl);
+  }
 
   // Check if redirected from form submission (#danke)
   if (window.location.hash === '#danke') {

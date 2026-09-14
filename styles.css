@@ -129,4 +129,16 @@ img, svg, video, canvas, audio, iframe, embed, object {
   animation: slideInTop 1.15s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
+/* Layout shift prevention for Showcase */
+#showcase-content {
+  min-height: 520px;
+  contain: layout;
+}
+
+@media (min-width: 768px) {
+  #showcase-content {
+    min-height: 580px;
+  }
+}
+
 
