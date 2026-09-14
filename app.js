@@ -184,7 +184,9 @@ const translations = {
     legalTabKontakt: "Kontakt & Beratung",
     legalModalTitle: "Rechtliche Hinweise & Datenschutz",
     legalModalClose: "Schließen",
-    legalModalStand: "Stand: September 2026 • DSGVO- & DDG-konform"
+    legalModalStand: "Stand: September 2026 • DSGVO- & DDG-konform",
+    autoplayActive: "Auto-Tour: Aktiv",
+    autoplayPaused: "Auto-Tour: Pausiert"
   },
   tr: {
     topBanner: "İşletmelere Özel B2B Web Uygulamaları, Lojistik & Dijital Dönüşüm – %100 Talebinize Özel!",
@@ -369,7 +371,9 @@ const translations = {
     legalTabKontakt: "İletişim & Danışmanlık",
     legalModalTitle: "Yasal Bildirimler & Gizlilik Politikası",
     legalModalClose: "Kapat",
-    legalModalStand: "Güncelleme: Eylül 2026 • KVKK, DSGVO & DDG Uyumlu"
+    legalModalStand: "Güncelleme: Eylül 2026 • KVKK, DSGVO & DDG Uyumlu",
+    autoplayActive: "Otomatik Tur: Açık",
+    autoplayPaused: "Otomatik Tur: Duraklatıldı"
   },
   en: {
     topBanner: "Tailored B2B WebApps & Cloud Software for Logistics, Industry & Crafts – 100% Customized!",
@@ -553,7 +557,9 @@ const translations = {
     legalTabKontakt: "Contact & Direct Line",
     legalModalTitle: "Legal Notice & Privacy Policy",
     legalModalClose: "Close",
-    legalModalStand: "As of September 2026 • GDPR & DDG Compliant"
+    legalModalStand: "As of September 2026 • GDPR & DDG Compliant",
+    autoplayActive: "Auto-Tour: Active",
+    autoplayPaused: "Auto-Tour: Paused"
   }
 };
 
@@ -2328,10 +2334,102 @@ const showcaseData = {
   }
 };
 
-function switchShowcaseTab(tabName) {
+// --- AUTO-TOUR / AUTOPLAY ENGINE ---
+let isAutoplayRunning = true;
+let isUserInteracting = false;
+let autoplayTimer = null;
+let userInteractionTimeout = null;
+const allShowcaseTabs = ['zeiterfassung', 'rechnungen', 'crm', 'logistik', 'fuhrpark', 'website'];
+const AUTOPLAY_INTERVAL = 4500; // 4.5 seconds per variant
+
+function startShowcaseAutoplay() {
+  stopShowcaseAutoplay();
+  autoplayTimer = setInterval(() => {
+    if (!isAutoplayRunning || isUserInteracting) return;
+    advanceShowcaseAuto();
+  }, AUTOPLAY_INTERVAL);
+}
+
+function stopShowcaseAutoplay() {
+  if (autoplayTimer) {
+    clearInterval(autoplayTimer);
+    autoplayTimer = null;
+  }
+}
+
+function advanceShowcaseAuto() {
+  const moduleData = showcaseData[currentTab];
+  const totalVariants = (moduleData && moduleData.variants) ? moduleData.variants.length : 3;
+
+  if (currentVariant + 1 < totalVariants) {
+    // Switch to next variant in same module (A -> B, B -> C)
+    switchShowcaseVariant(currentVariant + 1, false);
+  } else {
+    // Last variant reached -> move to next module, variant 0 (A)
+    const curIndex = allShowcaseTabs.indexOf(currentTab);
+    const nextTab = allShowcaseTabs[(curIndex + 1) % allShowcaseTabs.length];
+    switchShowcaseTab(nextTab, 0, false);
+  }
+}
+
+function pauseAutoplayTemporarily(durationMs = 12000) {
+  isUserInteracting = true;
+  updateAutoplayUI();
+  if (userInteractionTimeout) clearTimeout(userInteractionTimeout);
+  userInteractionTimeout = setTimeout(() => {
+    isUserInteracting = false;
+    updateAutoplayUI();
+  }, durationMs);
+}
+
+function toggleAutoplayManual() {
+  isAutoplayRunning = !isAutoplayRunning;
+  if (isAutoplayRunning) {
+    isUserInteracting = false;
+    startShowcaseAutoplay();
+  }
+  updateAutoplayUI();
+}
+
+function updateAutoplayUI() {
+  const btn = document.getElementById('autoplay-toggle-btn');
+  const icon = document.getElementById('autoplay-icon');
+  const label = document.getElementById('autoplay-label');
+  if (!btn || !label) return;
+
+  const isPaused = !isAutoplayRunning || isUserInteracting;
+  const activeText = (translations[currentLang] && translations[currentLang].autoplayActive) ? translations[currentLang].autoplayActive : "Auto-Tour: Aktiv";
+  const pausedText = (translations[currentLang] && translations[currentLang].autoplayPaused) ? translations[currentLang].autoplayPaused : "Auto-Tour: Pausiert";
+
+  if (isPaused) {
+    label.textContent = pausedText;
+    btn.className = "flex items-center gap-1.5 text-amber-300 bg-amber-950/80 hover:bg-amber-900/90 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg border border-amber-700/60 text-[10px] sm:text-xs transition cursor-pointer";
+    if (icon) {
+      icon.setAttribute('data-lucide', 'play');
+      icon.className = "w-3 h-3 text-amber-400";
+    }
+  } else {
+    label.textContent = activeText;
+    btn.className = "flex items-center gap-1.5 text-cyan-300 bg-cyan-950/80 hover:bg-cyan-900/90 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg border border-cyan-700/60 text-[10px] sm:text-xs transition cursor-pointer";
+    if (icon) {
+      icon.setAttribute('data-lucide', 'pause');
+      icon.className = "w-3 h-3 text-cyan-400";
+    }
+  }
+
+  if (window.lucide) {
+    lucide.createIcons();
+  }
+}
+
+function switchShowcaseTab(tabName, variantIndex = 0, isManual = true) {
   if (!showcaseData[tabName]) return;
   currentTab = tabName;
-  currentVariant = 0; // Default to Variant A
+  currentVariant = variantIndex;
+
+  if (isManual) {
+    pauseAutoplayTemporarily(12000);
+  }
 
   // Update Hero module tabs
   const allTabs = ['zeiterfassung', 'rechnungen', 'crm', 'logistik', 'fuhrpark', 'website'];
@@ -2341,17 +2439,17 @@ function switchShowcaseTab(tabName) {
     
     if (heroBtn) {
       if (t === tabName) {
-        heroBtn.className = "hero-module-btn px-4 py-2 rounded-xl border text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-2 bg-cyan-600 text-white border-cyan-600 shadow-cyan-600/20 scale-105";
+        heroBtn.className = "hero-module-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl border text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-1.5 sm:gap-2 bg-cyan-600 text-white border-cyan-600 shadow-cyan-600/20 scale-105";
       } else {
-        heroBtn.className = "hero-module-btn px-4 py-2 rounded-xl border text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-2 bg-white text-slate-700 border-slate-300 hover:border-cyan-400 hover:text-cyan-700";
+        heroBtn.className = "hero-module-btn px-3 sm:px-4 py-1.5 sm:py-2 rounded-xl border text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-1.5 sm:gap-2 bg-white text-slate-700 border-slate-300 hover:border-cyan-400 hover:text-cyan-700";
       }
     }
 
     if (barBtn) {
       if (t === tabName) {
-        barBtn.className = "px-2.5 sm:px-3 py-1.5 rounded-lg bg-cyan-600 text-white font-bold transition";
+        barBtn.className = "px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg bg-cyan-600 text-white font-bold transition";
       } else {
-        barBtn.className = "px-2.5 sm:px-3 py-1.5 rounded-lg text-slate-300 hover:text-white transition";
+        barBtn.className = "px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg text-slate-300 hover:text-white transition";
       }
     }
   });
@@ -2384,7 +2482,7 @@ function renderVariantButtons() {
       : "bg-slate-900 text-slate-300 hover:text-white hover:bg-slate-800 border border-slate-700 hover:border-cyan-500/50 px-2.5 sm:px-3.5 py-1.5 sm:py-2 font-bold";
     
     html += `
-      <button type="button" onclick="switchShowcaseVariant(${idx})" class="rounded-xl text-[11px] sm:text-xs md:text-sm transition-all duration-200 flex items-center gap-1.5 sm:gap-2 ${activeClass}">
+      <button type="button" onclick="switchShowcaseVariant(${idx}, true)" class="rounded-xl text-[11px] sm:text-xs md:text-sm transition-all duration-200 flex items-center gap-1.5 sm:gap-2 ${activeClass}">
         <span class="w-4 h-4 sm:w-5 sm:h-5 rounded-full ${isActive ? 'bg-white text-slate-900' : 'bg-slate-800 text-cyan-400'} font-black text-[10px] sm:text-xs flex items-center justify-center flex-shrink-0">${v.badge}</span>
         <span class="truncate">${name}</span>
       </button>
@@ -2394,10 +2492,14 @@ function renderVariantButtons() {
   container.innerHTML = html;
 }
 
-function switchShowcaseVariant(variantIndex) {
+function switchShowcaseVariant(variantIndex, isManual = true) {
   const moduleData = showcaseData[currentTab];
   if (!moduleData || !moduleData.variants[variantIndex]) return;
   currentVariant = variantIndex;
+
+  if (isManual) {
+    pauseAutoplayTemporarily(12000);
+  }
 
   renderVariantButtons();
   renderShowcaseContent();
@@ -2415,10 +2517,13 @@ function renderShowcaseContent() {
     urlEl.textContent = variant.url;
   }
 
-  // Render HTML
+  // Render HTML with smooth animation
   const contentContainer = document.getElementById('showcase-content');
   if (contentContainer) {
+    contentContainer.classList.remove('showcase-animated');
+    void contentContainer.offsetWidth; // Trigger reflow for animation restart
     contentContainer.innerHTML = variant.render(currentLang);
+    contentContainer.classList.add('showcase-animated');
   }
 
   if (window.lucide) {
@@ -3573,6 +3678,37 @@ document.addEventListener('DOMContentLoaded', () => {
       timerEl.textContent = `${hStr}:${mStr}:${sStr}`;
     }
   }, 1000);
+
+  // Initialize Showcase Auto-Tour
+  startShowcaseAutoplay();
+  updateAutoplayUI();
+
+  const showcaseEl = document.getElementById('showcase');
+  if (showcaseEl) {
+    showcaseEl.addEventListener('mouseenter', () => {
+      isUserInteracting = true;
+      updateAutoplayUI();
+    });
+    showcaseEl.addEventListener('mouseleave', () => {
+      isUserInteracting = false;
+      updateAutoplayUI();
+    });
+    showcaseEl.addEventListener('touchstart', () => {
+      pauseAutoplayTemporarily(15000);
+    }, { passive: true });
+  }
+
+  const heroButtonsContainer = document.querySelector('.hero-module-btn')?.parentElement;
+  if (heroButtonsContainer) {
+    heroButtonsContainer.addEventListener('mouseenter', () => {
+      isUserInteracting = true;
+      updateAutoplayUI();
+    });
+    heroButtonsContainer.addEventListener('mouseleave', () => {
+      isUserInteracting = false;
+      updateAutoplayUI();
+    });
+  }
 
   // Check if redirected from form submission (#danke)
   if (window.location.hash === '#danke') {

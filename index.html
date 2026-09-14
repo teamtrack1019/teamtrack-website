@@ -408,6 +408,10 @@
               <span class="text-[11px] sm:text-xs text-slate-400 font-mono ml-1.5 sm:ml-2 truncate notranslate" translate="no" id="mockup-url-bar">ihre-firma.teamtrack.cloud/zeiterfassung</span>
             </div>
             <div class="flex items-center gap-2 sm:gap-3 text-xs sm:text-sm flex-shrink-0">
+              <button type="button" id="autoplay-toggle-btn" onclick="toggleAutoplayManual()" class="flex items-center gap-1.5 text-cyan-300 bg-cyan-950/80 hover:bg-cyan-900/90 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg border border-cyan-700/60 text-[10px] sm:text-xs transition cursor-pointer" title="Auto-Tour pausieren / fortsetzen">
+                <i data-lucide="play" id="autoplay-icon" class="w-3 h-3 text-cyan-400"></i>
+                <span id="autoplay-label" data-i18n="autoplayActive">Auto-Demo</span>
+              </button>
               <span class="flex items-center gap-1 text-emerald-400 bg-emerald-950/60 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-lg border border-emerald-800/60 text-[11px] sm:text-xs" id="mockup-status-indicator">
                 <span class="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-emerald-400 animate-ping"></span>
                 <span data-i18n="mockupLive">System aktiv</span>
