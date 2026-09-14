@@ -2422,8 +2422,21 @@ function updateAutoplayUI() {
   }
 }
 
+let currentTransitionClass = 'showcase-animated';
+const slideDirections = ['showcase-slide-right', 'showcase-slide-left', 'showcase-slide-bottom', 'showcase-slide-top'];
+let slideDirectionIndex = 0;
+
 function switchShowcaseTab(tabName, variantIndex = 0, isManual = false) {
   if (!showcaseData[tabName]) return;
+  
+  // If moving to a different module, use dynamic directional slide!
+  if (currentTab !== tabName) {
+    currentTransitionClass = slideDirections[slideDirectionIndex % slideDirections.length];
+    slideDirectionIndex++;
+  } else {
+    currentTransitionClass = 'showcase-animated';
+  }
+
   currentTab = tabName;
   currentVariant = variantIndex;
 
@@ -2495,6 +2508,9 @@ function renderVariantButtons() {
 function switchShowcaseVariant(variantIndex, isManual = false) {
   const moduleData = showcaseData[currentTab];
   if (!moduleData || !moduleData.variants[variantIndex]) return;
+  
+  // Variants inside same module keep the clean soft fade transition
+  currentTransitionClass = 'showcase-animated';
   currentVariant = variantIndex;
 
   if (isManual) {
@@ -2517,13 +2533,13 @@ function renderShowcaseContent() {
     urlEl.textContent = variant.url;
   }
 
-  // Render HTML with smooth animation
+  // Render HTML with dynamic animation (slide for modules, fade for variants)
   const contentContainer = document.getElementById('showcase-content');
   if (contentContainer) {
-    contentContainer.classList.remove('showcase-animated');
+    contentContainer.classList.remove('showcase-animated', 'showcase-slide-right', 'showcase-slide-left', 'showcase-slide-bottom', 'showcase-slide-top');
     void contentContainer.offsetWidth; // Trigger reflow for animation restart
     contentContainer.innerHTML = variant.render(currentLang);
-    contentContainer.classList.add('showcase-animated');
+    contentContainer.classList.add(currentTransitionClass);
   }
 
   if (window.lucide) {

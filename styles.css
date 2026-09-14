@@ -64,7 +64,69 @@ img, svg, video, canvas, audio, iframe, embed, object {
   }
 }
 
+/* Directional Module Slide Animations */
+@keyframes slideInRight {
+  from {
+    opacity: 0.1;
+    transform: translateX(45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0.1;
+    transform: translateX(-45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInBottom {
+  from {
+    opacity: 0.1;
+    transform: translateY(45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInTop {
+  from {
+    opacity: 0.1;
+    transform: translateY(-45px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .showcase-animated {
   animation: showcaseFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+.showcase-slide-right {
+  animation: slideInRight 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.showcase-slide-left {
+  animation: slideInLeft 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.showcase-slide-bottom {
+  animation: slideInBottom 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.showcase-slide-top {
+  animation: slideInTop 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
 
