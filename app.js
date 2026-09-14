@@ -2340,7 +2340,7 @@ let isUserInteracting = false;
 let autoplayTimer = null;
 let userInteractionTimeout = null;
 const allShowcaseTabs = ['zeiterfassung', 'rechnungen', 'crm', 'logistik', 'fuhrpark', 'website'];
-const AUTOPLAY_INTERVAL = 5500; // 5.5 seconds per variant (calm and comfortable to read)
+const AUTOPLAY_INTERVAL = 8000; // 8.0 seconds per variant (slow, relaxed & easy to read)
 
 function startShowcaseAutoplay() {
   stopShowcaseAutoplay();

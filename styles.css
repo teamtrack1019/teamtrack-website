@@ -55,8 +55,8 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 @keyframes showcaseFadeIn {
   from {
-    opacity: 0.3;
-    transform: translateY(6px);
+    opacity: 0.2;
+    transform: translateY(8px);
   }
   to {
     opacity: 1;
@@ -64,11 +64,11 @@ img, svg, video, canvas, audio, iframe, embed, object {
   }
 }
 
-/* Directional Module Slide Animations - Gentle & Elegant */
+/* Directional Module Slide Animations - Ultra Soft & Slower Pace */
 @keyframes slideInRight {
   from {
-    opacity: 0.2;
-    transform: translateX(28px);
+    opacity: 0.15;
+    transform: translateX(35px);
   }
   to {
     opacity: 1;
@@ -78,8 +78,8 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 @keyframes slideInLeft {
   from {
-    opacity: 0.2;
-    transform: translateX(-28px);
+    opacity: 0.15;
+    transform: translateX(-35px);
   }
   to {
     opacity: 1;
@@ -89,8 +89,8 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 @keyframes slideInBottom {
   from {
-    opacity: 0.2;
-    transform: translateY(28px);
+    opacity: 0.15;
+    transform: translateY(35px);
   }
   to {
     opacity: 1;
@@ -100,8 +100,8 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 @keyframes slideInTop {
   from {
-    opacity: 0.2;
-    transform: translateY(-28px);
+    opacity: 0.15;
+    transform: translateY(-35px);
   }
   to {
     opacity: 1;
@@ -110,23 +110,23 @@ img, svg, video, canvas, audio, iframe, embed, object {
 }
 
 .showcase-animated {
-  animation: showcaseFadeIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: showcaseFadeIn 0.75s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .showcase-slide-right {
-  animation: slideInRight 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: slideInRight 1.15s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .showcase-slide-left {
-  animation: slideInLeft 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: slideInLeft 1.15s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .showcase-slide-bottom {
-  animation: slideInBottom 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: slideInBottom 1.15s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 .showcase-slide-top {
-  animation: slideInTop 0.75s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: slideInTop 1.15s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 
 
