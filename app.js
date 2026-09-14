@@ -2340,7 +2340,7 @@ let isUserInteracting = false;
 let autoplayTimer = null;
 let userInteractionTimeout = null;
 const allShowcaseTabs = ['zeiterfassung', 'rechnungen', 'crm', 'logistik', 'fuhrpark', 'website'];
-const AUTOPLAY_INTERVAL = 4500; // 4.5 seconds per variant
+const AUTOPLAY_INTERVAL = 5500; // 5.5 seconds per variant (calm and comfortable to read)
 
 function startShowcaseAutoplay() {
   stopShowcaseAutoplay();
@@ -3698,33 +3698,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Showcase Auto-Tour
   startShowcaseAutoplay();
   updateAutoplayUI();
-
-  const showcaseEl = document.getElementById('showcase');
-  if (showcaseEl) {
-    showcaseEl.addEventListener('mouseenter', () => {
-      isUserInteracting = true;
-      updateAutoplayUI();
-    });
-    showcaseEl.addEventListener('mouseleave', () => {
-      isUserInteracting = false;
-      updateAutoplayUI();
-    });
-    showcaseEl.addEventListener('touchstart', () => {
-      pauseAutoplayTemporarily(15000);
-    }, { passive: true });
-  }
-
-  const heroButtonsContainer = document.querySelector('.hero-module-btn')?.parentElement;
-  if (heroButtonsContainer) {
-    heroButtonsContainer.addEventListener('mouseenter', () => {
-      isUserInteracting = true;
-      updateAutoplayUI();
-    });
-    heroButtonsContainer.addEventListener('mouseleave', () => {
-      isUserInteracting = false;
-      updateAutoplayUI();
-    });
-  }
 
   // Check if redirected from form submission (#danke)
   if (window.location.hash === '#danke') {
