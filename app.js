@@ -2422,7 +2422,7 @@ function updateAutoplayUI() {
   }
 }
 
-function switchShowcaseTab(tabName, variantIndex = 0, isManual = true) {
+function switchShowcaseTab(tabName, variantIndex = 0, isManual = false) {
   if (!showcaseData[tabName]) return;
   currentTab = tabName;
   currentVariant = variantIndex;
@@ -2492,7 +2492,7 @@ function renderVariantButtons() {
   container.innerHTML = html;
 }
 
-function switchShowcaseVariant(variantIndex, isManual = true) {
+function switchShowcaseVariant(variantIndex, isManual = false) {
   const moduleData = showcaseData[currentTab];
   if (!moduleData || !moduleData.variants[variantIndex]) return;
   currentVariant = variantIndex;
