@@ -2594,6 +2594,8 @@ function changeLanguage(lang) {
 
   // Update showcase
   switchShowcaseTab(currentTab);
+  updateAutoplayUI();
+  updateCalculator();
 
   // Update legal modal if open
   const modal = document.getElementById('legal-modal');
@@ -3713,8 +3715,22 @@ document.addEventListener('DOMContentLoaded', () => {
     lucide.createIcons();
   }
 
-  const savedLang = localStorage.getItem('teamtrack_lang') || 'de';
-  changeLanguage(savedLang);
+  const hostname = window.location.hostname.toLowerCase();
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramLang = urlParams.get('lang');
+
+  let initialLang = 'de';
+  if (paramLang && ['de', 'tr', 'en'].includes(paramLang)) {
+    initialLang = paramLang;
+  } else if (hostname.startsWith('tr.') || hostname.includes('tr.team-track')) {
+    initialLang = 'tr';
+  } else if (hostname.startsWith('en.') || hostname.includes('en.team-track')) {
+    initialLang = 'en';
+  } else {
+    initialLang = localStorage.getItem('teamtrack_lang') || 'de';
+  }
+
+  changeLanguage(initialLang);
 
   const workersInput = document.getElementById('calc-workers');
   const rateInput = document.getElementById('calc-rate');
