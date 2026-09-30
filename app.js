@@ -3325,7 +3325,7 @@ const legalTexts = {
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
           <h4 class="font-bold text-white text-xs">Steuerliche Angaben</h4>
           <p>Umsatzsteuer: Gemäß § 19 UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet bzw. Umsatzsteuer-ID nach Zuteilung.</p>
-          <p>Berufsbezeichnung: Freiberuflicher Softwareentwickler & IT-Berater (verliehen in der Bundesrepublik Deutschland).</p>
+          <p>Berufsbezeichnung: Freiberuflicher Softwareentwickler & IT-Berater.</p>
         </div>
 
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
@@ -3358,8 +3358,14 @@ const legalTexts = {
 
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
           <h4 class="font-bold text-white text-xs">Mesleki ve Vergi Bilgileri</h4>
-          <p>Vergi: Alman KDV Kanunu § 19 UStG uyarınca düzenlenmiştir.</p>
-          <p>Faaliyet Alanı: Serbest Yazılım Geliştirme ve IT Danışmanlığı (Almanya).</p>
+          <p>Vergi: Alman KDV Kanunu § 19 UStG (küçük işletme düzenlemesi) uyarınca KDV hesaplanmaz; KDV kimlik numarası tahsis edildiğinde belirtilir.</p>
+          <p>Faaliyet alanı: Serbest yazılım geliştirme ve IT danışmanlığı.</p>
+        </div>
+
+        <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
+          <h4 class="font-bold text-white text-xs">Uyuşmazlık Çözümü</h4>
+          <p>Avrupa Komisyonu çevrimiçi uyuşmazlık çözümü (OS) platformu sunar: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">https://ec.europa.eu/consumers/odr/</a>.</p>
+          <p>Tüketici tahkim kurulunda uyuşmazlık çözümüne katılmakla yükümlü değiliz ve buna hazır değiliz (§ 36 VSBG).</p>
         </div>
       </div>
     `,
@@ -3386,8 +3392,14 @@ const legalTexts = {
 
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
           <h4 class="font-bold text-white text-xs">Commercial Details</h4>
-          <p>Taxation: Governed by § 19 UStG (German Small Business Regulation).</p>
-          <p>Profession: Freelance Software Engineering & IT Consulting (Germany).</p>
+          <p>VAT: Pursuant to § 19 UStG (German small business regulation), no VAT is charged; VAT ID will be stated once assigned.</p>
+          <p>Professional activity: Freelance software development & IT consulting.</p>
+        </div>
+
+        <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
+          <h4 class="font-bold text-white text-xs">Dispute Resolution</h4>
+          <p>The European Commission provides a platform for online dispute resolution (ODR): <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">https://ec.europa.eu/consumers/odr/</a>.</p>
+          <p>We are neither obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board (§ 36 VSBG).</p>
         </div>
       </div>
     `
