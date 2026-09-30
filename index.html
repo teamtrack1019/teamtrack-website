@@ -199,8 +199,9 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
   
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Self-hosted Tailwind / Lucide / Inter (no third-party CDN requests) -->
+  <link rel="stylesheet" href="/assets/fonts/inter.css?v=7.2">
+  <script src="/assets/vendor/tailwindcss.js?v=7.2"></script>
   <script>
     tailwind.config = {
       theme: {
@@ -224,13 +225,8 @@
       }
     }
   </script>
-  
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=7.0">
+  <script src="/assets/vendor/lucide.min.js?v=7.2"></script>
+  <link rel="stylesheet" href="styles.css?v=7.2">
 </head>
 <body class="bg-slate-50 text-slate-900 antialiased font-sans selection:bg-cyan-500 selection:text-white">
 
@@ -1492,6 +1488,6 @@
     </div>
   </div>
 
-  <script src="app.js?v=7.1"></script>
+  <script src="app.js?v=7.2"></script>
 </body>
 </html>
