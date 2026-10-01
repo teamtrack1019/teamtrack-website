@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b3d2e">
+  <title>WhatsApp Termin-Demo · Salon Mira</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+  <div class="page">
+    <aside class="pitch">
+      <p class="pitch-brand"><a href="/" style="color:inherit;text-decoration:none;">TeamTrack</a> · Showcase</p>
+      <h1>WhatsApp Terminbuchung</h1>
+      <p class="pitch-lead">Live-Demo eines automatisierten Buchungsdialogs für Friseure &amp; lokale Dienstleister.</p>
+      <ul class="pitch-points">
+        <li>Service → Tag → Uhrzeit → Kontaktdaten</li>
+        <li>Echtzeit-Verfügbarkeit &amp; Doppelbuchungs-Schutz</li>
+        <li>Stub für Kalender- &amp; WhatsApp-API</li>
+        <li>Simulierte 24h-Erinnerung</li>
+      </ul>
+      <p class="pitch-cta">Sales line: <em>„Das habe ich — ich baue es für dich.“</em></p>
+      <p class="pitch-hint"><a href="/" style="color:inherit;">← Zurück zu team-track.de</a></p>
+    </aside>
+
+    <main class="phone-shell" aria-label="WhatsApp Chat Demo">
+      <div class="phone">
+        <header class="chat-header">
+          <div class="avatar" aria-hidden="true">SM</div>
+          <div class="header-text">
+            <strong id="salon-name">Salon Mira</strong>
+            <span id="bot-status">online · Termin-Assistent</span>
+          </div>
+          <button type="button" class="header-reset" id="btn-reset" title="Demo neu starten">↻</button>
+        </header>
+
+        <div class="chat-body" id="chat-body" role="log" aria-live="polite"></div>
+
+        <div class="quick-replies" id="quick-replies" hidden></div>
+
+        <form class="composer" id="composer" hidden>
+          <input type="text" id="composer-input" autocomplete="name" placeholder="Nachricht…" enterkeyhint="send">
+          <button type="submit" aria-label="Senden">➤</button>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <script src="assets/js/salon.js"></script>
+  <script src="assets/js/booking.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
