@@ -5,7 +5,58 @@
   const STORAGE_KEY = "whatsapp-termin-demo.bookings";
   const WEEKDAY_KEYS = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
   const WEEKDAY_FROM_SHORT = { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 };
-  const WEEKDAY_DE = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
+  const WEEKDAYS = {
+    de: ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"],
+    tr: ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"],
+    en: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+  };
+  const ERR = {
+    de: {
+      missingConfig: "Salon-Konfiguration fehlt.",
+      unknownService: "Unbekannter Service.",
+      invalidDate: "Ungültiges Datum.",
+      needName: "Bitte gib deinen Namen an.",
+      needPhone: "Bitte gib eine gültige Telefonnummer an.",
+      badDateTime: "Datum oder Uhrzeit ungültig.",
+      doubleBook: "Doppelbuchung verhindert: Slot bereits belegt.",
+      unavailable: "Dieser Termin ist leider nicht mehr verfügbar.",
+      invalidSlot: "Termin ungültig.",
+    },
+    tr: {
+      missingConfig: "Salon yapılandırması eksik.",
+      unknownService: "Bilinmeyen hizmet.",
+      invalidDate: "Geçersiz tarih.",
+      needName: "Lütfen adınızı yazın.",
+      needPhone: "Lütfen geçerli bir telefon numarası girin.",
+      badDateTime: "Tarih veya saat geçersiz.",
+      doubleBook: "Çift rezervasyon engellendi: slot dolu.",
+      unavailable: "Bu randevu artık müsait değil.",
+      invalidSlot: "Randevu geçersiz.",
+    },
+    en: {
+      missingConfig: "Salon configuration missing.",
+      unknownService: "Unknown service.",
+      invalidDate: "Invalid date.",
+      needName: "Please enter your name.",
+      needPhone: "Please enter a valid phone number.",
+      badDateTime: "Invalid date or time.",
+      doubleBook: "Double booking blocked: slot already taken.",
+      unavailable: "This slot is no longer available.",
+      invalidSlot: "Invalid appointment.",
+    },
+  };
+
+  function lang() {
+    return window.DEMO_LANG || "de";
+  }
+
+  function tErr(key) {
+    return (ERR[lang()] || ERR.de)[key] || ERR.de[key];
+  }
+
+  function weekdays() {
+    return WEEKDAYS[lang()] || WEEKDAYS.de;
+  }
 
   const memory = [];
   let persist = true;
@@ -13,7 +64,7 @@
   function config() {
     const cfg = window.SALON_CONFIG;
     if (!cfg || !Array.isArray(cfg.services)) {
-      throw new Error("Salon-Konfiguration fehlt.");
+      throw new Error(tErr("missingConfig"));
     }
     return cfg;
   }
@@ -25,7 +76,7 @@
   function readStore() {
     if (!persist) return memory.slice();
     try {
-      const raw = localStorage.getItem(STORAGE_KEY);
+      const raw = localStorage.getItem(STORAGE_KEY + "." + lang());
       if (!raw) return [];
       const list = JSON.parse(raw);
       return Array.isArray(list) ? list : [];
@@ -42,7 +93,7 @@
       return;
     }
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+      localStorage.setItem(STORAGE_KEY + "." + lang(), JSON.stringify(list));
     } catch {
       persist = false;
       memory.length = 0;
@@ -171,11 +222,22 @@
 
   function germanDayLabel(ymd, todayYmd, tz) {
     const [, m, d] = ymd.split("-");
-    const dm = `${d}.${m}.`;
+    const dm = lang() === "en" ? `${d}/${m}` : `${d}.${m}.`;
     const diff = dayDiff(todayYmd, ymd);
+    const wd = weekdays()[weekdayIndex(ymd, tz)];
+    if (lang() === "tr") {
+      if (diff === 0) return `Bugün, ${dm}`;
+      if (diff === 1) return `Yarın, ${dm}`;
+      return `${wd}, ${dm}`;
+    }
+    if (lang() === "en") {
+      if (diff === 0) return `Today, ${dm}`;
+      if (diff === 1) return `Tomorrow, ${dm}`;
+      return `${wd}, ${dm}`;
+    }
     if (diff === 0) return `Heute, ${dm}`;
     if (diff === 1) return `Morgen, ${dm}`;
-    return `${WEEKDAY_DE[weekdayIndex(ymd, tz)]}, ${dm}`;
+    return `${wd}, ${dm}`;
   }
 
   function salonPublic() {
@@ -188,6 +250,7 @@
       welcomeMessage: cfg.welcomeMessage,
       reminderHoursBefore: cfg.reminderHoursBefore,
       currency: cfg.currency,
+      locale: cfg.locale,
       services: cfg.services,
       bookingHorizonDays: cfg.bookingHorizonDays,
     };
@@ -195,7 +258,7 @@
 
   function availableDays(serviceId) {
     const service = serviceById(serviceId);
-    if (!service) throw new Error("Unbekannter Service.");
+    if (!service) throw new Error(tErr("unknownService"));
 
     const cfg = config();
     const tz = timezone();
@@ -219,12 +282,12 @@
 
   function availableTimes(serviceId, dateYmd) {
     const service = serviceById(serviceId);
-    if (!service) throw new Error("Unbekannter Service.");
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(dateYmd)) throw new Error("Ungültiges Datum.");
+    if (!service) throw new Error(tErr("unknownService"));
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(dateYmd)) throw new Error(tErr("invalidDate"));
 
     return slotsForDate(dateYmd, service).map((time) => ({
       time,
-      label: `${time} Uhr`,
+      label: lang() === "de" ? `${time} Uhr` : time,
     }));
   }
 
@@ -236,13 +299,13 @@
     const phone = String(input.customer_phone || "").trim();
 
     const service = serviceById(serviceId);
-    if (!service) throw new Error("Unbekannter Service.");
-    if (name.length < 2) throw new Error("Bitte gib deinen Namen an.");
+    if (!service) throw new Error(tErr("unknownService"));
+    if (name.length < 2) throw new Error(tErr("needName"));
     if (!/^[+\d][\d\s/\-()]{5,}$/.test(phone)) {
-      throw new Error("Bitte gib eine gültige Telefonnummer an.");
+      throw new Error(tErr("needPhone"));
     }
     if (!/^\d{4}-\d{2}-\d{2}$/.test(dateYmd) || !/^\d{2}:\d{2}$/.test(time)) {
-      throw new Error("Datum oder Uhrzeit ungültig.");
+      throw new Error(tErr("badDateTime"));
     }
 
     const cfg = config();
@@ -252,14 +315,14 @@
     const sameDay = confirmedBookings().filter((b) => b.date === dateYmd);
 
     if (overlaps(time, endTime, sameDay)) {
-      throw new Error("Doppelbuchung verhindert: Slot bereits belegt.");
+      throw new Error(tErr("doubleBook"));
     }
     if (!slotsForDate(dateYmd, service).includes(time)) {
-      throw new Error("Dieser Termin ist leider nicht mehr verfügbar.");
+      throw new Error(tErr("unavailable"));
     }
 
     const starts = zonedTimeToUtc(dateYmd, time, tz);
-    if (Number.isNaN(starts.getTime())) throw new Error("Termin ungültig.");
+    if (Number.isNaN(starts.getTime())) throw new Error(tErr("invalidSlot"));
     const ends = new Date(starts.getTime() + duration * 60000);
     const reminderHours = Number(cfg.reminderHoursBefore ?? 24);
     const reminderAt = new Date(starts.getTime() - reminderHours * 3600000);
@@ -283,9 +346,9 @@
       price: service.price,
       durationMinutes: duration,
       display: {
-        date: `${d}.${m}.${y}`,
+        date: lang() === "en" ? `${d}/${m}/${y}` : `${d}.${m}.${y}`,
         time,
-        weekday: WEEKDAY_DE[weekdayIndex(dateYmd, tz)],
+        weekday: weekdays()[weekdayIndex(dateYmd, tz)],
       },
     };
 

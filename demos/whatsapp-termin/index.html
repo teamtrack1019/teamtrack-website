@@ -11,19 +11,28 @@
   <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body>
+  <header class="demo-topbar">
+    <div class="demo-topbar-left">
+      <a href="/" class="demo-brand" id="pitch-brand">TeamTrack · Showcase</a>
+    </div>
+    <a href="/" class="demo-close" id="btn-close">
+      <span aria-hidden="true">✕</span>
+      <span id="btn-close-label">Schließen</span>
+    </a>
+  </header>
+
   <div class="page">
     <aside class="pitch">
-      <p class="pitch-brand"><a href="/" style="color:inherit;text-decoration:none;">TeamTrack</a> · Showcase</p>
-      <h1>WhatsApp Terminbuchung</h1>
-      <p class="pitch-lead">Live-Demo eines automatisierten Buchungsdialogs für Friseure &amp; lokale Dienstleister.</p>
+      <h1 id="pitch-title">WhatsApp Terminbuchung</h1>
+      <p class="pitch-lead" id="pitch-lead">Live-Demo eines automatisierten Buchungsdialogs für Friseure &amp; lokale Dienstleister.</p>
       <ul class="pitch-points">
-        <li>Service → Tag → Uhrzeit → Kontaktdaten</li>
-        <li>Echtzeit-Verfügbarkeit &amp; Doppelbuchungs-Schutz</li>
-        <li>Stub für Kalender- &amp; WhatsApp-API</li>
-        <li>Simulierte 24h-Erinnerung</li>
+        <li id="pitch-1">Service → Tag → Uhrzeit → Kontaktdaten</li>
+        <li id="pitch-2">Echtzeit-Verfügbarkeit &amp; Doppelbuchungs-Schutz</li>
+        <li id="pitch-3">Stub für Kalender- &amp; WhatsApp-API</li>
+        <li id="pitch-4">Simulierte 24h-Erinnerung</li>
       </ul>
-      <p class="pitch-cta">Sales line: <em>„Das habe ich — ich baue es für dich.“</em></p>
-      <p class="pitch-hint"><a href="/" style="color:inherit;">← Zurück zu team-track.de</a></p>
+      <p class="pitch-cta"><em id="pitch-cta">Sales line: „Das habe ich — ich baue es für dich.“</em></p>
+      <p class="pitch-hint"><a href="/" id="btn-close-home">← Zurück zur Website</a></p>
     </aside>
 
     <main class="phone-shell" aria-label="WhatsApp Chat Demo">

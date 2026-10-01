@@ -2877,6 +2877,13 @@ function openShowcaseModule(tabName) {
   openModuleVollbild(tabName);
 }
 
+function openWhatsappDemo(event) {
+  if (event) event.preventDefault();
+  closeNavMenu();
+  const lang = (typeof currentLang !== 'undefined' && currentLang) ? currentLang : 'de';
+  window.location.href = '/demos/whatsapp-termin/?lang=' + encodeURIComponent(lang);
+}
+
 let moduleVollbildTab = null;
 let moduleVollbildVariant = 0;
 
