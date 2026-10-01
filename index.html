@@ -305,10 +305,10 @@
                       <i data-lucide="globe" class="w-3.5 h-3.5 text-cyan-600 flex-shrink-0"></i>
                       <span data-i18n="navModWebsite">Webseiten</span>
                     </button>
-                    <button type="button" onclick="openShowcaseModule('whatsapp')" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-sm font-semibold text-slate-700 hover:text-cyan-700 hover:bg-white transition cursor-pointer">
+                    <a href="/demos/whatsapp-termin/" onclick="closeNavMenu()" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-sm font-semibold text-slate-700 hover:text-cyan-700 hover:bg-white transition">
                       <i data-lucide="message-circle" class="w-3.5 h-3.5 text-emerald-600 flex-shrink-0"></i>
                       <span data-i18n="navModWhatsappTermin">WhatsApp Terminbuchung</span>
-                    </button>
+                    </a>
                     <!-- Yeni maddeler buraya eklenebilir -->
                   </div>
                 </div>
@@ -466,7 +466,6 @@
             <button type="button" onclick="switchShowcaseTab('logistik', 0, true)" id="bar-tab-logistik" class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg text-slate-300 hover:text-white transition"><span data-i18n="barTabLogistik">4. Logistik</span></button>
             <button type="button" onclick="switchShowcaseTab('fuhrpark', 0, true)" id="bar-tab-fuhrpark" class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg text-slate-300 hover:text-white transition"><span data-i18n="barTabFuhrpark">5. Fuhrpark</span></button>
             <button type="button" onclick="switchShowcaseTab('website', 0, true)" id="bar-tab-website" class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg text-slate-300 hover:text-white transition"><span data-i18n="barTabWebsite">6. Webseiten</span></button>
-            <button type="button" onclick="switchShowcaseTab('whatsapp', 0, true)" id="bar-tab-whatsapp" class="px-2 sm:px-3 py-1 sm:py-1.5 rounded-lg text-slate-300 hover:text-white transition"><span data-i18n="barTabWhatsapp">7. WhatsApp</span></button>
           </div>
         </div>
 
@@ -1535,6 +1534,6 @@
     </div>
   </div>
 
-  <script src="app.js?v=7.4"></script>
+  <script src="app.js?v=7.3"></script>
 </body>
 </html>
