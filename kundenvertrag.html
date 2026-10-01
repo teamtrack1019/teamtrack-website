@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeamTrack AGB &amp; Vertrag | Ausfüllbar &amp; Druckbar</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 12mm 11mm 12mm 11mm;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      color: #0f172a;
+      background-color: #f8fafc;
+      line-height: 1.4;
+      font-size: 10.2px;
+      margin: 0;
+      padding: 0;
+    }
+    .top-actions {
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #ffffff;
+      padding: 14px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+    .top-actions h3 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+    .top-actions p {
+      margin: 2px 0 0 0;
+      font-size: 11px;
+      color: #94a3b8;
+    }
+    .btn-print {
+      background: #0284c7;
+      color: #ffffff;
+      border: none;
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 8px;
+      cursor: pointer;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.4);
+    }
+    .btn-print:hover { background: #0369a1; }
+    .page-container {
+      max-width: 210mm;
+      margin: 20px auto;
+      background: #ffffff;
+      padding: 12mm 11mm;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+      border-radius: 8px;
+    }
+    .header-box {
+      border-bottom: 2px solid #0284c7;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand-title {
+      font-size: 19px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0;
+      line-height: 1.1;
+      letter-spacing: -0.3px;
+      background: none !important;
+      border: none !important;
+      padding: 0 !important;
+    }
+    .brand-title span { color: #0284c7; }
+    .brand-subtitle {
+      margin: 2px 0 0 0;
+      font-size: 10px;
+      font-weight: 600;
+      color: #64748b;
+    }
+    .doc-badge {
+      display: inline-block;
+      background-color: #f0fdf4;
+      border: 1.5px solid #16a34a;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 9.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #15803d;
+      letter-spacing: 0.4px;
+    }
+    .contract-nr {
+      margin: 4px 0 0 0;
+      font-size: 9.5px;
+      font-weight: 700;
+      color: #475569;
+    }
+    h1 {
+      font-size: 13px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 3px 0;
+      text-align: center;
+    }
+    .subtitle {
+      text-align: center;
+      font-size: 9.8px;
+      color: #64748b;
+      margin-bottom: 10px;
+    }
+    .parties-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 10px;
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 8px 10px;
+    }
+    .party-title {
+      font-weight: 800;
+      color: #0284c7;
+      font-size: 10px;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+      border-bottom: 1px solid #cbd5e1;
+      padding-bottom: 2px;
+    }
+    input[type="text"], input[type="number"], input[type="email"], input[type="tel"], select {
+      font-family: inherit;
+      font-size: 10px;
+      color: #0369a1;
+      font-weight: 600;
+      border: 1px solid #94a3b8;
+      border-radius: 4px;
+      padding: 2px 5px;
+      background-color: #ffffff;
+      outline: none;
+      width: 100%;
+    }
+    input:focus {
+      border-color: #0284c7;
+      background-color: #f0f9ff;
+      box-shadow: 0 0 0 2px rgba(2,132,199,0.2);
+    }
+    .input-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 3px;
+      font-size: 10px;
+      gap: 6px;
+    }
+    .input-label {
+      width: 105px;
+      color: #475569;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .input-val { flex-grow: 1; min-width: 0; }
+    h2 {
+      font-size: 10.8px;
+      font-weight: 800;
+      color: #0f172a;
+      background-color: #f1f5f9;
+      border-left: 3.5px solid #0284c7;
+      padding: 3px 7px;
+      margin: 8px 0 4px 0;
+    }
+    p {
+      margin: 0 0 3px 0;
+      color: #1e293b;
+      text-align: justify;
+    }
+    ul {
+      margin: 0 0 3px 0;
+      padding-left: 16px;
+    }
+    li { margin-bottom: 1.5px; }
+    .note {
+      background-color: #f0f9ff;
+      border: 1px solid #bae6fd;
+      border-left: 3.5px solid #0284c7;
+      padding: 5px 8px;
+      border-radius: 4px;
+      margin: 5px 0;
+      font-size: 9.5px;
+      color: #0c4a6e;
+    }
+    .protect-alert {
+      background-color: #fffbeb;
+      border: 1px solid #fde68a;
+      border-left: 3.5px solid #d97706;
+      padding: 5px 8px;
+      border-radius: 4px;
+      margin: 5px 0;
+      font-size: 9.5px;
+      color: #92400e;
+    }
+    .signature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 14px;
+      page-break-inside: avoid;
+    }
+    .signature-box {
+      border-top: 1px solid #334155;
+      padding-top: 4px;
+      margin-top: 24px;
+      font-size: 10px;
+    }
+    .meta-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-bottom: 8px;
+      font-size: 10px;
+    }
+    .meta-box {
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 6px 8px;
+      background: #f8fafc;
+    }
+    .meta-box strong {
+      display: block;
+      color: #0284c7;
+      font-size: 9.5px;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    .page-break {
+      break-before: page;
+      page-break-before: always;
+      margin-top: 18px;
+      padding-top: 8px;
+      border-top: 2px dashed #cbd5e1;
+    }
+    .check-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 12px;
+      margin: 4px 0 6px 0;
+      font-size: 9.8px;
+    }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+    }
+    .check-item input[type="checkbox"] {
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+    table.tom-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 4px 0 6px 0;
+      font-size: 9.5px;
+    }
+    table.tom-table th,
+    table.tom-table td {
+      border: 1px solid #cbd5e1;
+      padding: 4px 6px;
+      text-align: left;
+      vertical-align: top;
+    }
+    table.tom-table th {
+      background: #f1f5f9;
+      font-weight: 800;
+      color: #0f172a;
+    }
+    @media print {
+      body { background: #ffffff; }
+      .top-actions { display: none !important; }
+      .page-container {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+      input {
+        border: none !important;
+        background: transparent !important;
+        padding: 0 !important;
+        color: #0f172a !important;
+        font-weight: bold !important;
+        box-shadow: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-actions">
+    <div>
+      <h3>TeamTrack B2B-AGB + AVV + TOM (ein Dokument, mehrere Druckseiten)</h3>
+      <p>Ausfüllbar &amp; druckbar • AGB • Anlage 1 AVV (Art. 28 DSGVO) • Anlage 2 TOMs</p>
+    </div>
+    <button type="button" class="btn-print" onclick="window.print()">Als PDF drucken / speichern</button>
+  </div>
+
+  <div class="page-container">
+    <div class="header-box">
+      <div>
+        <h2 class="brand-title">Team<span>Track</span></h2>
+        <p class="brand-subtitle">Softwareentwickler &amp; IT-Berater • Inhaberin: Huriye Ünalsoy • 97236 Randersacker, Deutschland</p>
+      </div>
+      <div style="text-align: right;">
+        <span class="doc-badge">B2B-VERTRAG &amp; AGB</span>
+        <p class="contract-nr">Dokument-Nr: <input type="text" value="TT-AGB-2026-001" style="width: 110px; font-weight: bold;"></p>
+      </div>
+    </div>
+
+    <h1>ALLGEMEINE GESCHÄFTS- &amp; VERTRAGSBEDINGUNGEN (B2B)</h1>
+    <p class="subtitle">
+      Gültig für Individual-Softwareentwicklung, IT-Beratung, Cloud-/SaaS-Systeme und Schnittstellenintegrationen.
+      Die Auftragsverarbeitungsvereinbarung (AVV gem. Art. 28 DSGVO) ist als <strong>Anlage 1</strong>, die technischen und organisatorischen Maßnahmen als <strong>Anlage 2</strong> Bestandteil dieses Dokuments.
+    </p>
+
+    <div class="meta-row">
+      <div class="meta-box">
+        <strong>Vertragsbeginn</strong>
+        <input type="text" placeholder="TT.MM.JJJJ">
+      </div>
+      <div class="meta-box">
+        <strong>Bezug / Angebot</strong>
+        <input type="text" placeholder="z.B. Angebot Nr. / Paket 1–3">
+      </div>
+      <div class="meta-box">
+        <strong>Vertragsmodell</strong>
+        <input type="text" placeholder="Festpreis / Retainer / Erweiterung">
+      </div>
+    </div>
+
+    <div class="parties-grid">
+      <div>
+        <div class="party-title">1. Auftragnehmer (Dienstleister)</div>
+        <div class="input-row"><span class="input-label">Unternehmen:</span><strong>TeamTrack Softwareentwickler &amp; IT-Berater</strong></div>
+        <div class="input-row"><span class="input-label">Inhaberin:</span><span>Huriye Ünalsoy</span></div>
+        <div class="input-row"><span class="input-label">Adresse:</span><span>Balthasar-Neumann-Straße 38, 97236 Randersacker, Deutschland</span></div>
+        <div class="input-row"><span class="input-label">E-Mail:</span><span>kontakt@team-track.de</span></div>
+        <div class="input-row"><span class="input-label">Telefon:</span><span>+49 172 6125371 | +49 172 4690446</span></div>
+      </div>
+      <div>
+        <div class="party-title">2. Auftraggeber (Kunde)</div>
+        <div class="input-row"><span class="input-label">Firma:</span><input type="text" class="input-val" placeholder="Firmenname des Auftraggebers"></div>
+        <div class="input-row"><span class="input-label">Ansprechpartner:</span><input type="text" class="input-val" placeholder="Vor- &amp; Nachname / Position"></div>
+        <div class="input-row"><span class="input-label">Straße, Hausnr.:</span><input type="text" class="input-val" placeholder="Straße &amp; Hausnummer"></div>
+        <div class="input-row"><span class="input-label">PLZ, Ort:</span><input type="text" class="input-val" placeholder="PLZ &amp; Stadt, Land"></div>
+        <div class="input-row"><span class="input-label">E-Mail:</span><input type="email" class="input-val" placeholder="firma@beispiel.de"></div>
+        <div class="input-row"><span class="input-label">Telefon:</span><input type="tel" class="input-val" placeholder="+49 ..."></div>
+        <div class="input-row"><span class="input-label">USt-ID (falls):</span><input type="text" class="input-val" placeholder="DE..."></div>
+      </div>
+    </div>
+
+    <h2>§ 1 Geltungsbereich &amp; Vertragspartner</h2>
+    <p>Diese Bedingungen gelten ausschließlich gegenüber Unternehmern, juristischen Personen des öffentlichen Rechts oder öffentlich-rechtlichen Sondervermögen im Sinne von § 14 BGB. Vertragspartner ist TeamTrack Softwareentwickler &amp; IT-Berater, Inhaberin: Huriye Ünalsoy, Balthasar-Neumann-Straße 38, 97236 Randersacker, Deutschland. Entgegenstehende oder abweichende Geschäftsbedingungen des Auftraggebers werden nicht anerkannt, es sei denn, TeamTrack stimmt diesen ausdrücklich schriftlich (Textform genügt) zu.</p>
+
+    <h2>§ 2 Leistungsumfang &amp; Vertragsmodelle</h2>
+    <p>Der konkrete Leistungsumfang richtet sich nach dem jeweiligen Einzelvertrag bzw. Angebot (z. B. Festpreis-Projekt, Setup mit fortlaufender Betreuung/Retainer oder modulare System-Erweiterung). Individual-WebApps werden im White-Label-Design des Auftraggebers (Logo, Firmenfarben, Subdomain) bereitgestellt, soweit vereinbart. Nicht im Angebot enthaltene Leistungen gelten als zusätzliche Beauftragung und werden gesondert vergütet.</p>
+
+    <h2>§ 3 Mitwirkungspflichten des Auftraggebers</h2>
+    <p>Der Auftraggeber stellt die für die Projektrealisierung erforderlichen Informationen, Texte, Logos, Zugänge und technischen Freigaben rechtzeitig und vollständig zur Verfügung. Verzögerungen infolge verspäteter oder unvollständiger Mitwirkung führen zu einer angemessenen Verschiebung der Termine; hieraus entstehende Mehrkosten können dem Auftraggeber in Rechnung gestellt werden.</p>
+
+    <h2>§ 4 Vergütung &amp; Zahlungsbedingungen</h2>
+    <p>1. Die Vergütung ergibt sich aus dem Angebot bzw. der Auftragsbestätigung. Soweit nicht anders vereinbart, gelten folgende Zahlungsmodalitäten:</p>
+    <ul>
+      <li><strong>Festpreis-Projekte:</strong> <input type="text" placeholder="z.B. 40% bei Auftrag, 40% Zwischenstand, 20% Abnahme" style="width: 68%;"></li>
+      <li><strong>Laufende Betreuung (Retainer):</strong> monatlich im Voraus zum <input type="text" placeholder="1." style="width: 36px;"> eines jeden Monats.</li>
+      <li><strong>Zusatzleistungen / Erweiterungen:</strong> nach Aufwand oder Festpreis gemäß gesonderter Vereinbarung.</li>
+    </ul>
+    <p>2. Rechnungen sind innerhalb von <input type="text" value="14" style="width: 36px;"> Tagen nach Rechnungsdatum ohne Abzug zur Zahlung fällig, sofern nichts anderes vereinbart ist.</p>
+    <p>3. TeamTrack ist Kleinunternehmerin im Sinne von § 19 UStG; in Rechnungen wird daher keine Umsatzsteuer ausgewiesen, solange diese Regelung gilt. Eine später erteilte USt-ID wird dem Auftraggeber mitgeteilt.</p>
+    <p>4. Bei Zahlungsverzug ist TeamTrack berechtigt, Leistungen zurückzuhalten bzw. den Zugang zu betreuten Systemen nach vorheriger Mahnung vorübergehend zu sperren.</p>
+
+    <h2>§ 5 Nutzungsrechte &amp; Urheberrecht</h2>
+    <p>1. Nach vollständiger Begleichung der vereinbarten Vergütung erhält der Auftraggeber die vertraglich vereinbarten Nutzungsrechte an der für ihn erstellten Software für seine eigenen betrieblichen Zwecke.</p>
+    <p>2. Bei laufenden Betreuungsverträgen (Retainer) und System-Erweiterungen verwaltet TeamTrack den Quellcode in gesicherten Repositories, um Updates, Features und Sicherheits-Patches einspielen zu können. Das Urheberrecht an der Systemarchitektur und am von TeamTrack entwickelten Code verbleibt – soweit nicht ausdrücklich anders vereinbart – bei TeamTrack; dem Auftraggeber stehen die vereinbarten Nutzungsrechte zu.</p>
+    <p>3. Open-Source-Komponenten Dritter unterliegen deren jeweiligen Lizenzen.</p>
+
+    <h2>§ 6 Abnahme</h2>
+    <p>1. Bei Festpreis-Werken fordert TeamTrack den Auftraggeber nach Bereitstellung zur Abnahme auf. Die Abnahme gilt als erfolgt, wenn der Auftraggeber nicht innerhalb von <input type="text" value="7" style="width: 36px;"> Werktagen nach Bereitstellung wesentliche Mängel schriftlich (Textform genügt) rügt oder die Software produktiv nutzt.</p>
+    <p>2. Unwesentliche Mängel berechtigen nicht zur Verweigerung der Abnahme; sie werden im Rahmen der Gewährleistung beseitigt.</p>
+
+    <h2>§ 7 Gewährleistung, Datensicherung &amp; SLA</h2>
+    <p>TeamTrack gewährleistet eine fachgerechte Programmierung nach aktuellem Stand der Technik und hostet Cloud-Systeme – soweit vereinbart – in ISO/IEC 27001 zertifizierten Rechenzentren in Deutschland bzw. der EU (Ziel-Verfügbarkeit <strong>SLA 99,5 %</strong>) mit automatisierten täglichen Backups. Für Mängel bei Festpreis-Werken gilt eine 30-tägige kostenlose Nachbesserungsfrist ab Abnahme. Eine Haftung für Ausfälle von Drittanbieter-Schnittstellen (z. B. DATEV, ERP-Systeme) oder Störungen externer Telekommunikations-/Cloud-Dienste ist ausgeschlossen. Die Haftung von TeamTrack für leichte Fahrlässigkeit, mittelbare Schäden, Datenverluste oder entgangenen Gewinn ist – soweit gesetzlich zulässig – ausgeschlossen. Die Gesamthaftung ist der Höhe nach auf den jeweiligen Auftragswert bzw. die jährliche Betreuungsvergütung begrenzt.</p>
+
+    <h2>§ 8 Gesetzliche Aufzeichnungs- und Einhaltungspflichten &amp; Haftungsausschluss (ArbZG, MiLoG, FPersV, VO (EG) 561/2006)</h2>
+    <div class="protect-alert">
+      <strong>Wichtige Schutzklausel (Gesetzliche Pflichten &amp; Versicherungsschutz):</strong><br>
+      Die von TeamTrack bereitgestellten Software-Module und Funktionen (z. B. mobile Zeiterfassung, Pausen- &amp; Schichtprüfungen, Touren- und Fuhrparkdisposition, automatische Warnhinweise) stellen rein technische Hilfsmittel zur betrieblichen Unterstützung und Organisation dar. Die alleinige rechtliche und tatsächliche Verantwortung für die gesetzeskonforme Erfassung, Dokumentation und Einhaltung sämtlicher gesetzlicher Arbeits-, Lenk- und Ruhezeitvorschriften (insb. Arbeitszeitgesetz – <strong>ArbZG</strong>, Mindestlohngesetz – <strong>MiLoG</strong>, Fahrpersonalverordnung – <strong>FPersV</strong>, Verordnung (EG) Nr. <strong>561/2006</strong> sowie Arbeitnehmer-Entsendegesetz – <strong>AEntG</strong>), aller arbeitsschutzrechtlichen Fürsorgepflichten sowie aller versicherungsrechtlichen Obliegenheiten verbleibt uneingeschränkt beim Auftraggeber (Arbeitgeber / Unternehmer). TeamTrack übernimmt keinerlei Haftung für behördliche Bußgelder, Nachzahlungsforderungen, Schadensersatzansprüche, Unfallfolgen oder Leistungskürzungen bzw. Regressansprüche von Versicherungen, Berufsgenossenschaften oder Kontrollbehörden infolge fehlerhafter Bedienung, unterlassener betrieblicher Kontrollen, falscher Dateneingaben oder gesetzlicher Pflichtverletzungen seitens des Auftraggebers oder dessen Beschäftigten.
+    </div>
+
+    <h2>§ 9 Vertragslaufzeit, Kündigung &amp; Beendigung</h2>
+    <p>1. Festpreis-Projekte enden mit vollständiger Leistungserbringung und Abnahme, soweit nicht anders vereinbart.</p>
+    <p>2. Laufende Betreuungs-/Retainer-Verträge werden auf unbestimmte Zeit geschlossen und können von beiden Seiten mit einer Frist von <input type="text" value="30" style="width: 40px;"> Tagen zum Monatsende ordentlich gekündigt werden (Textform genügt), sofern im Angebot nichts anderes steht.</p>
+    <p>3. Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt (z. B. nachhaltiger Zahlungsverzug trotz Mahnung).</p>
+    <p>4. Nach Vertragsende stellt TeamTrack dem Auftraggeber – soweit technisch und vertraglich vorgesehen – innerhalb angemessener Frist einen Export der kundeneigenen Daten zur Verfügung. Hosting-Zugänge können nach Ablauf der Kündigungsfrist deaktiviert werden. Nicht bezahlte Leistungen bleiben bis zur vollständigen Zahlung zurückhaltbar.</p>
+
+    <h2>§ 10 Datenschutz &amp; Auftragsverarbeitung</h2>
+    <p>Beide Parteien verpflichten sich zur Vertraulichkeit. Soweit TeamTrack im Rahmen von Hosting, Wartung oder Betrieb personenbezogene Daten im Auftrag des Auftraggebers verarbeitet, agiert TeamTrack als Auftragsverarbeiter gemäß Art. 28 DSGVO; der Auftraggeber bleibt Verantwortlicher (Art. 4 Nr. 7 DSGVO). Einzelheiten regeln <strong>Anlage 1 – AVV</strong> und <strong>Anlage 2 – TOMs</strong>; beide Anlagen sind Bestandteil dieses Vertrags.</p>
+
+    <h2>§ 11 Schlussbestimmungen</h2>
+    <p>1. Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.</p>
+    <p>2. Gerichtsstand für alle Streitigkeiten aus diesem Vertragsverhältnis ist – soweit gesetzlich zulässig – Würzburg.</p>
+    <p>3. Änderungen und Ergänzungen bedürfen der Textform (E-Mail genügt).</p>
+    <p>4. Sollte eine Bestimmung unwirksam sein, bleibt der übrige Vertrag wirksam. Die Parteien ersetzen die Bestimmung durch eine wirksame Regelung, die dem wirtschaftlichen Zweck am nächsten kommt.</p>
+
+    <div class="signature-grid">
+      <div>
+        <p style="margin-bottom: 2px;"><strong>Ort, Datum:</strong> <input type="text" placeholder="z.B. Randersacker, 01.10.2026" style="width: 170px;"></p>
+        <div class="signature-box">
+          <strong>Auftragnehmer (AGB):</strong><br>
+          TeamTrack Softwareentwickler &amp; IT-Berater<br>
+          Inhaberin: Huriye Ünalsoy
+        </div>
+      </div>
+      <div>
+        <p style="margin-bottom: 2px;"><strong>Ort, Datum:</strong> <input type="text" placeholder="z.B. München, 01.10.2026" style="width: 170px;"></p>
+        <div class="signature-box">
+          <strong>Auftraggeber – AGB (Kunde):</strong><br>
+          Rechtsverbindliche Unterschrift &amp; Firmenstempel
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== ANLAGE 1: AVV ===================== -->
+    <div class="page-break">
+      <div class="header-box">
+        <div>
+          <h2 class="brand-title">Team<span>Track</span></h2>
+          <p class="brand-subtitle">Anlage 1 zum B2B-Vertrag • Auftragsverarbeitung gem. Art. 28 DSGVO</p>
+        </div>
+        <div style="text-align: right;">
+          <span class="doc-badge">ANLAGE 1 – AVV</span>
+          <p class="contract-nr">Bezug Dok.-Nr: <input type="text" value="TT-AGB-2026-001" style="width: 110px; font-weight: bold;"></p>
+        </div>
+      </div>
+
+      <h1>AUFTRAGSVERARBEITUNGSVEREINBARUNG (AVV)</h1>
+      <p class="subtitle">gemäß Art. 28 Abs. 3 DSGVO • Verantwortlicher = Auftraggeber • Auftragsverarbeiter = TeamTrack</p>
+
+      <div class="note">
+        Diese Anlage gilt nur, soweit TeamTrack personenbezogene Daten im Auftrag hostet, wartet oder sonst verarbeitet
+        (z. B. Cloud-WebApp, Zeiterfassung, CRM). Reine Entwicklungsleistungen ohne Datenhosting lösen keine AVV aus.
+      </div>
+
+      <h2>A. Gegenstand, Dauer, Art und Zweck</h2>
+      <p><strong>Gegenstand:</strong> Verarbeitung personenbezogener Daten im Rahmen der vereinbarten Software-/Hosting-/Wartungsleistungen.</p>
+      <p><strong>Zweck:</strong> Bereitstellung, Betrieb, Wartung, Support und Weiterentwicklung der kundenspezifischen Systeme laut Angebot.</p>
+      <p><strong>Dauer:</strong> für die Laufzeit des Hauptvertrags bzw. der Betreuung; danach Löschung/Rückgabe gemäß Abschnitt F.</p>
+      <p><strong>Konkrete Systeme / Module (ausfüllen):</strong></p>
+      <div class="check-grid">
+        <label class="check-item"><input type="checkbox"> Zeiterfassung / Schicht</label>
+        <label class="check-item"><input type="checkbox"> CRM / Kundenverwaltung</label>
+        <label class="check-item"><input type="checkbox"> Touren / Fuhrpark / Disposition</label>
+        <label class="check-item"><input type="checkbox"> Rechnungs-/Dokumentenmodul</label>
+        <label class="check-item"><input type="checkbox"> Mitarbeiter-App / Portal</label>
+        <label class="check-item"><input type="checkbox"> Sonstiges: <input type="text" placeholder="..." style="width: 55%;"></label>
+      </div>
+
+      <h2>B. Kategorien betroffener Personen</h2>
+      <div class="check-grid">
+        <label class="check-item"><input type="checkbox"> Beschäftigte / Subunternehmer des Auftraggebers</label>
+        <label class="check-item"><input type="checkbox"> Kunden / Interessenten des Auftraggebers</label>
+        <label class="check-item"><input type="checkbox"> Lieferanten / Geschäftspartner</label>
+        <label class="check-item"><input type="checkbox"> Sonstige: <input type="text" placeholder="..." style="width: 55%;"></label>
+      </div>
+
+      <h2>C. Arten der personenbezogenen Daten</h2>
+      <div class="check-grid">
+        <label class="check-item"><input type="checkbox"> Stammdaten (Name, Kontakt)</label>
+        <label class="check-item"><input type="checkbox"> Beschäftigtendaten / Arbeitszeiten</label>
+        <label class="check-item"><input type="checkbox"> Standort-/GPS-/Tourendaten</label>
+        <label class="check-item"><input type="checkbox"> Vertrags-/Rechnungsdaten</label>
+        <label class="check-item"><input type="checkbox"> Zugangs- &amp; Protokolldaten</label>
+        <label class="check-item"><input type="checkbox"> Sonstige: <input type="text" placeholder="..." style="width: 55%;"></label>
+      </div>
+      <p>Besondere Kategorien (Art. 9 DSGVO) werden nur verarbeitet, wenn ausdrücklich vereinbart: <input type="text" placeholder="nein / Beschreibung" style="width: 45%;"></p>
+
+      <h2>D. Pflichten der Parteien</h2>
+      <p>1. TeamTrack verarbeitet personenbezogene Daten nur auf dokumentierte Weisung des Auftraggebers, sofern keine gesetzliche Verpflichtung entgegensteht.</p>
+      <p>2. TeamTrack stellt sicher, dass zur Verarbeitung befugte Personen zur Vertraulichkeit verpflichtet sind.</p>
+      <p>3. TeamTrack trifft geeignete technische und organisatorische Maßnahmen gemäß Art. 32 DSGVO (siehe <strong>Anlage 2</strong>).</p>
+      <p>4. Der Auftraggeber ist und bleibt alleiniger Verantwortlicher für die Rechtmäßigkeit der Datenerhebung, Informationspflichten gegenüber Betroffenen und gesetzliche Aufbewahrungsfristen.</p>
+      <p>5. TeamTrack unterstützt den Auftraggeber angemessen bei Betroffenenrechten (Art. 15–22 DSGVO) sowie bei Melde-/Folgenabschätzungspflichten (Art. 32–36 DSGVO).</p>
+
+      <h2>E. Unterauftragsverarbeiter</h2>
+      <p>Der Auftraggeber stimmt der Einschaltung folgender Unterauftragsverarbeiter zu (soweit für die Leistung erforderlich):</p>
+      <table class="tom-table">
+        <thead>
+          <tr>
+            <th>Dienst</th>
+            <th>Zweck</th>
+            <th>Ort / Hinweis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vercel Inc.</td>
+            <td>Hosting / Deployment von Webanwendungen</td>
+            <td>u. a. EU-Regionen; ggf. USA (SCC / DPF)</td>
+          </tr>
+          <tr>
+            <td>1&amp;1 IONOS SE</td>
+            <td>E-Mail / SMTP-Kommunikation</td>
+            <td>Deutschland / EU</td>
+          </tr>
+          <tr>
+            <td>GitHub, Inc. (soweit genutzt)</td>
+            <td>Quellcode-Repository / CI (ohne Kundengeschäftsdaten in Repos)</td>
+            <td>ggf. USA (SCC / DPF)</td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="Weitere (z.B. DB-Hoster)" style="width: 95%;"></td>
+            <td><input type="text" placeholder="Zweck" style="width: 95%;"></td>
+            <td><input type="text" placeholder="Ort" style="width: 95%;"></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>TeamTrack informiert den Auftraggeber über beabsichtigte Änderungen bei Unterauftragsverarbeitern und räumt Widerspruchsrecht in angemessener Frist ein. Mit Unterauftragsverarbeitern werden datenschutzrechtlich erforderliche Vereinbarungen geschlossen.</p>
+
+      <h2>F. Löschung und Rückgabe</h2>
+      <p>Nach Ende der Auftragsverarbeitung löscht TeamTrack personenbezogene Daten oder gibt sie zurück – nach Wahl des Auftraggebers – und löscht vorhandene Kopien, soweit keine gesetzliche Aufbewahrungspflicht besteht. Bestätigung auf Anfrage.</p>
+
+      <h2>G. Nachweise und Kontrollen</h2>
+      <p>TeamTrack stellt dem Auftraggeber auf Anfrage die erforderlichen Informationen zum Nachweis der Art.-28-Pflichten zur Verfügung. Vor-Ort-Prüfungen sind nach angemessener Ankündigung, während der Geschäftszeiten und ohne Störung des Betriebs möglich; Kosten trägt der Auftraggeber, sofern kein erheblicher Pflichtverstoß von TeamTrack vorliegt.</p>
+
+      <h2>H. Schluss</h2>
+      <p>Es gilt deutsches Recht. Gerichtsstand ist – soweit zulässig – Würzburg. Diese AVV geht bei Widersprüchen zu datenschutzrechtlichen Fragen dem Hauptvertrag vor.</p>
+
+      <div class="signature-grid">
+        <div>
+          <p style="margin-bottom: 2px;"><strong>Ort, Datum:</strong> <input type="text" placeholder="TT.MM.JJJJ" style="width: 120px;"></p>
+          <div class="signature-box">
+            <strong>Auftragsverarbeiter:</strong><br>
+            TeamTrack Softwareentwickler &amp; IT-Berater<br>
+            Inhaberin: Huriye Ünalsoy
+          </div>
+        </div>
+        <div>
+          <p style="margin-bottom: 2px;"><strong>Ort, Datum:</strong> <input type="text" placeholder="TT.MM.JJJJ" style="width: 120px;"></p>
+          <div class="signature-box">
+            <strong>Verantwortlicher (Kunde):</strong><br>
+            Rechtsverbindliche Unterschrift &amp; Firmenstempel
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== ANLAGE 2: TOMs ===================== -->
+    <div class="page-break">
+      <div class="header-box">
+        <div>
+          <h2 class="brand-title">Team<span>Track</span></h2>
+          <p class="brand-subtitle">Anlage 2 zum B2B-Vertrag / zur AVV • TOMs gem. Art. 32 DSGVO</p>
+        </div>
+        <div style="text-align: right;">
+          <span class="doc-badge">ANLAGE 2 – TOM</span>
+        </div>
+      </div>
+
+      <h1>TECHNISCHE UND ORGANISATORISCHE MASSNAHMEN (TOMs)</h1>
+      <p class="subtitle">Kurzübersicht der von TeamTrack eingesetzten Schutzmaßnahmen (Stand: 2026)</p>
+
+      <table class="tom-table">
+        <thead>
+          <tr>
+            <th style="width: 28%;">Bereich</th>
+            <th>Maßnahmen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Vertraulichkeit / Verschlüsselung</strong></td>
+            <td>TLS-Verschlüsselung der Übertragung; Passwort-Hashing (z. B. Bcrypt/Argon2); Zugriff nur für befugte Personen.</td>
+          </tr>
+          <tr>
+            <td><strong>Mandantentrennung</strong></td>
+            <td>Kundenbezogene Systeme/Datenbanken möglichst isoliert; keine Vermischung von Mandantendaten.</td>
+          </tr>
+          <tr>
+            <td><strong>Zugriffskontrolle</strong></td>
+            <td>Rollen- und Rechtekonzept (Need-to-know); administrative Zugänge beschränkt und geschützt.</td>
+          </tr>
+          <tr>
+            <td><strong>Verfügbarkeit / Backup</strong></td>
+            <td>Regelmäßige (i. d. R. tägliche) Backups; Wiederherstellungsprozesse; Hosting in professionellen Rechenzentren (DE/EU, soweit vereinbart).</td>
+          </tr>
+          <tr>
+            <td><strong>Eingabekontrolle / Protokolle</strong></td>
+            <td>Technische Logs zur Nachvollziehbarkeit von Zugriffen und Änderungen, soweit systemseitig vorgesehen.</td>
+          </tr>
+          <tr>
+            <td><strong>Auftragskontrolle</strong></td>
+            <td>Verarbeitung nur im Rahmen des Vertrags/AVV; Unterauftragsverarbeiter mit entsprechenden Vereinbarungen.</td>
+          </tr>
+          <tr>
+            <td><strong>Trennung / Zweckbindung</strong></td>
+            <td>Kundendaten nur für vereinbarte Zwecke; keine Nutzung für eigene Werbung.</td>
+          </tr>
+          <tr>
+            <td><strong>Weitergabe / Transfers</strong></td>
+            <td>Übermittlungen an Unterauftragsverarbeiter nur soweit erforderlich; bei Drittlandtransfers Einsatz geeigneter Garantien (z. B. SCC / DPF), soweit anwendbar.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>TeamTrack aktualisiert die TOMs bei Bedarf an den Stand der Technik. Wesentliche Verschlechterungen des Schutzniveaus werden dem Auftraggeber mitgeteilt.</p>
+
+      <div class="note">
+        <strong>Hinweis zum Druck:</strong> Ein Dokument • typischerweise mehrere A4-Seiten (AGB + AVV + TOM).
+        Das ist üblich und in Ordnung — nicht alles muss auf eine einzige Seite.
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
