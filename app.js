@@ -2633,6 +2633,12 @@ function changeLanguage(lang) {
   updateAutoplayUI();
   updateCalculator();
 
+  // Update module Vollbild if open
+  const vollbild = document.getElementById('module-vollbild');
+  if (vollbild && !vollbild.classList.contains('hidden') && moduleVollbildTab) {
+    renderModuleVollbild();
+  }
+
   // Update legal modal if open
   const modal = document.getElementById('legal-modal');
   if (modal && !modal.classList.contains('hidden')) {
