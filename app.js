@@ -78,6 +78,7 @@ const translations = {
     barTabLogistik: "4. Logistik",
     barTabFuhrpark: "5. Fuhrpark",
     barTabWebsite: "6. Webseiten",
+    barTabWhatsapp: "7. WhatsApp",
     variantPrompt: "Modell-Variante wählen (A, B, C):",
     ctaSubPrompt: "Gefällt Ihnen die Demo? Lassen Sie uns Ihre eigene Firmen-WebApp besprechen:",
     heroBtnPrimary: "Kostenloses Erstgespräch anfragen",
@@ -281,6 +282,7 @@ const translations = {
     barTabLogistik: "4. Lojistik",
     barTabFuhrpark: "5. Filo & Araç",
     barTabWebsite: "6. Web Siteleri",
+    barTabWhatsapp: "7. WhatsApp",
     variantPrompt: "Model Varyasyonu Seçin (A, B, C):",
     ctaSubPrompt: "Demoyu beğendiniz mi? Firmanıza özel web yazılımını birlikte planlayalım:",
     heroBtnPrimary: "Ücretsiz Ön Görüşme İsteyin",
@@ -484,6 +486,7 @@ const translations = {
     barTabLogistik: "4. Logistics",
     barTabFuhrpark: "5. Fleet",
     barTabWebsite: "6. Websites",
+    barTabWhatsapp: "7. WhatsApp",
     variantPrompt: "Choose Model Variation (A, B, C):",
     ctaSubPrompt: "Like what you see? Let's engineer your company's custom software:",
     heroBtnPrimary: "Request Free Consultation",
@@ -2379,6 +2382,74 @@ const showcaseData = {
         }
       }
     ]
+  },
+  whatsapp: {
+    title: {
+      de: "7. WhatsApp Terminbuchung (Live-Demo)",
+      tr: "7. WhatsApp Randevu (Canlı Demo)",
+      en: "7. WhatsApp Booking (Live Demo)"
+    },
+    variants: [
+      {
+        badge: "A",
+        name: {
+          de: "Live-Chat: Service → Tag → Uhrzeit → Bestätigung",
+          tr: "Canlı sohbet: Hizmet → Gün → Saat → Onay",
+          en: "Live chat: Service → Day → Time → Confirm"
+        },
+        url: "ihre-firma.teamtrack.cloud/whatsapp-termin",
+        render: (lang) => {
+          const isTr = lang === "tr";
+          const isEn = lang === "en";
+          return `
+            <div class="grid grid-cols-1 xl:grid-cols-[minmax(0,1fr)_320px] gap-4 sm:gap-5">
+              <div class="bg-slate-950 rounded-2xl border-2 border-emerald-500/50 shadow-2xl shadow-emerald-500/10 overflow-hidden min-h-[620px] sm:min-h-[680px]">
+                <iframe
+                  title="WhatsApp Termin Demo"
+                  src="/demos/whatsapp-termin/?embed=1"
+                  class="w-full h-[620px] sm:h-[680px] border-0 bg-[#12261e]"
+                  loading="lazy"
+                  referrerpolicy="no-referrer"
+                ></iframe>
+              </div>
+              <div class="bg-gradient-to-b from-emerald-950/50 via-slate-900 to-slate-950 p-5 rounded-2xl border border-emerald-500/30 flex flex-col justify-between shadow-xl">
+                <div>
+                  <h4 class="font-bold text-sm text-emerald-200 flex items-center gap-2 mb-3">
+                    <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                    <span>${isTr ? "WhatsApp ile otomatik randevu" : (isEn ? "Automated WhatsApp booking" : "Automatisierte WhatsApp-Terminbuchung")}</span>
+                  </h4>
+                  <p class="text-xs text-slate-300 leading-relaxed mb-4">
+                    ${isTr
+                      ? "Frisör, temizlik, zanaat ve yerel hizmetler için: müşteri WhatsApp’tan hizmet seçer, gün/saat alır, onay ve 24s hatırlatma görür — çift rezervasyon korumalı."
+                      : (isEn
+                        ? "For salons, cleaning, crafts and local services: customers pick a service, day and time in WhatsApp-style chat, get confirmation and a simulated 24h reminder — with double-booking protection."
+                        : "Für Friseure, Reinigung, Handwerk & lokale Dienstleister: Service, Tag und Uhrzeit im WhatsApp-Stil buchen, Bestätigung + simulierte 24h-Erinnerung — mit Doppelbuchungs-Schutz.")}
+                  </p>
+                  <ul class="space-y-2 text-xs text-slate-300 mb-4">
+                    <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold">✓</span><span>${isTr ? "Canlı müsaitlik (açılış saatleri + kayıtlı randevular)" : (isEn ? "Live availability from opening hours + stored bookings" : "Live-Verfügbarkeit aus Öffnungszeiten + gespeicherten Terminen")}</span></li>
+                    <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold">✓</span><span>${isTr ? "Çift rezervasyon engeli" : (isEn ? "Overlap / double-booking guard" : "Überlappungs- & Doppelbuchungs-Schutz")}</span></li>
+                    <li class="flex items-start gap-2"><span class="text-emerald-400 font-bold">✓</span><span>${isTr ? "Takvim & WhatsApp API için hazır iskelet" : (isEn ? "Stub-ready for Calendar & WhatsApp API" : "Vorbereitet für Kalender- & WhatsApp-API")}</span></li>
+                  </ul>
+                  <p class="text-[11px] text-slate-400 italic mb-3">
+                    ${isTr ? "Satış cümlesi: „Bende var — senin için kurarım.“" : (isEn ? "Sales line: “I’ve got this — I’ll build it for you.”" : "Sales line: „Das habe ich — ich baue es für dich.“")}
+                  </p>
+                </div>
+                <div class="space-y-2">
+                  <a href="/demos/whatsapp-termin/" target="_blank" rel="noopener" class="w-full py-2.5 px-3 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition shadow-lg shadow-emerald-600/30">
+                    <i data-lucide="maximize-2" class="w-4 h-4"></i>
+                    <span>${isTr ? "Tam ekran demoyu aç" : (isEn ? "Open fullscreen demo" : "Vollbild-Demo öffnen")}</span>
+                  </a>
+                  <a href="#kontakt-formular" onclick="scrollToContactForm('Interesse an Modul: WhatsApp Terminbuchung', 'WhatsApp')" class="w-full py-2.5 px-3 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 transition border border-slate-600">
+                    <i data-lucide="send" class="w-4 h-4"></i>
+                    <span>${isTr ? "Bu modülü iste →" : (isEn ? "Request this module →" : "Dieses Modul anfragen →")}</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          `;
+        }
+      }
+    ]
   }
 };
 
@@ -2388,7 +2459,7 @@ let isUserInteracting = false;
 let isElementVisible = true;
 let autoplayTimer = null;
 let userInteractionTimeout = null;
-const allShowcaseTabs = ['zeiterfassung', 'rechnungen', 'crm', 'logistik', 'fuhrpark', 'website'];
+const allShowcaseTabs = ['zeiterfassung', 'rechnungen', 'crm', 'logistik', 'fuhrpark', 'website', 'whatsapp'];
 const AUTOPLAY_INTERVAL = 8000; // 8.0 seconds per variant (slow, relaxed & easy to read)
 
 function startShowcaseAutoplay() {
@@ -2494,7 +2565,7 @@ function switchShowcaseTab(tabName, variantIndex = 0, isManual = false) {
   }
 
   // Update Hero module tabs
-  const allTabs = ['zeiterfassung', 'rechnungen', 'crm', 'logistik', 'fuhrpark', 'website'];
+  const allTabs = ['zeiterfassung', 'rechnungen', 'crm', 'logistik', 'fuhrpark', 'website', 'whatsapp'];
   allTabs.forEach(t => {
     const heroBtn = document.getElementById('hero-tab-' + t);
     const barBtn = document.getElementById('bar-tab-' + t);
