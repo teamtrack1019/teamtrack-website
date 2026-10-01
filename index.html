@@ -265,10 +265,52 @@
             </button>
 
             <!-- 100% Solid Opaque Dropdown Navigation List (Zero transparency, high contrast) -->
-            <div id="nav-menu-dropdown" class="hidden absolute right-0 mt-3 w-72 sm:w-80 bg-white rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.35)] border-2 border-slate-200 p-3 z-[100] transition-all duration-200">
+            <div id="nav-menu-dropdown" class="hidden absolute right-0 mt-3 w-72 sm:w-80 bg-white rounded-2xl shadow-[0_20px_60px_-15px_rgba(0,0,0,0.35)] border-2 border-slate-200 p-3 z-[100] transition-all duration-200 max-h-[min(80vh,640px)] overflow-y-auto">
               <div class="space-y-1">
+
+                <!-- Neler yapıyoruz / Was wir machen — expandable module group -->
+                <div class="rounded-xl border border-cyan-100 bg-cyan-50/40 overflow-hidden">
+                  <button type="button" id="nav-whatwedo-toggle" onclick="event.stopPropagation(); toggleWhatWeDoMenu()" class="w-full flex items-center gap-3 px-3 py-2.5 text-left text-sm font-semibold text-slate-700 hover:text-cyan-700 hover:bg-cyan-50 transition group cursor-pointer">
+                    <span class="p-2 rounded-lg bg-cyan-100 text-cyan-700 group-hover:bg-cyan-600 group-hover:text-white transition">
+                      <i data-lucide="boxes" class="w-4 h-4"></i>
+                    </span>
+                    <div class="flex-1 min-w-0">
+                      <p class="font-bold text-slate-900 group-hover:text-cyan-700" data-i18n="navWhatWeDo">Was wir machen</p>
+                      <p class="text-[11px] text-slate-500 font-normal" data-i18n="navWhatWeDoSub">Module &amp; Lösungen</p>
+                    </div>
+                    <i data-lucide="chevron-down" id="nav-whatwedo-chevron" class="w-4 h-4 text-slate-400 transition-transform duration-200 rotate-180 flex-shrink-0"></i>
+                  </button>
+                  <div id="nav-whatwedo-submenu" class="px-2 pb-2 space-y-0.5">
+                    <button type="button" onclick="openShowcaseModule('zeiterfassung')" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-sm font-semibold text-slate-700 hover:text-cyan-700 hover:bg-white transition cursor-pointer">
+                      <i data-lucide="clock" class="w-3.5 h-3.5 text-cyan-600 flex-shrink-0"></i>
+                      <span data-i18n="navModZeiterfassung">Zeiterfassung</span>
+                    </button>
+                    <button type="button" onclick="openShowcaseModule('rechnungen')" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-sm font-semibold text-slate-700 hover:text-cyan-700 hover:bg-white transition cursor-pointer">
+                      <i data-lucide="file-text" class="w-3.5 h-3.5 text-cyan-600 flex-shrink-0"></i>
+                      <span data-i18n="navModRechnungen">Rechnungen</span>
+                    </button>
+                    <button type="button" onclick="openShowcaseModule('crm')" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-sm font-semibold text-slate-700 hover:text-cyan-700 hover:bg-white transition cursor-pointer">
+                      <i data-lucide="users" class="w-3.5 h-3.5 text-cyan-600 flex-shrink-0"></i>
+                      <span data-i18n="navModCrm">CRM</span>
+                    </button>
+                    <button type="button" onclick="openShowcaseModule('logistik')" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-sm font-semibold text-slate-700 hover:text-cyan-700 hover:bg-white transition cursor-pointer">
+                      <i data-lucide="map" class="w-3.5 h-3.5 text-cyan-600 flex-shrink-0"></i>
+                      <span data-i18n="navModLogistik">Logistik</span>
+                    </button>
+                    <button type="button" onclick="openShowcaseModule('fuhrpark')" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-sm font-semibold text-slate-700 hover:text-cyan-700 hover:bg-white transition cursor-pointer">
+                      <i data-lucide="truck" class="w-3.5 h-3.5 text-cyan-600 flex-shrink-0"></i>
+                      <span data-i18n="navModFuhrpark">Fuhrpark</span>
+                    </button>
+                    <button type="button" onclick="openShowcaseModule('website')" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-lg text-left text-sm font-semibold text-slate-700 hover:text-cyan-700 hover:bg-white transition cursor-pointer">
+                      <i data-lucide="globe" class="w-3.5 h-3.5 text-cyan-600 flex-shrink-0"></i>
+                      <span data-i18n="navModWebsite">Webseiten</span>
+                    </button>
+                    <!-- Yeni maddeler buraya eklenebilir -->
+                  </div>
+                </div>
+
                 <a href="#leistungen" onclick="closeNavMenu()" class="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-semibold text-slate-700 hover:text-cyan-600 hover:bg-cyan-50 transition group">
-                  <span class="p-2 rounded-lg bg-cyan-100 text-cyan-700 group-hover:bg-cyan-600 group-hover:text-white transition">
+                  <span class="p-2 rounded-lg bg-sky-100 text-sky-700 group-hover:bg-sky-600 group-hover:text-white transition">
                     <i data-lucide="layout-grid" class="w-4 h-4"></i>
                   </span>
                   <div>

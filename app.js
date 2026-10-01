@@ -6,6 +6,14 @@ const translations = {
     topBannerLink: "Erstgespräch anfragen →",
     logoSub: "B2B Softwareentwickler & IT-Berater",
     navMenuBtn: "Menü",
+    navWhatWeDo: "Was wir machen",
+    navWhatWeDoSub: "Module & Lösungen",
+    navModZeiterfassung: "Zeiterfassung",
+    navModRechnungen: "Rechnungen",
+    navModCrm: "CRM",
+    navModLogistik: "Logistik",
+    navModFuhrpark: "Fuhrpark",
+    navModWebsite: "Webseiten",
     navServicesSub: "WebApps, CRM, Schnittstellen",
     navShowcaseSub: "Interaktive Demo & Varianten",
     navWorkflowSub: "In 4 Schritten zur Software",
@@ -200,6 +208,14 @@ const translations = {
     topBannerLink: "Ön Görüşme İsteyin →",
     logoSub: "B2B Yazılım Geliştirici & IT Danışmanı",
     navMenuBtn: "Menü",
+    navWhatWeDo: "Neler yapıyoruz",
+    navWhatWeDoSub: "Modüller & çözümler",
+    navModZeiterfassung: "Saat Takibi",
+    navModRechnungen: "Faturalar",
+    navModCrm: "CRM",
+    navModLogistik: "Lojistik",
+    navModFuhrpark: "Filo & Araç",
+    navModWebsite: "Web Siteleri",
     navServicesSub: "Web Uygulamaları, CRM, Entegrasyon",
     navShowcaseSub: "İnteraktif Demo & Varyantlar",
     navWorkflowSub: "4 Adımda Yazılım Geliştirme",
@@ -394,6 +410,14 @@ const translations = {
     topBannerLink: "Request Intro Call →",
     logoSub: "B2B Software Engineer & IT Consultant",
     navMenuBtn: "Menu",
+    navWhatWeDo: "What we do",
+    navWhatWeDoSub: "Modules & solutions",
+    navModZeiterfassung: "Time Tracking",
+    navModRechnungen: "Invoices",
+    navModCrm: "CRM",
+    navModLogistik: "Logistics",
+    navModFuhrpark: "Fleet",
+    navModWebsite: "Websites",
     navServicesSub: "WebApps, CRM, API Integration",
     navShowcaseSub: "Interactive Demo & Variants",
     navWorkflowSub: "4 Steps to Custom Software",
@@ -2815,6 +2839,34 @@ function closeNavMenu() {
   const chevron = document.getElementById('nav-menu-chevron');
   if (dropdown) dropdown.classList.add('hidden');
   if (chevron) chevron.classList.remove('rotate-180');
+}
+
+function toggleWhatWeDoMenu() {
+  const submenu = document.getElementById('nav-whatwedo-submenu');
+  const chevron = document.getElementById('nav-whatwedo-chevron');
+  if (!submenu) return;
+  const isHidden = submenu.classList.contains('hidden');
+  if (isHidden) {
+    submenu.classList.remove('hidden');
+    if (chevron) chevron.classList.add('rotate-180');
+  } else {
+    submenu.classList.add('hidden');
+    if (chevron) chevron.classList.remove('rotate-180');
+  }
+}
+
+function openShowcaseModule(tabName) {
+  closeNavMenu();
+  const showcase = document.getElementById('showcase');
+  if (showcase) {
+    showcase.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  // Slight delay so scroll starts before tab switch paints
+  setTimeout(() => {
+    if (typeof switchShowcaseTab === 'function') {
+      switchShowcaseTab(tabName, 0, true);
+    }
+  }, 80);
 }
 
 // Close dropdown if clicked outside
