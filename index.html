@@ -1534,6 +1534,25 @@
     </div>
   </div>
 
-  <script src="app.js?v=7.3"></script>
+  <!-- MODULE VOLLBILD (Was wir machen → Zeiterfassung etc.) -->
+  <div id="module-vollbild" class="fixed inset-0 z-[70] hidden bg-slate-950 text-slate-100 flex flex-col" role="dialog" aria-modal="true" aria-labelledby="module-vollbild-title">
+    <div class="flex-shrink-0 px-3 sm:px-5 py-2.5 sm:py-3 border-b border-slate-800 bg-slate-950/95 flex flex-wrap items-center justify-between gap-2">
+      <div class="min-w-0 flex items-center gap-2 sm:gap-3">
+        <span class="hidden sm:inline-flex bg-cyan-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md uppercase tracking-wider" data-i18n="showcaseBadge">SHOWCASE REFERENZ</span>
+        <h3 id="module-vollbild-title" class="font-extrabold text-sm sm:text-lg text-white truncate">Modul</h3>
+      </div>
+      <div class="flex items-center gap-2 flex-shrink-0">
+        <div id="module-vollbild-variants" class="hidden sm:flex items-center gap-1 bg-slate-900 p-1 rounded-xl border border-slate-700"></div>
+        <button type="button" onclick="closeModuleVollbild()" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-white text-xs sm:text-sm font-bold transition cursor-pointer">
+          <i data-lucide="x" class="w-4 h-4"></i>
+          <span data-i18n="moduleVollbildClose">Schließen</span>
+        </button>
+      </div>
+    </div>
+    <div id="module-vollbild-variants-mobile" class="sm:hidden flex-shrink-0 px-3 py-2 border-b border-slate-800 bg-slate-900/80 overflow-x-auto"></div>
+    <div id="module-vollbild-content" class="flex-1 overflow-y-auto p-3 sm:p-6 bg-slate-900"></div>
+  </div>
+
+  <script src="app.js?v=7.5"></script>
 </body>
 </html>
