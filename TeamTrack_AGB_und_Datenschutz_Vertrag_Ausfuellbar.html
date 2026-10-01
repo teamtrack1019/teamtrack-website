@@ -244,6 +244,47 @@
       text-transform: uppercase;
       margin-bottom: 3px;
     }
+    .page-break {
+      break-before: page;
+      page-break-before: always;
+      margin-top: 18px;
+      padding-top: 8px;
+      border-top: 2px dashed #cbd5e1;
+    }
+    .check-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 12px;
+      margin: 4px 0 6px 0;
+      font-size: 9.8px;
+    }
+    .check-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 5px;
+    }
+    .check-item input[type="checkbox"] {
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+    table.tom-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 4px 0 6px 0;
+      font-size: 9.5px;
+    }
+    table.tom-table th,
+    table.tom-table td {
+      border: 1px solid #cbd5e1;
+      padding: 4px 6px;
+      text-align: left;
+      vertical-align: top;
+    }
+    table.tom-table th {
+      background: #f1f5f9;
+      font-weight: 800;
+      color: #0f172a;
+    }
     @media print {
       body { background: #ffffff; }
       .top-actions { display: none !important; }
@@ -269,8 +310,8 @@
 
   <div class="top-actions">
     <div>
-      <h3>TeamTrack B2B-AGB &amp; Vertragsdokument (Schritt 1: AGB)</h3>
-      <p>Ausfüllbar &amp; druckbar • AVV (Art. 28 DSGVO) folgt als Anlage 1 im nächsten Schritt</p>
+      <h3>TeamTrack B2B-AGB + AVV + TOM (ein Dokument, mehrere Druckseiten)</h3>
+      <p>Ausfüllbar &amp; druckbar • AGB • Anlage 1 AVV (Art. 28 DSGVO) • Anlage 2 TOMs</p>
     </div>
     <button type="button" class="btn-print" onclick="window.print()">Als PDF drucken / speichern</button>
   </div>
@@ -290,7 +331,7 @@
     <h1>ALLGEMEINE GESCHÄFTS- &amp; VERTRAGSBEDINGUNGEN (B2B)</h1>
     <p class="subtitle">
       Gültig für Individual-Softwareentwicklung, IT-Beratung, Cloud-/SaaS-Systeme und Schnittstellenintegrationen.
-      Die separate Auftragsverarbeitungsvereinbarung (AVV gem. Art. 28 DSGVO) wird als <strong>Anlage 1</strong> beigefügt (folgt).
+      Die Auftragsverarbeitungsvereinbarung (AVV gem. Art. 28 DSGVO) ist als <strong>Anlage 1</strong>, die technischen und organisatorischen Maßnahmen als <strong>Anlage 2</strong> Bestandteil dieses Dokuments.
     </p>
 
     <div class="meta-row">
@@ -373,12 +414,8 @@
     <p>3. Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt (z. B. nachhaltiger Zahlungsverzug trotz Mahnung).</p>
     <p>4. Nach Vertragsende stellt TeamTrack dem Auftraggeber – soweit technisch und vertraglich vorgesehen – innerhalb angemessener Frist einen Export der kundeneigenen Daten zur Verfügung. Hosting-Zugänge können nach Ablauf der Kündigungsfrist deaktiviert werden. Nicht bezahlte Leistungen bleiben bis zur vollständigen Zahlung zurückhaltbar.</p>
 
-    <h2>§ 10 Datenschutz &amp; Auftragsverarbeitung (Hinweis)</h2>
-    <p>Beide Parteien verpflichten sich zur Vertraulichkeit. Soweit TeamTrack im Rahmen von Hosting, Wartung oder Betrieb personenbezogene Daten im Auftrag des Auftraggebers verarbeitet, agiert TeamTrack als Auftragsverarbeiter gemäß Art. 28 DSGVO; der Auftraggeber bleibt Verantwortlicher (Art. 4 Nr. 7 DSGVO). Die Einzelheiten (Gegenstand, Dauer, Art der Daten, TOMs, Unterauftragsverarbeiter, Löschung) werden in der <strong>Anlage 1 – AVV</strong> geregelt, die Bestandteil dieses Vertrags wird, sobald sie beigefügt und unterzeichnet ist.</p>
-    <div class="note">
-      <strong>Status Schritt 1:</strong> Dieses Dokument enthält die erweiterten AGB.
-      <strong>Anlage 1 (AVV)</strong> und <strong>Anlage 2 (TOMs)</strong> werden im nächsten Schritt ergänzt.
-    </div>
+    <h2>§ 10 Datenschutz &amp; Auftragsverarbeitung</h2>
+    <p>Beide Parteien verpflichten sich zur Vertraulichkeit. Soweit TeamTrack im Rahmen von Hosting, Wartung oder Betrieb personenbezogene Daten im Auftrag des Auftraggebers verarbeitet, agiert TeamTrack als Auftragsverarbeiter gemäß Art. 28 DSGVO; der Auftraggeber bleibt Verantwortlicher (Art. 4 Nr. 7 DSGVO). Einzelheiten regeln <strong>Anlage 1 – AVV</strong> und <strong>Anlage 2 – TOMs</strong>; beide Anlagen sind Bestandteil dieses Vertrags.</p>
 
     <h2>§ 11 Schlussbestimmungen</h2>
     <p>1. Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des UN-Kaufrechts.</p>
@@ -390,7 +427,7 @@
       <div>
         <p style="margin-bottom: 2px;"><strong>Ort, Datum:</strong> <input type="text" placeholder="z.B. Randersacker, 01.10.2026" style="width: 170px;"></p>
         <div class="signature-box">
-          <strong>Auftragnehmer:</strong><br>
+          <strong>Auftragnehmer (AGB):</strong><br>
           TeamTrack Softwareentwickler &amp; IT-Berater<br>
           Inhaberin: Huriye Ünalsoy
         </div>
@@ -398,9 +435,199 @@
       <div>
         <p style="margin-bottom: 2px;"><strong>Ort, Datum:</strong> <input type="text" placeholder="z.B. München, 01.10.2026" style="width: 170px;"></p>
         <div class="signature-box">
-          <strong>Auftraggeber (Kunde):</strong><br>
+          <strong>Auftraggeber – AGB (Kunde):</strong><br>
           Rechtsverbindliche Unterschrift &amp; Firmenstempel
         </div>
+      </div>
+    </div>
+
+    <!-- ===================== ANLAGE 1: AVV ===================== -->
+    <div class="page-break">
+      <div class="header-box">
+        <div>
+          <h2 class="brand-title">Team<span>Track</span></h2>
+          <p class="brand-subtitle">Anlage 1 zum B2B-Vertrag • Auftragsverarbeitung gem. Art. 28 DSGVO</p>
+        </div>
+        <div style="text-align: right;">
+          <span class="doc-badge">ANLAGE 1 – AVV</span>
+          <p class="contract-nr">Bezug Dok.-Nr: <input type="text" value="TT-AGB-2026-001" style="width: 110px; font-weight: bold;"></p>
+        </div>
+      </div>
+
+      <h1>AUFTRAGSVERARBEITUNGSVEREINBARUNG (AVV)</h1>
+      <p class="subtitle">gemäß Art. 28 Abs. 3 DSGVO • Verantwortlicher = Auftraggeber • Auftragsverarbeiter = TeamTrack</p>
+
+      <div class="note">
+        Diese Anlage gilt nur, soweit TeamTrack personenbezogene Daten im Auftrag hostet, wartet oder sonst verarbeitet
+        (z. B. Cloud-WebApp, Zeiterfassung, CRM). Reine Entwicklungsleistungen ohne Datenhosting lösen keine AVV aus.
+      </div>
+
+      <h2>A. Gegenstand, Dauer, Art und Zweck</h2>
+      <p><strong>Gegenstand:</strong> Verarbeitung personenbezogener Daten im Rahmen der vereinbarten Software-/Hosting-/Wartungsleistungen.</p>
+      <p><strong>Zweck:</strong> Bereitstellung, Betrieb, Wartung, Support und Weiterentwicklung der kundenspezifischen Systeme laut Angebot.</p>
+      <p><strong>Dauer:</strong> für die Laufzeit des Hauptvertrags bzw. der Betreuung; danach Löschung/Rückgabe gemäß Abschnitt F.</p>
+      <p><strong>Konkrete Systeme / Module (ausfüllen):</strong></p>
+      <div class="check-grid">
+        <label class="check-item"><input type="checkbox"> Zeiterfassung / Schicht</label>
+        <label class="check-item"><input type="checkbox"> CRM / Kundenverwaltung</label>
+        <label class="check-item"><input type="checkbox"> Touren / Fuhrpark / Disposition</label>
+        <label class="check-item"><input type="checkbox"> Rechnungs-/Dokumentenmodul</label>
+        <label class="check-item"><input type="checkbox"> Mitarbeiter-App / Portal</label>
+        <label class="check-item"><input type="checkbox"> Sonstiges: <input type="text" placeholder="..." style="width: 55%;"></label>
+      </div>
+
+      <h2>B. Kategorien betroffener Personen</h2>
+      <div class="check-grid">
+        <label class="check-item"><input type="checkbox"> Beschäftigte / Subunternehmer des Auftraggebers</label>
+        <label class="check-item"><input type="checkbox"> Kunden / Interessenten des Auftraggebers</label>
+        <label class="check-item"><input type="checkbox"> Lieferanten / Geschäftspartner</label>
+        <label class="check-item"><input type="checkbox"> Sonstige: <input type="text" placeholder="..." style="width: 55%;"></label>
+      </div>
+
+      <h2>C. Arten der personenbezogenen Daten</h2>
+      <div class="check-grid">
+        <label class="check-item"><input type="checkbox"> Stammdaten (Name, Kontakt)</label>
+        <label class="check-item"><input type="checkbox"> Beschäftigtendaten / Arbeitszeiten</label>
+        <label class="check-item"><input type="checkbox"> Standort-/GPS-/Tourendaten</label>
+        <label class="check-item"><input type="checkbox"> Vertrags-/Rechnungsdaten</label>
+        <label class="check-item"><input type="checkbox"> Zugangs- &amp; Protokolldaten</label>
+        <label class="check-item"><input type="checkbox"> Sonstige: <input type="text" placeholder="..." style="width: 55%;"></label>
+      </div>
+      <p>Besondere Kategorien (Art. 9 DSGVO) werden nur verarbeitet, wenn ausdrücklich vereinbart: <input type="text" placeholder="nein / Beschreibung" style="width: 45%;"></p>
+
+      <h2>D. Pflichten der Parteien</h2>
+      <p>1. TeamTrack verarbeitet personenbezogene Daten nur auf dokumentierte Weisung des Auftraggebers, sofern keine gesetzliche Verpflichtung entgegensteht.</p>
+      <p>2. TeamTrack stellt sicher, dass zur Verarbeitung befugte Personen zur Vertraulichkeit verpflichtet sind.</p>
+      <p>3. TeamTrack trifft geeignete technische und organisatorische Maßnahmen gemäß Art. 32 DSGVO (siehe <strong>Anlage 2</strong>).</p>
+      <p>4. Der Auftraggeber ist und bleibt alleiniger Verantwortlicher für die Rechtmäßigkeit der Datenerhebung, Informationspflichten gegenüber Betroffenen und gesetzliche Aufbewahrungsfristen.</p>
+      <p>5. TeamTrack unterstützt den Auftraggeber angemessen bei Betroffenenrechten (Art. 15–22 DSGVO) sowie bei Melde-/Folgenabschätzungspflichten (Art. 32–36 DSGVO).</p>
+
+      <h2>E. Unterauftragsverarbeiter</h2>
+      <p>Der Auftraggeber stimmt der Einschaltung folgender Unterauftragsverarbeiter zu (soweit für die Leistung erforderlich):</p>
+      <table class="tom-table">
+        <thead>
+          <tr>
+            <th>Dienst</th>
+            <th>Zweck</th>
+            <th>Ort / Hinweis</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Vercel Inc.</td>
+            <td>Hosting / Deployment von Webanwendungen</td>
+            <td>u. a. EU-Regionen; ggf. USA (SCC / DPF)</td>
+          </tr>
+          <tr>
+            <td>1&amp;1 IONOS SE</td>
+            <td>E-Mail / SMTP-Kommunikation</td>
+            <td>Deutschland / EU</td>
+          </tr>
+          <tr>
+            <td>GitHub, Inc. (soweit genutzt)</td>
+            <td>Quellcode-Repository / CI (ohne Kundengeschäftsdaten in Repos)</td>
+            <td>ggf. USA (SCC / DPF)</td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="Weitere (z.B. DB-Hoster)" style="width: 95%;"></td>
+            <td><input type="text" placeholder="Zweck" style="width: 95%;"></td>
+            <td><input type="text" placeholder="Ort" style="width: 95%;"></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>TeamTrack informiert den Auftraggeber über beabsichtigte Änderungen bei Unterauftragsverarbeitern und räumt Widerspruchsrecht in angemessener Frist ein. Mit Unterauftragsverarbeitern werden datenschutzrechtlich erforderliche Vereinbarungen geschlossen.</p>
+
+      <h2>F. Löschung und Rückgabe</h2>
+      <p>Nach Ende der Auftragsverarbeitung löscht TeamTrack personenbezogene Daten oder gibt sie zurück – nach Wahl des Auftraggebers – und löscht vorhandene Kopien, soweit keine gesetzliche Aufbewahrungspflicht besteht. Bestätigung auf Anfrage.</p>
+
+      <h2>G. Nachweise und Kontrollen</h2>
+      <p>TeamTrack stellt dem Auftraggeber auf Anfrage die erforderlichen Informationen zum Nachweis der Art.-28-Pflichten zur Verfügung. Vor-Ort-Prüfungen sind nach angemessener Ankündigung, während der Geschäftszeiten und ohne Störung des Betriebs möglich; Kosten trägt der Auftraggeber, sofern kein erheblicher Pflichtverstoß von TeamTrack vorliegt.</p>
+
+      <h2>H. Schluss</h2>
+      <p>Es gilt deutsches Recht. Gerichtsstand ist – soweit zulässig – Würzburg. Diese AVV geht bei Widersprüchen zu datenschutzrechtlichen Fragen dem Hauptvertrag vor.</p>
+
+      <div class="signature-grid">
+        <div>
+          <p style="margin-bottom: 2px;"><strong>Ort, Datum:</strong> <input type="text" placeholder="TT.MM.JJJJ" style="width: 120px;"></p>
+          <div class="signature-box">
+            <strong>Auftragsverarbeiter:</strong><br>
+            TeamTrack Softwareentwickler &amp; IT-Berater<br>
+            Inhaberin: Huriye Ünalsoy
+          </div>
+        </div>
+        <div>
+          <p style="margin-bottom: 2px;"><strong>Ort, Datum:</strong> <input type="text" placeholder="TT.MM.JJJJ" style="width: 120px;"></p>
+          <div class="signature-box">
+            <strong>Verantwortlicher (Kunde):</strong><br>
+            Rechtsverbindliche Unterschrift &amp; Firmenstempel
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== ANLAGE 2: TOMs ===================== -->
+    <div class="page-break">
+      <div class="header-box">
+        <div>
+          <h2 class="brand-title">Team<span>Track</span></h2>
+          <p class="brand-subtitle">Anlage 2 zum B2B-Vertrag / zur AVV • TOMs gem. Art. 32 DSGVO</p>
+        </div>
+        <div style="text-align: right;">
+          <span class="doc-badge">ANLAGE 2 – TOM</span>
+        </div>
+      </div>
+
+      <h1>TECHNISCHE UND ORGANISATORISCHE MASSNAHMEN (TOMs)</h1>
+      <p class="subtitle">Kurzübersicht der von TeamTrack eingesetzten Schutzmaßnahmen (Stand: 2026)</p>
+
+      <table class="tom-table">
+        <thead>
+          <tr>
+            <th style="width: 28%;">Bereich</th>
+            <th>Maßnahmen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Vertraulichkeit / Verschlüsselung</strong></td>
+            <td>TLS-Verschlüsselung der Übertragung; Passwort-Hashing (z. B. Bcrypt/Argon2); Zugriff nur für befugte Personen.</td>
+          </tr>
+          <tr>
+            <td><strong>Mandantentrennung</strong></td>
+            <td>Kundenbezogene Systeme/Datenbanken möglichst isoliert; keine Vermischung von Mandantendaten.</td>
+          </tr>
+          <tr>
+            <td><strong>Zugriffskontrolle</strong></td>
+            <td>Rollen- und Rechtekonzept (Need-to-know); administrative Zugänge beschränkt und geschützt.</td>
+          </tr>
+          <tr>
+            <td><strong>Verfügbarkeit / Backup</strong></td>
+            <td>Regelmäßige (i. d. R. tägliche) Backups; Wiederherstellungsprozesse; Hosting in professionellen Rechenzentren (DE/EU, soweit vereinbart).</td>
+          </tr>
+          <tr>
+            <td><strong>Eingabekontrolle / Protokolle</strong></td>
+            <td>Technische Logs zur Nachvollziehbarkeit von Zugriffen und Änderungen, soweit systemseitig vorgesehen.</td>
+          </tr>
+          <tr>
+            <td><strong>Auftragskontrolle</strong></td>
+            <td>Verarbeitung nur im Rahmen des Vertrags/AVV; Unterauftragsverarbeiter mit entsprechenden Vereinbarungen.</td>
+          </tr>
+          <tr>
+            <td><strong>Trennung / Zweckbindung</strong></td>
+            <td>Kundendaten nur für vereinbarte Zwecke; keine Nutzung für eigene Werbung.</td>
+          </tr>
+          <tr>
+            <td><strong>Weitergabe / Transfers</strong></td>
+            <td>Übermittlungen an Unterauftragsverarbeiter nur soweit erforderlich; bei Drittlandtransfers Einsatz geeigneter Garantien (z. B. SCC / DPF), soweit anwendbar.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>TeamTrack aktualisiert die TOMs bei Bedarf an den Stand der Technik. Wesentliche Verschlechterungen des Schutzniveaus werden dem Auftraggeber mitgeteilt.</p>
+
+      <div class="note">
+        <strong>Hinweis zum Druck:</strong> Ein Dokument • typischerweise mehrere A4-Seiten (AGB + AVV + TOM).
+        Das ist üblich und in Ordnung — nicht alles muss auf eine einzige Seite.
       </div>
     </div>
 
@@ -408,3 +635,4 @@
 
 </body>
 </html>
+
