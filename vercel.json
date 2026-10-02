@@ -1,7 +1,7 @@
 {
   "rewrites": [
     {
-      "source": "/:path((?!demos/).*)",
+      "source": "/:path((?!demos/|vertraege/).*)",
       "destination": "/index.html"
     }
   ]
