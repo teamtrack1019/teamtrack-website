@@ -3065,10 +3065,10 @@ const legalTexts = {
             5. Serverstandort, Entwicklungs-Infrastruktur (GitHub / Vercel) & Drittanbieter-Schnittstellen
           </h4>
           <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
-            <p><strong class="text-slate-100">Serverstandort Deutschland / EU:</strong> Kundensysteme und Datenbanken werden in nach ISO/IEC 27001 zertifizierten Rechenzentren innerhalb der Europäischen Union (vorrangig Frankfurt am Main / Deutschland) betrieben.</p>
+            <p><strong class="text-slate-100">Serverstandort Deutschland / EU:</strong> Kundensysteme und Datenbanken werden – soweit vereinbart – in nach ISO/IEC 27001 zertifizierten Rechenzentren innerhalb der Europäischen Union betrieben (vorrangig Region Frankfurt am Main / Deutschland). Typischerweise nutzen wir hierfür Cloud-Datenbanken wie Firebase / Google Cloud in der Region Europa (Frankfurt).</p>
             <p><strong class="text-slate-100">Website-Hosting & Deployment (Vercel) / Repositories (GitHub):</strong> Die öffentliche Website sowie Deployments laufen über Vercel; Quellcode wird in verschlüsselten Repositories (z. B. GitHub) verwaltet. Personenbezogene Geschäftsdaten der Kunden verbleiben strikt in den separaten Kundendatenbanken und werden nicht in Quellcode-Repositories gespeichert (Art. 32 DSGVO).</p>
             <p><strong class="text-slate-100">E-Mail-Infrastruktur (IONOS):</strong> Für den Empfang und Versand geschäftlicher E-Mails (inkl. Kontaktformular) nutzen wir den E-Mail-/SMTP-Dienst von IONOS in Deutschland.</p>
-            <p><strong class="text-slate-100">Drittanbieter-Schnittstellen (DATEV, SevDesk, ERP, Telematik):</strong> Die Anbindung von externen Schnittstellen erfolgt ausschließlich auf explizite Weisung des Kunden. Für die Datenverarbeitung bei den Drittanbietern gelten deren Datenschutzbestimmungen. TeamTrack übernimmt keine Haftung für außerhalb der eigenen Software liegende Drittanbieter-Dienste.</p>
+            <p><strong class="text-slate-100">Drittanbieter-Schnittstellen (DATEV, SevDesk, ERP, Telematik, Meta/WhatsApp, Google Kalender u. a.):</strong> Die Anbindung von externen Schnittstellen erfolgt ausschließlich auf explizite Weisung des Kunden und je nach Projekt. Für die Datenverarbeitung bei den Drittanbietern gelten deren Datenschutzbestimmungen. TeamTrack übernimmt keine Haftung für außerhalb der eigenen Software liegende Drittanbieter-Dienste.</p>
           </div>
         </div>
 
@@ -3174,10 +3174,10 @@ const legalTexts = {
             5. Sunucu Lokasyonu, Geliştirme Altyapısı (GitHub / Vercel) & Entegrasyonlar
           </h4>
           <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
-            <p><strong class="text-slate-100">Almanya ve AB sunucuları:</strong> Müşteri sistemleri ve veritabanları ISO/IEC 27001 sertifikalı Almanya / Avrupa Birliği veri merkezlerinde barındırılır.</p>
+            <p><strong class="text-slate-100">Almanya ve AB sunucuları:</strong> Müşteri sistemleri ve veritabanları – kararlaştırıldığı ölçüde – ISO/IEC 27001 sertifikalı Avrupa Birliği veri merkezlerinde barındırılır (öncelik: Frankfurt am Main / Almanya). Tipik olarak Firebase / Google Cloud (Avrupa / Frankfurt bölgesi) kullanılır.</p>
             <p><strong class="text-slate-100">Web sitesi barındırma & dağıtım (Vercel) / kod depoları (GitHub):</strong> Kamuya açık web sitesi ve yayınlar Vercel üzerinden; kaynak kod şifreli depolarda (ör. GitHub) yönetilir. Müşterinin ticari ve personel verileri kod depolarında tutulmaz, yalnızca izole müşteri veritabanlarında saklanır (DSGVO Madde 32).</p>
             <p><strong class="text-slate-100">E-posta altyapısı (IONOS):</strong> İş e-postaları ve iletişim formu iletimi için Almanya’daki IONOS e-posta/SMTP hizmeti kullanılır.</p>
-            <p><strong class="text-slate-100">Dış entegrasyonlar (DATEV, ERP, muhasebe):</strong> Harici sistemlere veri aktarımı yalnızca müşterinin onayı ile yapılır; üçüncü parti platformların kendi altyapı değişikliklerinden TeamTrack sorumlu tutulamaz.</p>
+            <p><strong class="text-slate-100">Dış entegrasyonlar (DATEV, ERP, Meta/WhatsApp, Google Takvim vb.):</strong> Harici sistemlere veri aktarımı yalnızca müşterinin onayı ve proje kapsamına göre yapılır; üçüncü parti platformların kendi altyapısından TeamTrack sorumlu tutulamaz.</p>
           </div>
         </div>
 
@@ -3282,10 +3282,10 @@ const legalTexts = {
             5. Server Hosting, Deployment Infrastructure (GitHub / Vercel) & Third-Party APIs
           </h4>
           <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
-            <p><strong class="text-slate-100">ISO 27001 German / EU data centers:</strong> Client application servers and databases are hosted in ISO/IEC 27001 certified facilities within Germany and the European Union.</p>
+            <p><strong class="text-slate-100">ISO 27001 German / EU data centers:</strong> Where agreed, client application servers and databases are hosted in ISO/IEC 27001 certified facilities within the European Union (preferably Frankfurt am Main / Germany). We typically use cloud databases such as Firebase / Google Cloud in the Europe (Frankfurt) region.</p>
             <p><strong class="text-slate-100">Website hosting & deployment (Vercel) / repositories (GitHub):</strong> The public website and deployments run on Vercel; source code is managed in encrypted repositories (e.g. GitHub). Operational client and employee data remains in isolated customer databases and is never committed to source code repositories (Art. 32 GDPR).</p>
             <p><strong class="text-slate-100">Email infrastructure (IONOS):</strong> Business email and contact-form delivery use the IONOS email/SMTP service in Germany.</p>
-            <p><strong class="text-slate-100">Third-party integrations (DATEV, ERPs):</strong> Data synchronization with external services occurs strictly upon client authorization; third-party provider terms govern outside TeamTrack's infrastructure.</p>
+            <p><strong class="text-slate-100">Third-party integrations (DATEV, ERPs, Meta/WhatsApp, Google Calendar, etc.):</strong> Data synchronization with external services occurs strictly upon client authorization and as scoped per project; third-party provider terms govern outside TeamTrack's infrastructure.</p>
           </div>
         </div>
 
@@ -3339,18 +3339,35 @@ const legalTexts = {
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 5 Gewährleistung, Datensicherung & SLA</h4>
-            <p>TeamTrack gewährleistet eine fachgerechte Programmierung nach aktuellem Stand der Technik und hostet Cloud-Systeme in ISO 27001 zertifizierten deutschen Rechenzentren (SLA 99,5% Verfügbarkeit) mit automatisierten täglichen Backups. Für Mängel bei Festpreis-Werken gilt eine 30-tägige Nachbesserungsfrist. Eine Haftung für Ausfälle von Drittanbieter-Schnittstellen (z.B. DATEV, ERP-Systeme) oder Telekommunikationsstörungen Dritter ist ausgeschlossen.</p>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 5 Abnahme</h4>
+            <p>Bei Festpreis-Werken und einmaligen Einrichtungsleistungen fordert TeamTrack den Auftraggeber nach betriebsbereiter Übergabe zur Abnahme auf. Die Abnahme gilt als erfolgt, wenn der Auftraggeber nicht innerhalb von 10 Werktagen wesentliche Mängel schriftlich (Textform genügt) rügt oder die Software produktiv nutzt. Unwesentliche Mängel berechtigen nicht zur Verweigerung der Abnahme.</p>
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 6 Gesetzliche Aufzeichnungs- und Einhaltungspflichten & Haftungsausschluss (ArbZG, MiLoG, FPersV, VO (EG) 561/2006)</h4>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 6 Gewährleistung, Datensicherung & SLA</h4>
+            <p>TeamTrack gewährleistet eine fachgerechte Programmierung nach aktuellem Stand der Technik und hostet Cloud-Systeme – soweit vereinbart – in ISO/IEC 27001 zertifizierten Rechenzentren in Deutschland bzw. der EU (Ziel-Verfügbarkeit SLA 99,5 %) mit automatisierten täglichen Backups. Für Mängel bei Festpreis-Werken gilt eine 30-tägige kostenlose Nachbesserungsfrist ab Abnahme. Eine Haftung für Ausfälle von Drittanbieter-Schnittstellen (z. B. DATEV, ERP-Systeme, Meta/WhatsApp, Google Kalender) oder Störungen externer Telekommunikations-/Cloud-Dienste ist ausgeschlossen.</p>
+          </div>
+
+          <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
+            <h4 class="font-bold text-cyan-300 mb-1">§ 7 Vergütung & Umsatzsteuer</h4>
+            <p>Die Vergütung ergibt sich aus dem Angebot bzw. Einzelvertrag. Preise verstehen sich zzgl. der gesetzlichen Umsatzsteuer, soweit anwendbar. Derzeit gilt § 19 UStG (Kleinunternehmerregelung) — es wird keine Umsatzsteuer ausgewiesen. Entfällt diese Regelung oder wird eine USt-ID erteilt, wird die gesetzliche Umsatzsteuer ausgewiesen.</p>
+          </div>
+
+          <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
+            <h4 class="font-bold text-cyan-300 mb-1">§ 8 Vertragslaufzeit & Kündigung</h4>
+            <p>1. Festpreis-Projekte enden mit vollständiger Leistungserbringung und Abnahme, soweit nicht anders vereinbart.<br>
+            2. Laufende Betreuungs-/Retainer-Verträge werden – sofern im Angebot nichts anderes steht – auf unbestimmte Zeit geschlossen und können von beiden Seiten mit einer Frist von 30 Tagen zum Monatsende ordentlich gekündigt werden (Textform genügt). Abweichende Mindestlaufzeiten oder Verlängerungsklauseln im Angebot / Einzelvertrag gehen vor.<br>
+            3. Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt.</p>
+          </div>
+
+          <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
+            <h4 class="font-bold text-cyan-300 mb-1">§ 9 Gesetzliche Aufzeichnungs- und Einhaltungspflichten & Haftungsausschluss (ArbZG, MiLoG, FPersV, VO (EG) 561/2006)</h4>
             <p>Die von TeamTrack bereitgestellten Software-Module und Funktionen (z. B. mobile Zeiterfassung, Pausen- & Schichtprüfungen, Touren- und Fuhrparkdisposition, automatische Warnhinweise) stellen rein technische Hilfsmittel zur betrieblichen Unterstützung und Organisation dar. Die alleinige rechtliche und tatsächliche Verantwortung für die gesetzeskonforme Erfassung, Dokumentation und Einhaltung sämtlicher gesetzlicher Arbeits-, Lenk- und Ruhezeitvorschriften (insb. Arbeitszeitgesetz – ArbZG, Mindestlohngesetz – MiLoG, Fahrpersonalverordnung – FPersV, Verordnung (EG) Nr. 561/2006 sowie Arbeitnehmer-Entsendegesetz – AEntG), aller arbeitsschutzrechtlichen Fürsorgepflichten sowie aller versicherungsrechtlichen Obliegenheiten verbleibt uneingeschränkt beim Auftraggeber (Arbeitgeber / Unternehmer). TeamTrack übernimmt keinerlei Haftung für behördliche Bußgelder, Nachzahlungsforderungen, Schadensersatzansprüche, Unfallfolgen oder Leistungskürzungen bzw. Regressansprüche von Versicherungen, Berufsgenossenschaften oder Kontrollbehörden infolge fehlerhafter Bedienung, unterlassener betrieblicher Kontrollen, falscher Dateneingaben oder gesetzlicher Pflichtverletzungen seitens des Auftraggebers oder dessen Beschäftigten.</p>
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 7 Datenschutz, Auftragsverarbeitung (AVV) & Gerichtsstand</h4>
-            <p>Beide Parteien verpflichten sich zur strengen Vertraulichkeit. Soweit TeamTrack im Rahmen des Betriebs personenbezogene Daten (z.B. Arbeitszeiten, Kundendaten) im Auftrag verarbeitet, stellt TeamTrack dem Kunden einen rechtskonformen Auftragsverarbeitungsvertrag (AVV gem. Art. 28 DSGVO) zur Verfügung. Es gilt deutsches Recht. Gerichtsstand ist Würzburg.</p>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 10 Datenschutz, Auftragsverarbeitung (AVV) & Gerichtsstand</h4>
+            <p>Beide Parteien verpflichten sich zur strengen Vertraulichkeit. Soweit TeamTrack im Rahmen von Hosting, Wartung oder Betrieb personenbezogene Daten im Auftrag verarbeitet, agiert TeamTrack als Auftragsverarbeiter gemäß Art. 28 DSGVO; der Auftraggeber bleibt Verantwortlicher. Hierzu wird eine gesonderte AVV (inkl. TOM) geschlossen. Bei Widersprüchen gehen Regelungen des Einzelvertrags / Angebots diesen AGB vor; in datenschutzrechtlichen Fragen geht die AVV vor. Es gilt deutsches Recht. Gerichtsstand ist – soweit gesetzlich zulässig – Würzburg.</p>
           </div>
         </div>
       </div>
@@ -3387,18 +3404,35 @@ const legalTexts = {
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 5 Garanti ve Sorumluluk Sınırı</h4>
-            <p>TeamTrack sistemin teknik standartlara uygunluğunu garanti eder. Sabit fiyatlı projelerde 30 günlük ücretsiz düzeltme garantisi sunulur. Üçüncü parti API veya internet servis sağlayıcı kaynaklı kesintilerden TeamTrack sorumlu tutulamaz.</p>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 5 Kabul (Abnahme)</h4>
+            <p>Sabit fiyatlı işler ve tek seferlik kurulumlarda, sistem işletmeye hazır teslim edildikten sonra müşteri 10 iş günü içinde yazılı olarak (e-posta yeterlidir) esaslı ayıpları bildirmediği veya yazılımı fiilen kullanmaya başladığı takdirde kabul gerçekleşmiş sayılır.</p>
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 6 Yasal Kayıt ve Uyumluluk Yükümlülükleri & Sigorta Sorumluluk Muafiyeti (ArbZG, MiLoG, FPersV, VO (EG) 561/2006)</h4>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 6 Garanti, Veri Güvenliği ve SLA</h4>
+            <p>TeamTrack sistemin teknik standartlara uygunluğunu garanti eder. Bulut sistemleri – kararlaştırıldığı ölçüde – ISO 27001 sertifikalı Almanya/AB veri merkezlerinde (%99,5 uptime hedefi) barındırılır ve günlük otomatik yedeklenir. Sabit fiyatlı projelerde kabulden itibaren 30 günlük ücretsiz düzeltme (Nachbesserung) sunulur. Üçüncü parti API (DATEV, ERP, Meta/WhatsApp, Google Takvim vb.) veya telekomünikasyon kaynaklı kesintilerden TeamTrack sorumlu tutulamaz.</p>
+          </div>
+
+          <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
+            <h4 class="font-bold text-cyan-300 mb-1">§ 7 Ücret ve KDV</h4>
+            <p>Ücret teklif veya bireysel sözleşmeye göredir. Fiyatlar, uygulanabilir olduğu ölçüde yasal KDV hariçtir. Şu an § 19 UStG (Kleinunternehmer) geçerlidir — KDV gösterilmez. Bu rejim kalkar veya KDV No alınırsa yasal KDV faturalarda gösterilir.</p>
+          </div>
+
+          <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
+            <h4 class="font-bold text-cyan-300 mb-1">§ 8 Sözleşme Süresi ve Fesih</h4>
+            <p>1. Sabit fiyatlı projeler, aksi kararlaştırılmadıkça teslim ve kabul ile sona erer.<br>
+            2. Sürekli bakım/abonelik sözleşmeleri – teklifte aksi yoksa – belirsiz sürelidir ve taraflarca ay sonuna 30 gün kala olağan şekilde feshedilebilir (e-posta yeterlidir). Teklifteki asgari süre veya yenileme kuralları önceliklidir.<br>
+            3. Haklı nedenle olağanüstü fesih hakkı saklıdır.</p>
+          </div>
+
+          <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
+            <h4 class="font-bold text-cyan-300 mb-1">§ 9 Yasal Kayıt ve Uyumluluk Yükümlülükleri & Sigorta Sorumluluk Muafiyeti (ArbZG, MiLoG, FPersV, VO (EG) 561/2006)</h4>
             <p>TeamTrack tarafından sunulan yazılım modülleri ve fonksiyonları (çalışma saati ve puantaj kaydı, mola ve vardiya kontrolleri, rota/görev planlama, otomatik uyarılar) yalnızca işletmeye yardımcı teknik destek ve organizasyon araçlarıdır. Yasal çalışma, sürüş ve dinlenme sürelerine (ArbZG, MiLoG, FPersV, AB 561/2006 Tüzüğü vb.), kayıt tutma ve belgeleme yükümlülüklerine, iş güvenliği kurallarına ve işletmenin kendi sigorta poliçesi yükümlülüklerine uyulması münhasıran müşterinin (işverenin) sorumluluğundadır. Müşterinin veya personelinin kural ihlallerinden, hatalı veri girişlerinden, yetersiz denetimlerinden veya sistem uyarılarına uymamasından doğabilecek idari para cezalarından, kaza tazminatlarından, iş kazası sonuçlarından veya sigorta şirketleri/resmi kurumlar nezdinde oluşabilecek ödeme kesintilerinden ve rüculardan TeamTrack hiçbir şekilde sorumlu tutulamaz.</p>
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 7 Gizlilik, Veri İşleme (AVV) ve Yetkili Mahkeme</h4>
-            <p>Taraflar tüm ticari sırları ve müşteri verilerini korumayı taahhüt eder. TeamTrack, müşteri adına veri işlediği durumlarda standart bir Veri İşleme Sözleşmesi (AVV - DSGVO Madde 28) sunar. Alman hukuku geçerlidir; uyuşmazlıklarda Würzburg mahkemeleri yetkilidir.</p>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 10 Gizlilik, Veri İşleme (AVV) ve Yetkili Mahkeme</h4>
+            <p>Taraflar tüm ticari sırları ve müşteri verilerini korumayı taahhüt eder. TeamTrack, müşteri adına veri işlediği durumlarda Veri İşleme Sözleşmesi (AVV – DSGVO Madde 28 ve TOM) imzalar; müşteri veri sorumlusudur. Çelişki halinde bireysel sözleşme/teklif AGB’ye üstün gelir; veri koruma konularında AVV üstündür. Alman hukuku geçerlidir; uyuşmazlıklarda yetkili mahkeme — kanunen izin verildiği ölçüde — Würzburg’dur.</p>
           </div>
         </div>
       </div>
@@ -3435,18 +3469,35 @@ const legalTexts = {
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 5 Warranty & Liability Limitations</h4>
-            <p>TeamTrack guarantees industry-standard engineering. Fixed-price deliveries include a 30-day warranty. Liability is excluded for outages of external third-party APIs (e.g. ERP, DATEV) or force majeure hosting disruptions.</p>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 5 Acceptance</h4>
+            <p>For fixed-price works and one-off setup services, after operational handover the client shall inspect within 10 business days. Acceptance is deemed given if no material defects are notified in text form (email suffices) or if the software is used productively. Immaterial defects do not justify refusal of acceptance.</p>
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 6 Statutory Recording & Compliance Obligations, Liability Exclusion (ArbZG, MiLoG, FPersV, Regulation (EC) 561/2006)</h4>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 6 Warranty, Backups & SLA</h4>
+            <p>TeamTrack guarantees industry-standard engineering and – where agreed – hosts cloud systems in ISO/IEC 27001 certified data centers in Germany / the EU (target availability SLA 99.5%) with automated daily backups. Fixed-price deliveries include a 30-day free remediation period from acceptance. Liability is excluded for outages of external third-party APIs (e.g. ERP, DATEV, Meta/WhatsApp, Google Calendar) or external telecom/cloud disruptions.</p>
+          </div>
+
+          <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
+            <h4 class="font-bold text-cyan-300 mb-1">§ 7 Fees & VAT</h4>
+            <p>Fees follow the offer or individual contract. Prices are exclusive of statutory VAT where applicable. Currently § 19 UStG (small-business rule) applies — no VAT is charged. If that regime ends or a VAT ID is issued, statutory VAT will be shown.</p>
+          </div>
+
+          <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
+            <h4 class="font-bold text-cyan-300 mb-1">§ 8 Term & Termination</h4>
+            <p>1. Fixed-price projects end upon full delivery and acceptance unless otherwise agreed.<br>
+            2. Ongoing retainer/support contracts are – unless the offer states otherwise – concluded for an indefinite term and may be terminated by either party with 30 days’ notice to month-end (text form suffices). Minimum terms or renewal clauses in the offer / individual contract prevail.<br>
+            3. Extraordinary termination for good cause remains unaffected.</p>
+          </div>
+
+          <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
+            <h4 class="font-bold text-cyan-300 mb-1">§ 9 Statutory Recording & Compliance Obligations, Liability Exclusion (ArbZG, MiLoG, FPersV, Regulation (EC) 561/2006)</h4>
             <p>Software features provided by TeamTrack (e.g., digital time recording, break compliance checks, route and dispatch management, automated alerts) serve strictly as operational and administrative technical aids. Full and sole legal responsibility for compliance with and documentation of all statutory working hours, minimum wage recording rules, driving and rest periods (specifically ArbZG, MiLoG, FPersV, Regulation (EC) No 561/2006, AEntG), occupational safety mandates, and insurance covenants rests unconditionally with the client (employer). TeamTrack assumes zero liability for regulatory fines, back-pay claims, damages, accident consequences, or insurance claim denials/deductions by insurance providers or authorities resulting from user error, lack of employer supervision, incorrect data input, or compliance breaches by the client or its personnel.</p>
           </div>
 
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
-            <h4 class="font-bold text-cyan-300 mb-1">§ 7 Privacy, Data Processing (DPA) & Jurisdiction</h4>
-            <p>Both parties maintain strict commercial confidentiality and GDPR compliance. Where TeamTrack processes data on behalf of the client, a standardized Data Processing Agreement (DPA / AVV pursuant to Art. 28 GDPR) is executed. German law applies. Legal venue is Würzburg, Germany.</p>
+            <h4 class="font-bold text-cyan-300 mb-1">§ 10 Privacy, Data Processing (DPA/AVV) & Jurisdiction</h4>
+            <p>Both parties maintain strict commercial confidentiality. Where TeamTrack processes personal data on behalf of the client in hosting/operation, TeamTrack acts as processor under Art. 28 GDPR; the client remains controller. A separate DPA/AVV (incl. TOMs) is executed. In case of conflict, the individual contract/offer prevails over these GTC; on data-protection matters the AVV prevails. German law applies. Venue is – where legally permitted – Würzburg, Germany.</p>
           </div>
         </div>
       </div>
@@ -3477,7 +3528,7 @@ const legalTexts = {
 
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
           <h4 class="font-bold text-white text-xs">Steuerliche Angaben</h4>
-          <p>Umsatzsteuer: Gemäß § 19 UStG (Kleinunternehmerregelung) wird keine Umsatzsteuer berechnet bzw. Umsatzsteuer-ID nach Zuteilung.</p>
+          <p>Umsatzsteuer: Preise zzgl. der gesetzlichen Umsatzsteuer, soweit anwendbar. Derzeit gilt § 19 UStG (Kleinunternehmerregelung) — es wird keine Umsatzsteuer ausgewiesen; eine später erteilte USt-ID wird mitgeteilt.</p>
           <p>Berufsbezeichnung: Freiberuflicher Softwareentwickler & IT-Berater.</p>
         </div>
 
@@ -3511,7 +3562,7 @@ const legalTexts = {
 
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
           <h4 class="font-bold text-white text-xs">Mesleki ve Vergi Bilgileri</h4>
-          <p>Vergi: Alman KDV Kanunu § 19 UStG (küçük işletme düzenlemesi) uyarınca KDV hesaplanmaz; KDV kimlik numarası tahsis edildiğinde belirtilir.</p>
+          <p>Vergi: Fiyatlar, uygulanabilir olduğu ölçüde yasal KDV hariçtir. Şu an § 19 UStG (küçük işletme düzenlemesi) geçerlidir — KDV gösterilmez; sonradan alınan KDV No bildirilir.</p>
           <p>Faaliyet alanı: Serbest yazılım geliştirme ve IT danışmanlığı.</p>
         </div>
 
@@ -3545,7 +3596,7 @@ const legalTexts = {
 
         <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/80 space-y-2 text-xs text-slate-300">
           <h4 class="font-bold text-white text-xs">Commercial Details</h4>
-          <p>VAT: Pursuant to § 19 UStG (German small business regulation), no VAT is charged; VAT ID will be stated once assigned.</p>
+          <p>VAT: Prices exclusive of statutory VAT where applicable. Currently § 19 UStG (German small business regulation) applies — no VAT is charged; any later VAT ID will be stated.</p>
           <p>Professional activity: Freelance software development & IT consulting.</p>
         </div>
 
