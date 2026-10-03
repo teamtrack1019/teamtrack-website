@@ -3356,7 +3356,7 @@ const legalTexts = {
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
             <h4 class="font-bold text-cyan-300 mb-1">§ 8 Vertragslaufzeit & Kündigung</h4>
             <p>1. Festpreis-Projekte enden mit vollständiger Leistungserbringung und Abnahme, soweit nicht anders vereinbart.<br>
-            2. Laufende Betreuungs-/Retainer-Verträge werden – sofern im Angebot nichts anderes steht – auf unbestimmte Zeit geschlossen und können von beiden Seiten mit einer Frist von 30 Tagen zum Monatsende ordentlich gekündigt werden (Textform genügt). Abweichende Mindestlaufzeiten oder Verlängerungsklauseln im Angebot / Einzelvertrag gehen vor.<br>
+            2. Laufende Betreuungs-/Retainer-Verträge werden – sofern im Angebot nichts anderes steht – mit einer Mindestlaufzeit von 12 Monaten ab Bereitstellung geschlossen. Der Vertrag verlängert sich automatisch um jeweils weitere 12 Monate, sofern er nicht von einer Partei mit einer Frist von 1 Monat zum Ende der jeweiligen Laufzeit ordentlich gekündigt wird (Textform / E-Mail genügt). Abweichende Regelungen im Angebot / Einzelvertrag (z. B. andere Mindestlaufzeit oder Kündigung mit 30 Tagen zum Monatsende) gehen vor.<br>
             3. Das Recht zur außerordentlichen Kündigung aus wichtigem Grund bleibt unberührt.</p>
           </div>
 
@@ -3421,7 +3421,7 @@ const legalTexts = {
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
             <h4 class="font-bold text-cyan-300 mb-1">§ 8 Sözleşme Süresi ve Fesih</h4>
             <p>1. Sabit fiyatlı projeler, aksi kararlaştırılmadıkça teslim ve kabul ile sona erer.<br>
-            2. Sürekli bakım/abonelik sözleşmeleri – teklifte aksi yoksa – belirsiz sürelidir ve taraflarca ay sonuna 30 gün kala olağan şekilde feshedilebilir (e-posta yeterlidir). Teklifteki asgari süre veya yenileme kuralları önceliklidir.<br>
+            2. Sürekli bakım/abonelik sözleşmeleri – teklifte aksi yoksa – teslimden itibaren 12 ay asgari süreyle kurulur. Süresi dolmadan taraflardan biri dönem sonuna 1 ay kala olağan fesih bildiriminde bulunmazsa sözleşme otomatik olarak 12’şer ay uzar (e-posta yeterlidir). Teklif/bireysel sözleşmedeki farklı kurallar (ör. ay sonuna 30 gün kala fesih) önceliklidir.<br>
             3. Haklı nedenle olağanüstü fesih hakkı saklıdır.</p>
           </div>
 
@@ -3486,7 +3486,7 @@ const legalTexts = {
           <div class="p-4 bg-slate-950/60 rounded-xl border border-slate-800">
             <h4 class="font-bold text-cyan-300 mb-1">§ 8 Term & Termination</h4>
             <p>1. Fixed-price projects end upon full delivery and acceptance unless otherwise agreed.<br>
-            2. Ongoing retainer/support contracts are – unless the offer states otherwise – concluded for an indefinite term and may be terminated by either party with 30 days’ notice to month-end (text form suffices). Minimum terms or renewal clauses in the offer / individual contract prevail.<br>
+            2. Ongoing retainer/support contracts are – unless the offer states otherwise – concluded with a minimum term of 12 months from go-live. The contract renews automatically for successive 12-month periods unless either party terminates with 1 month’s notice to the end of the then-current term (text form / email suffices). Divergent rules in the offer / individual contract (e.g. 30 days’ notice to month-end) prevail.<br>
             3. Extraordinary termination for good cause remains unaffected.</p>
           </div>
 
